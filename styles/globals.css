@@ -14,3 +14,21 @@ a {
 * {
   box-sizing: border-box;
 }
+
+a:link{
+  color: rgb(0, 0, 0)
+}
+
+a:visited{
+  color: rgb(0, 0, 0)
+}
+
+a:hover{
+  opacity: 0.4;
+  transition: 0.3s;
+  cursor: url ("./cursor-select.png"), auto !important;
+}
+
+a:active{
+  color: #686868;
+}

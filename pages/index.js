@@ -16,37 +16,34 @@ export default function Home() {
     <div className="App">
       
       <header className="App-header" />
-    <title>Toby B</title>
-    <link rel="icon" href="icon.png" />
-
-    <div className="topnav">
-    <a className="sendBlog" href="https://tobyb.xyz/blog">/ Blog.</a>
-    <a className="sendProj" href="https://tobyb.xyz/projects">/ Projects.</a>
-    <a className="sendAbout" href="https://tobyb.xyz/about">/ About.</a>
-    <a className="sendStatus"  href="https://tobybxyz.statuspage.io/">/ Status.</a>
-    <div className="navbar"></div>
+    <div className={styles.topnav}>
+    <a className={styles.sendBlog} href="https://tobyb.xyz/blog">/ Blog.</a>
+    <a className={styles.sendProj} href="https://tobyb.xyz/projects">/ Projects.</a>
+    <a className={styles.sendAbout} href="https://tobyb.xyz/about">/ About.</a>
+    <a className={styles.sendStatus}  href="https://tobybxyz.statuspage.io/">/ Status.</a>
+    <div className={styles.navbar} />
   </div>
 
-  <Image className="memoji" alt="logo" src="logo.svg" />
-  <Image className="scrollarrow" alt="arrow" src="logo.svg" />
+  <Image className={styles.memoji} alt="logo" src="/vercel.svg" height="20" width="20"/>
+  <Image className={styles.scrollarrow} alt="arrow" src="/vercel.svg" height="20" width="20"/>
 
-  <h1 className="text1">Who am I?</h1>
-  <h1 className="text2">What do I do?</h1>
-  <h1 className="text3">What tools do I use?</h1>
+  <h1 className={styles.text1}>Who am I?</h1>
+  <h1 className={styles.text2}>What do I do?</h1>
+  <h1 className={styles.text3}>What tools do I use?</h1>
   
-  <h1 className="opentext">Hi. I&apos;m Toby.</h1>
+  <h1 className={styles.opentext}>Hi. I&apos;m Toby.</h1>
   
-  <a className="topName" href="https://tobyb.xyz/index.html">Toby B.</a>
+  <a className={styles.topName} href="https://tobyb.xyz/index.html">Toby B.</a>
 
-    <p className="text1ans">I&apos;m a 13 year old full stack web developer, <br/> ethical hacker, dog parent and massive nerd. <br/> I love video games, walking my dog <br/> and programming!</p>
-    <p className="text2ans">I do web development, app development, a small bit of AI development and I&apos;m an ethical hacker. I also like playing and listening to music.</p>
-    <p className="text3ans">JavaScript<br/>Next.js<br/>CSS<br/>Html<br/>GitHub<br/>VSCode</p>
-    <p className="text3ans1">Vercel <br/> PlanetScale<br/>Postman<br/>Firebase<br/>Node.JS<br/>Homebrew</p>
-    <p className="text3ans2">NPM<br/>Terminal<br/>MacOS<br/>Figma<br/>PostgreSQL<br/>Go</p>
+    <p className={styles.text1ans}>I&apos;m a 13 year old full stack web developer, <br/> ethical hacker, dog parent and massive nerd. <br/> I love video games, walking my dog <br/> and programming!</p>
+    <p className={styles.text2ans}>I do web development, app development, a small bit of AI development and I&apos;m an ethical hacker. I also like playing and listening to music.</p>
+    <p className={styles.text3ans}>JavaScript<br/>Next.js<br/>CSS<br/>Html<br/>GitHub<br/>VSCode</p>
+    <p className={styles.text3ans1}>Vercel <br/> PlanetScale<br/>Postman<br/>Firebase<br/>Node.JS<br/>Homebrew</p>
+    <p className={styles.text3ans2}>NPM<br/>Terminal<br/>MacOS<br/>Figma<br/>PostgreSQL<br/>Go</p>
 
-    <a className="github" href="https://github.com/itstobez" ><Image alt="icon1" src="logo.svg" /></a>
-    <a className="mail" href="mailto:toby@tobyb.xyz" ><Image alt="icon2" src="logo.svg" /></a>
-    <a className="twitter" href="https://twitter.com/DevelopedByToby"><Image alt="icon3" src="logo.svg" /></a>
+    <a className={styles.github} href="https://github.com/itstobez" ><Image alt="icon1" src="/vercel.svg" layout="fill" height="20" width="20"/></a>
+    <a className={styles.mail} href="mailto:toby@tobyb.xyz" ><Image alt="icon2" src="/vercel.svg" layout="fill" height="20" width="20"/></a>
+    <a className={styles.twitter} href="https://twitter.com/DevelopedByToby"><Image alt="icon3" src="/vercel.svg" height="20" width="20"/></a>
       
       <p className="endtext">Designed and developed by a nerd called Toby in 2021. <br/> Built with only html, CSS and just under 870 lines of code.</p>
       
