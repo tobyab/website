@@ -1,28 +1,39 @@
+.container {
+  padding: 2rem 5rem 2rem 5rem;
+  margin: 0;
+}
+
 .opentext{
   position: absolute;
-  top: 170%;
+  top: 50%;
   left: 2%;
   font-size: 30vh;
   font-weight: 700;
-  padding: 0 !important;
-  margin: 0 !important;
+  margin: 1rem 0rem 0rem 0rem;
   line-height: 27vh
 }
 
 .subtitle{
   position: absolute;
-  top: 0;
-  left: 50%;
-  font-size: 2.5vh
+  font-size: 2.5vh;
+  top: 1320%;
+  left: 2.5%;
+  margin: 1rem 0rem 0rem 0rem;
 }
 
 .mediv{
   position: absolute;
-  top: 100% !important;
-  left: 45%
+  top: 150% !important;
+  left: 45%;
 }
 
 .me{
   position: absolute;
-  top: 20%
+  margin: 1rem 0rem 0rem 0rem;
+}
+
+.popupButton{
+  position: absolute;
+  top: 1%;
+  left: 100%;
 }

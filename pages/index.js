@@ -16,8 +16,11 @@ export default function Home() {
     <div className="App">
       <header className="App-header" />
   </div>
+  <Image className={styles.popupButton} src="/command.png" alt="Command" height="60" width="60" />
+
   <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
   <h1 className={styles.subtitle}>13 y/o full stack web dev and designer.</h1>
+  
   <div className={styles.mediv}>
   <Image className={styles.me} src="/peep (3).png" alt="Toby" height="700" width="700" />
   </div>
