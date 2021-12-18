@@ -27,7 +27,7 @@ export default function Home() {
   <div className={styles.mediv}>
   <Image className={styles.me} src="/peep (3).png" alt="Toby" height="700" width="700" />
   </div>
-  
+
 </ChakraProvider>
     </div>
   );
