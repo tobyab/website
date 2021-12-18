@@ -26,7 +26,6 @@ a:visited{
 a:hover{
   opacity: 0.4;
   transition: 0.3s;
-  cursor: url ("./cursor-select.png"), auto !important;
 }
 
 a:active{
