@@ -16,7 +16,9 @@ export default function Home() {
     <div className="App">
       <header className="App-header" />
   </div>
-  <Image className={styles.popupButton} src="/command.svg" alt="Command" height="60" width="60" />
+  <div className={styles.popupDiv}>
+  <Image className={styles.popupButton} src="/command.svg" alt="Command" height="50" width="50" />
+  </div>
 
   <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
   <h1 className={styles.subtitle}>13 y/o full stack web dev and designer.</h1>

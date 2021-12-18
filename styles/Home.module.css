@@ -32,8 +32,14 @@
   margin: 1rem 0rem 0rem 0rem;
 }
 
+.popupDiv{
+  position: absolute;
+  top: 45%;
+  left: 95%
+}
+
 .popupButton{
   position: absolute;
-  top: 1%;
-  left: 100%;
+  left: 10%;
+  margin: 1rem 0rem 0rem 0rem;
 }
