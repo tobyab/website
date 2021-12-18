@@ -1,14 +1,28 @@
-.container{
-  display: flex;
-}
 .opentext{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-165%, 8%);
-  font-size: 25vh;
+  top: 170%;
+  left: 2%;
+  font-size: 30vh;
   font-weight: 700;
   padding: 0 !important;
   margin: 0 !important;
   line-height: 27vh
+}
+
+.subtitle{
+  position: absolute;
+  top: 0;
+  left: 50%;
+  font-size: 2.5vh
+}
+
+.mediv{
+  position: absolute;
+  top: 100% !important;
+  left: 45%
+}
+
+.me{
+  position: absolute;
+  top: 20%
 }
