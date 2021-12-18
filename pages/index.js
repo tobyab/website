@@ -16,6 +16,7 @@ export default function Home() {
     <div className="App">
       <header className="App-header" />
   </div>
+  
   <div className={styles.popupDiv}>
   <Image className={styles.popupButton} src="/command.svg" alt="Command" height="50" width="50" />
   </div>
@@ -26,6 +27,7 @@ export default function Home() {
   <div className={styles.mediv}>
   <Image className={styles.me} src="/peep (3).png" alt="Toby" height="700" width="700" />
   </div>
+  
 </ChakraProvider>
     </div>
   );
