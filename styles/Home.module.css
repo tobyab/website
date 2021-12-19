@@ -5,11 +5,9 @@
 
 .opentext{
   position: absolute;
-  top: 50%;
-  left: 2%;
   font-size: 30vh;
   font-weight: 700;
-  margin: 1rem 0rem 0rem 0rem;
+  margin: 1rem 0rem 0rem -2rem;
   line-height: 27vh
 }
 
@@ -27,7 +25,6 @@
 .subtitle{
   position: absolute;
   font-size: 2.5vh;
-  left: 2.5%;
   margin: 50rem 0rem 0rem 0rem;
 }
 
@@ -37,6 +34,15 @@
     font-size: 2vh;
     left: 5.5%;
     margin: 30rem 0rem 0rem 0rem;
+  }
+}
+
+@media only screen and (max-height: 800px) {
+  .subtitle{
+    position: absolute;
+    font-size: 2.5vh;
+    left: 5.5%;
+    margin: 41rem 0rem 0rem -1rem;
   }
 }
 
