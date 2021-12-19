@@ -13,12 +13,31 @@
   line-height: 27vh
 }
 
+@media only screen and (max-width: 700px) {
+  .opentext{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    font-size: 20vh;
+    margin: 1rem 0rem 0rem 0rem;
+    line-height: 17vh
+  }
+}
+
 .subtitle{
   position: absolute;
   font-size: 2.5vh;
-  top: 1300%;
   left: 2.5%;
-  margin: 1rem 0rem 0rem 0rem;
+  margin: 50rem 0rem 0rem 0rem;
+}
+
+@media only screen and (max-width: 700px) {
+  .subtitle{
+    position: absolute;
+    font-size: 2vh;
+    left: 5.5%;
+    margin: 30rem 0rem 0rem 0rem;
+  }
 }
 
 .mediv{
@@ -27,10 +46,16 @@
   left: 45%;
 }
 
-.me{
-  position: absolute;
-  margin: 1rem 0rem 0rem 0rem;
+@media only screen and (max-width: 700px) {
+  .mediv{
+    position: absolute;
+    margin: 25rem 0rem 0rem -14rem;
+    height: 20vh !important;
+    width: 50vh !important
+  }
 }
+
+/* positioning */
 
 .popupDiv{
   position: absolute;
@@ -38,11 +63,22 @@
   left: 95%
 }
 
+/* styling */
+
 .popupButton{
   position: absolute;
   left: 10%;
   margin: 1rem 0rem 0rem 0rem;
   cursor: pointer
+}
+
+@media only screen and (max-width: 700px) {
+  .popupDiv{
+    position: absolute;
+    left: 82%;
+    margin: -1.5rem 0rem 0rem 0rem;
+    cursor: pointer
+  }
 }
 
 @media only screen and (max-width: 700px) {
