@@ -34,7 +34,6 @@
   top: 150% !important;
   left: 45%;
 }
-
 @media only screen and (max-width: 700px) {
   .mediv{
     position: absolute;
@@ -45,15 +44,12 @@
 }
 
 /* positioning */
-
 .popupDiv{
   position: absolute;
   top: 1%;
   left: 95%
 }
-
 /* styling */
-
 .popupButton{
   position: absolute;
   cursor: pointer;
@@ -63,17 +59,14 @@
   font-size: 7vh !important;
   border-radius: 7px;
   transition: transform 250ms cubic-bezier(.2,.8,.4,1);
-}
-  
+} 
 .popupButton:hover{
     transform: scale(1.10);
     background-color: #fff;
 }
-  
 .popupButton:active{
     transform: scale(0.9);
 }  
-
 
 @media only screen and (max-width: 700px) {
   .popupDiv{

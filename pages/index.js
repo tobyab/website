@@ -3,6 +3,13 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { ChakraProvider } from '@chakra-ui/react'
+import {
+  Command,
+  CommandInput,
+  CommandList,
+  CommandItem,
+  useCommand
+} from 'cmdk'
 
 export default function Home() {
   return (
