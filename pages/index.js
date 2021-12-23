@@ -18,7 +18,7 @@ export default function Home() {
   </div>
   
   <div className={styles.popupDiv}>
-  <button className={styles.popupButton}>hello world</button>
+  <button className={styles.popupButton}>⌘</button>
   </div>
 
   <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>

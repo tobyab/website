@@ -48,7 +48,7 @@
 
 .popupDiv{
   position: absolute;
-  top: 45%;
+  top: 1%;
   left: 95%
 }
 
@@ -56,21 +56,21 @@
 
 .popupButton{
   position: absolute;
-  left: 10%;
-  margin: 1rem 0rem 0rem 0rem;
   cursor: pointer;
-  padding: 12px 24px;
-  backgroundColor: white;
+  padding: 0.5% 0.1% !important;
+  background-color: white;
   color: black;
-  borderRadius: 7px;
+  font-size: 7vh !important;
+  border-radius: 7px;
   transition: transform 250ms cubic-bezier(.2,.8,.4,1);
 }
   
-.exampleClass:hover {
+.popupButton:hover{
     transform: scale(1.10);
+    background-color: #fff;
 }
   
-.exampleClass:active {
+.popupButton:active{
     transform: scale(0.9);
 }  
 
