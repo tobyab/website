@@ -22,7 +22,7 @@ export default function Home() {
   </div>
 
   <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
-  <h1 className={styles.subtitle}>13 y/o full stack web dev and designer.</h1>
+  <h1 className={styles.info}>13 y/o full stack web dev & designer.</h1>
 
   <div className={styles.mediv}>
   <Image className={styles.me} src="/peep (3).png" alt="Toby" height="700" width="700" />
