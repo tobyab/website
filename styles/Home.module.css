@@ -52,6 +52,18 @@
   }
 }
 
+.button{
+  position: absolute;
+  top: 20%
+}
+
+.hellodiv{
+  position: absolute;
+  top: 150%;
+  left: 55%;
+  display: none
+}
+
 /* positioning */
 .popupDiv{
   position: absolute;

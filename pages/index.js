@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import { ChakraProvider } from '@chakra-ui/react'
+import ReactDOM from 'react-dom'
 import {
   Command,
   CommandInput,
@@ -35,7 +36,33 @@ export default function Home() {
   <Image className={styles.me} src="/peep (3).png" alt="Toby" height="700" width="700" />
   </div>
 
+    <div className={styles.hellodiv}>
+  <Image className={styles.hello} idName={styles.hello} onClick={appearImage} src="/hello.png" alt="hello" height="700" width="700" />
+  </div>
+
+  <button className={styles.button} idName="button" onClick={appearImage}>
+    test
+  </button>
+
+  <h1 id="root">hello world</h1>
+
 </ChakraProvider>
     </div>
   );
+}
+
+//ReactDOM.render(element, document.getElementById('button'));
+const appearImage = (change) => {
+ // document.getElementById("hello").styles.display = "block";
+  //console.log('hello world')
+}
+
+function tick() {
+  const element = (
+    <div>
+      <h1>Hello, world!</h1>
+      <h2>It is {new Date().toLocaleTimeString()}.</h2>
+    </div>
+  );
+  ReactDOM.render(element, document.getElementById('root'));
 }
