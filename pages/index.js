@@ -11,6 +11,7 @@ import {
   CommandItem,
   useCommand
 } from 'cmdk'
+import React, {useEffect} from "react";
 
 export default function Home() {
   return (
@@ -33,10 +34,12 @@ export default function Home() {
   <h1 className={styles.info}>13 y/o full stack web dev & designer.</h1>
 
   <div className={styles.mediv}>
+    <button id="mebutton">
   <Image className={styles.me} src="/peep (3).png" alt="Toby" height="700" width="700" />
+  </button>
   </div>
 
-    <div className={styles.hellodiv}>
+    <div className={styles.hellodiv} idName="hellodiv">
   <Image className={styles.hello} idName={styles.hello} onClick={appearImage} src="/hello.png" alt="hello" height="700" width="700" />
   </div>
 
@@ -51,18 +54,17 @@ export default function Home() {
   );
 }
 
-//ReactDOM.render(element, document.getElementById('button'));
-const appearImage = (change) => {
- // document.getElementById("hello").styles.display = "block";
-  //console.log('hello world')
-}
-
-function tick() {
-  const element = (
-    <div>
-      <h1>Hello, world!</h1>
-      <h2>It is {new Date().toLocaleTimeString()}.</h2>
-    </div>
-  );
-  ReactDOM.render(element, document.getElementById('root'));
-}
+function appearImage() {
+// eslint-disable-next-line react-hooks/rules-of-hooks
+useEffect(function appearImage() {
+const targetDiv = document.getElementById("hellodiv");
+const btn = document.getElementById("mebutton");
+btn.onClick = function () {
+  if (targetDiv.style.display !== "none") {
+    targetDiv.style.display = "none";
+  } else {
+    targetDiv.style.display = "block";
+      };
+    };
+  });
+};

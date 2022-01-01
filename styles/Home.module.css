@@ -64,6 +64,10 @@
   display: none
 }
 
+.hello{
+  z-index: 10;
+}
+
 /* positioning */
 .popupDiv{
   position: absolute;
