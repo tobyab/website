@@ -43,12 +43,11 @@ export default function Home() {
   <Image className={styles.hello} idName={styles.hello} onClick={appearImage} src="/hello.png" alt="hello" height="700" width="700" />
   </div>
 
+  <div className={styles.cmdkmenu} idName="cmdkmenu"></div>
+  
   <button className={styles.button} idName="button" onClick={appearImage}>
     test
   </button>
-
-  <h1 id="root">hello world</h1>
-
 </ChakraProvider>
     </div>
   );
@@ -67,4 +66,5 @@ btn.onClick = function () {
       };
     };
   });
+  console.log('hello world')
 };

@@ -1,13 +1,8 @@
-.container {
-  padding: 2rem 5rem 2rem 4rem;
-  margin: 0;
-}
-
 .opentext{
   position: absolute;
   font-size: 30vh;
   font-weight: 700;
-  margin: 1rem 0rem 0rem -2rem;
+  margin: 1rem 0rem 0rem 1rem;
   line-height: 27vh
 }
 
@@ -68,6 +63,19 @@
   z-index: 10;
 }
 
+.cmdkmenu{
+  height: 42vh;
+  width: 70vh;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 2vh;
+  z-index: 20;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 /* positioning */
 .popupDiv{
   position: absolute;
@@ -102,9 +110,6 @@
   }
 }
 
-@media only screen and (max-width: 700px) {
-  .container {
-    padding: 7rem 2rem 1rem 3rem;
-    margin: 0;
-  }
+.container {
+  padding: 0 2rem;
 }
