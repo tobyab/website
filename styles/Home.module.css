@@ -12,7 +12,7 @@
     top: 50%;
     left: 5%;
     font-size: 20vh;
-    margin: 1rem 0rem 0rem 0rem;
+    margin: 0rem 0rem 0rem 0rem;
     line-height: 17vh
   }
 }
@@ -61,19 +61,6 @@
 
 .hello{
   z-index: 10;
-}
-
-.cmdkmenu{
-  height: 42vh;
-  width: 70vh;
-  background-color: #fff;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-  border-radius: 2vh;
-  z-index: 20;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 /* positioning */
