@@ -9,6 +9,7 @@ import {
     NO_GROUP,
   } from "kbar";
 
+
 function CommandK() {
      const actions = [{
           id: "blog",
@@ -40,4 +41,7 @@ function CommandK() {
       <CommandK />
     </KBarProvider>;
     </KBarProvider>
-)};
+    )
+}
+
+export default CommandK

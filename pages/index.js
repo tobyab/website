@@ -12,7 +12,7 @@ import {
   useCommand
 } from 'cmdk'
 import React, {useEffect} from "react";
-import { CommandK } from "../src/components/cmdk";
+import CommandK from "../src/components/cmdk";
 
 export default function Home() {
   return (
