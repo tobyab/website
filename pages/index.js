@@ -41,3 +41,7 @@ export default function Home() {
         </div>
   );
 }
+
+function appearImage() {
+  console.log('hello world')
+}
