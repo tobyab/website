@@ -20,7 +20,11 @@ function RenderResults() {
         ) : (
           <div
             style={{
-              background: active ? "#e55e55" : "transparent",
+              background: active ? "#eee" : "#fff" ,
+              height: 300,
+              //width: 700,
+              padding: 1,
+              maxWidth: 700,
             }}
           >
             {item.name}
@@ -37,7 +41,7 @@ function MyApp({ Component, pageProps }) {
       id: "blog",
       name: "Blog",
       shortcut: ["b"],
-      keywords: "writing words",
+      keywords: "writing words blog",
       perform: () => window.open("/blog"),
     },
     {
@@ -46,6 +50,13 @@ function MyApp({ Component, pageProps }) {
       shortcut: ["a"],
       keywords: "about command who",
       perform: () => window.open("/about"),
+    },
+    {
+      id: "test",
+      name: "test",
+      shortcut: ["t"],
+      keywords: "test tes te",
+      perform: () => window.open("/test"),
     },
   ];
 
@@ -61,10 +72,10 @@ function MyApp({ Component, pageProps }) {
         </KBarPortal>
         <Component {...pageProps} />
       </KBarProvider>
-  );
-}
+    );
+  }
 
 export default MyApp
 
 // MASSIVE thank you to Ella for helping me with kbar,
-// I strongly recommend you check out her github here! https://github.com/eilla1 
+// I strongly recommend you check out her github here: https://github.com/eilla1!
