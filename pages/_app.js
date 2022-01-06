@@ -8,6 +8,7 @@ import {
   KBarResults,
   useMatches,
 } from "kbar";
+import $ from 'jquery'
 
 function RenderResults() {
   const { results } = useMatches();
@@ -21,10 +22,12 @@ function RenderResults() {
           <div
             style={{
               background: active ? "#eee" : "#fff" ,
-              height: 300,
-              //width: 700,
-              padding: 1,
-              maxWidth: 700,
+              padding: "0.5rem 1rem",
+              borderLeft: `3px solid ${active ? "#000" : "transparent"}`,
+              //display: "flex",
+              //alignItems: "center",
+              //justifyContent: "space-between",
+              cursor: "pointer",
             }}
           >
             {item.name}
