@@ -24,9 +24,17 @@ function RenderResults() {
               background: active ? "#eee" : "#fff" ,
               padding: "0.5rem 1rem",
               borderLeft: `3px solid ${active ? "#000" : "transparent"}`,
-              //display: "flex",
-              //alignItems: "center",
-              //justifyContent: "space-between",
+              alignItems: "center",
+              justifyContent: "space-between",
+              cursor: "pointer",
+              padding: "12px 16px",
+              background: active ? "var(--a1)" : "transparent",
+              borderLeft: `2px solid ${
+                active ? "var(--foreground)" : "transparent"
+              }`,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
               cursor: "pointer",
             }}
           >
@@ -49,15 +57,14 @@ function MyApp({ Component, pageProps }) {
     },
     {
       id: "about",
-      name: "about",
+      name: "About",
       shortcut: ["a"],
       keywords: "about command who",
       perform: () => window.open("/about"),
     },
     {
       id: "test",
-      name: "test",
-      shortcut: ["t"],
+      name: "Test",
       keywords: "test tes te",
       perform: () => window.open("/test"),
     },
