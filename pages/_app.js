@@ -161,4 +161,4 @@ function MyApp({ Component, pageProps }) {
 export default MyApp
 
 // MASSIVE thank you to Ella for helping me with kbar,
-// I strongly recommend you check out her github here: https://github.com/eilla1!
+// I strongly recommend you check out her github here: https://github.com/eilla1 :)
