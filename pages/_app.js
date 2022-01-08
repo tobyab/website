@@ -8,7 +8,6 @@ import {
   KBarResults,
   useMatches,
 } from "kbar";
-import $ from 'jquery'
 
 const searchStyle = {
   padding: "12px 16px",
@@ -16,7 +15,7 @@ const searchStyle = {
   width: "100%",
   outline: "none",
   border: "none",
-  background: "var(--background)",
+  background: "#fff",
   color: "var(--foreground)",
 };
 
@@ -27,13 +26,14 @@ const animatorStyle = {
   color: "var(--foreground)",
   borderRadius: "8px",
   overflow: "hidden",
-  boxShadow: "var(--shadow)",
 };
 
 const groupNameStyle = {
   padding: "8px 16px",
   fontSize: "10px",
-  opacity: 0.5,
+  opacity: 1,
+  color: "#var(--foreground)",
+  background: "#fff",
 };
 
 function RenderResults() {
@@ -43,7 +43,7 @@ function RenderResults() {
       items={results}
       onRender={({ item, active }) =>
         typeof item === "string" ? (
-          <div>{item}</div>
+          <div style={groupNameStyle}>{item}</div>
         ) : (
           <div
             style={{
@@ -54,9 +54,8 @@ function RenderResults() {
               justifyContent: "space-between",
               cursor: "pointer",
               //padding: "12px 16px",
-              
                borderLeft: `2px solid ${
-               active ? "var(--foreground)" : "transparent"
+               active ? "var(--foreground)" : "#fff"
              }`,
               display: "flex",
               alignItems: "center",
@@ -82,7 +81,7 @@ function MyApp({ Component, pageProps }) {
       id: "blog",
       name: "Blog",
       shortcut: ["b"],
-      keywords: "writing words blog",
+      keywords: "writing words blog b hello",
       section: "Navigation",
       perform: () => window.open("/blog"),
     },
@@ -90,22 +89,23 @@ function MyApp({ Component, pageProps }) {
       id: "about",
       name: "About",
       shortcut: ["a"],
-      keywords: "about command who",
+      keywords: "about command who a",
       section: "Navigation",
       perform: () => window.open("/about"),
     },
     {
-      id: "test",
-      name: "Test",
-      keywords: "test tes te",
+      id: "projects",
+      name: "Projects",
+      shortcut: ["p"],
+      keywords: "projects p open source",
       section: "Navigation",
-      perform: () => window.open("/test"),
+      perform: () => window.open("/projects"),
     },
     {
-    id: "contactAction",
-    name: "Contact",
-    shortcut: ["c"],
-    keywords: "email hello",
+    id: "Email",
+    name: "Email",
+    shortcut: ["e"],
+    keywords: "email hello message send e",
     section: "Social",
     perform: () => window.open("mailto:toby@tobyb.xyz", "_blank"),
   },
@@ -113,7 +113,7 @@ function MyApp({ Component, pageProps }) {
     id: "twitterAction",
     name: "Twitter",
     shortcut: ["t"],
-    keywords: "social contact dm",
+    keywords: "social contact dm t s",
     section: "Social",
     perform: () => window.open("https://twitter.com/DevelopedByToby", "_blank"),
   },
@@ -121,9 +121,25 @@ function MyApp({ Component, pageProps }) {
     id: "githubAction",
     name: "Github",
     shortcut: ["g", "h"],
-    keywords: "sourcecode",
+    keywords: "source code g",
     section: "Social",
     perform: () => window.open("https://github.com/itstobez", "_blank"),
+  },
+  {
+    id: "status",
+    name: "Status",
+    shortcut: ["s"],
+    keywords: "status s",
+    section: "Utilities",
+    perform: () => window.open("https://https://tobybxyz.statuspage.io/", "_blank"),
+  },
+  {
+    id: "sourcecode",
+    name: "Code",
+    shortcut: ["s", "c"],
+    keywords: "source code s",
+    section: "Utilities",
+    perform: () => window.open("https://https://github.com/ItsTobez/tobyb.xyz-v2/", "_blank"),
   },
   ];
 
