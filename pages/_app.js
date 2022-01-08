@@ -9,14 +9,16 @@ import {
   useMatches,
 } from "kbar";
 
+
 const searchStyle = {
   padding: "12px 16px",
   fontSize: "16px",
   width: "100%",
   outline: "none",
   border: "none",
-  background: "#fff",
+  background: "rgba(255, 255, 255, 0.98)",
   color: "var(--foreground)",
+  borderBottom: "0.5px solid #f0f0f0",
 };
 
 const animatorStyle = {
@@ -26,14 +28,15 @@ const animatorStyle = {
   color: "var(--foreground)",
   borderRadius: "8px",
   overflow: "hidden",
+  boxShadow: "var(--shadow)",
 };
 
 const groupNameStyle = {
   padding: "8px 16px",
   fontSize: "10px",
   opacity: 1,
-  color: "#var(--foreground)",
-  background: "#fff",
+  color: "#8f8f8f",
+  background: "rgba(255, 255, 255, 0.98)",
 };
 
 function RenderResults() {
@@ -47,15 +50,17 @@ function RenderResults() {
         ) : (
           <div
             style={{
-              background: active ? "#eee" : "#fff" ,
+              background: active ? "#eee" : "rgba(255, 255, 255, 0.98)" ,
               padding: "0.5rem 1rem",
+              boxShadow: "var(--shadow)",
               //borderLeft: `3px solid ${active ? "transparent" : "transparent"}`,
               alignItems: "center",
               justifyContent: "space-between",
               cursor: "pointer",
               //padding: "12px 16px",
-               borderLeft: `2px solid ${
-               active ? "var(--foreground)" : "#fff"
+              height: "100",
+               borderLeft: `0px solid ${
+               active ? "var(--foreground)" : "transparent"
              }`,
               display: "flex",
               alignItems: "center",
@@ -135,7 +140,7 @@ function MyApp({ Component, pageProps }) {
   },
   {
     id: "sourcecode",
-    name: "Code",
+    name: "Source Code",
     shortcut: ["s", "c"],
     keywords: "source code s",
     section: "Utilities",

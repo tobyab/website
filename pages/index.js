@@ -5,7 +5,8 @@ import styles from '../styles/Home.module.css'
 import { ChakraProvider } from '@chakra-ui/react'
 import ReactDOM from 'react-dom'
 import React, {useEffect} from "react";
-import commandk from './/_app.js'
+import { useKBar } from 'kbar'
+import { MyApp } from "./_app.js";
 
 export default function Home() {
   return (
@@ -18,7 +19,7 @@ export default function Home() {
       <ChakraProvider>
 
           <div className={styles.popupDiv}>
-            <button className={styles.popupButton} onClick={commandk}>⌘</button>
+            <button className={styles.popupButton} onClick={MyApp}>⌘</button>
           </div>
 
           <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
@@ -26,7 +27,7 @@ export default function Home() {
 
           <div className={styles.mediv}>
             <button id="mebutton">
-              <Image className={styles.me} src="/peep (3).png" alt="Toby" height="700" width="700" />
+              <Image className={styles.me} src="/me.svg" alt="Toby" height="700" width="700" />
             </button>
           </div>
 
