@@ -26,20 +26,10 @@ export default function Home() {
           <h1 className={styles.info}>13 y/o full stack web dev & designer.</h1>
 
           <div className={styles.mediv}>
-            <button id="mebutton">
               <Image className={styles.me} src="/me.svg" alt="Toby" height="700" width="700" />
-            </button>
-          </div>
-
-          <div className={styles.hellodiv} idName="hellodiv">
-            <Image className={styles.hello} idName={styles.hello} onClick={appearImage} src="/hello.png" alt="hello" height="700" width="700" />
           </div>
 
         </ChakraProvider>
         </div>
   );
-}
-
-function appearImage() {
-  console.log('hello world')
 }

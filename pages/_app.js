@@ -8,6 +8,7 @@ import {
   KBarResults,
   useMatches,
 } from "kbar";
+import rotate from './index'
 
 
 const searchStyle = {
@@ -51,7 +52,7 @@ function RenderResults() {
           <div
             style={{
               background: active ? "#eee" : "rgba(255, 255, 255, 0.98)" ,
-              padding: "0.5rem 1rem",
+              padding: "0.7rem 1.5rem",
               boxShadow: "var(--shadow)",
               //borderLeft: `3px solid ${active ? "transparent" : "transparent"}`,
               alignItems: "center",
@@ -69,7 +70,7 @@ function RenderResults() {
               display: "flex",
               gap: "8px",
               alignItems: "center",
-              fontSize: 14,
+              fontSize: 16,
             }}
           >
             {item.name}
@@ -146,6 +147,14 @@ function MyApp({ Component, pageProps }) {
     section: "Utilities",
     perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/", "_blank"),
   },
+  {
+    id: "spin",
+    name: "Spin!",
+    shortcut: ["s", "p"],
+    keywords: "spin s",
+    section: "Utilities",
+    perform: {spin}
+  },
   ];
 
   return (
@@ -163,7 +172,23 @@ function MyApp({ Component, pageProps }) {
     );
   }
 
+  function spin() {
+    var elem = document.getElementById("body");
+    var pos = 0;
+    var id = setInterval(frame, 5);
+    function frame() {
+      if (pos == 360) {
+        clearInterval(id);
+      } else {
+        pos++;
+        elem.style.transform = "rotate(" + pos + "deg)";
+      }
+    }
+}
+
 export default MyApp
+
+
 
 // MASSIVE thank you to Ella for helping me with kbar,
 // I strongly recommend you check out her github here: https://github.com/eilla1 :)
