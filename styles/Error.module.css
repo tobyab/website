@@ -1,0 +1,31 @@
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -130%);
+    font-size: 20vh
+}
+
+.subtitle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 130%);
+    font-weight: normal;
+    text-align: center
+}
+
+.return{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    background-color: #000;
+    color: #fff;
+    height: 5vh;
+    width: 16vh;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.5vh
+}
