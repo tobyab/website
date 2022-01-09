@@ -10,11 +10,6 @@ import {
 } from "kbar";
 import rotate from './index'
 
-const boxStyle = {
-  //add a drop boxShadow to the box
-  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
-}
-
 const searchStyle = {
   padding: "12px 16px",
   fontSize: "16px",
@@ -33,7 +28,7 @@ const animatorStyle = {
   color: "var(--foreground)",
   borderRadius: "8px",
   overflow: "hidden",
-  boxShadow: "var(--shadow)",
+  boxShadow: "0px 7px 29px 0px rgba(100, 100, 111, 0.2) ",
 };
 
 const groupNameStyle = {
@@ -112,6 +107,14 @@ function MyApp({ Component, pageProps }) {
       section: "Navigation",
       perform: () => window.open("/projects"),
     },
+    {
+      id: "cv",
+      name: "CV",
+      shortcut: ["c", "v"],
+      keywords: "c cv about all toby info more find",
+      section: "Navigation",
+      perform: () => window.open("https://tobyb.notion.site/tobyb/All-about-me-7a2fa4d2c85f4bdeb8bf8556d7aac77a"),
+    },
     // Social
     {
     id: "email",
@@ -155,28 +158,12 @@ function MyApp({ Component, pageProps }) {
     perform: () => window.open("https://https://tobybxyz.statuspage.io/", "_blank"),
   },
   {
-    id: "cv",
-    name: "CV",
-    shortcut: ["c", "v"],
-    keywords: "c cv about all toby info more find",
-    section: "Utilities",
-    perform: () => window.open("https://tobyb.notion.site/tobyb/All-about-me-7a2fa4d2c85f4bdeb8bf8556d7aac77a"),
-  },
-  {
     id: "sourcecode",
     name: "Source Code",
     shortcut: ["s", "c"],
     keywords: "source code s",
     section: "Utilities",
     perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/", "_blank"),
-  },
-  {
-    id: "spin",
-    name: "Spin!",
-    shortcut: ["s", "p"],
-    keywords: "spin s",
-    section: "Utilities",
-    perform: {spin},
   },
   ];
 
