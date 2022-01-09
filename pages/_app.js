@@ -10,6 +10,10 @@ import {
 } from "kbar";
 import rotate from './index'
 
+const boxStyle = {
+  //add a drop boxShadow to the box
+  boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.5)",
+}
 
 const searchStyle = {
   padding: "12px 16px",
@@ -83,6 +87,7 @@ function RenderResults() {
 
 function MyApp({ Component, pageProps }) {
   const actions = [
+    // Navigation
     {
       id: "blog",
       name: "Blog",
@@ -107,6 +112,7 @@ function MyApp({ Component, pageProps }) {
       section: "Navigation",
       perform: () => window.open("/projects"),
     },
+    // Social
     {
     id: "email",
     name: "Email",
@@ -132,12 +138,29 @@ function MyApp({ Component, pageProps }) {
     perform: () => window.open("https://github.com/itstobez", "_blank"),
   },
   {
+    id: "polyworkAction",
+    name: "Polywork",
+    shortcut: ["p", "w"],
+    keywords: "p poly work polywork",
+    section: "Social",
+    perform: () => window.open("https://www.polywork.com/itstobez", "_blank"),
+  },
+  // Utilities
+  {
     id: "status",
     name: "Status",
     shortcut: ["s"],
     keywords: "status s",
     section: "Utilities",
     perform: () => window.open("https://https://tobybxyz.statuspage.io/", "_blank"),
+  },
+  {
+    id: "cv",
+    name: "CV",
+    shortcut: ["c", "v"],
+    keywords: "c cv about all toby info more find",
+    section: "Utilities",
+    perform: () => window.open("https://tobyb.notion.site/tobyb/All-about-me-7a2fa4d2c85f4bdeb8bf8556d7aac77a"),
   },
   {
     id: "sourcecode",
@@ -153,7 +176,7 @@ function MyApp({ Component, pageProps }) {
     shortcut: ["s", "p"],
     keywords: "spin s",
     section: "Utilities",
-    perform: {spin}
+    perform: {spin},
   },
   ];
 
