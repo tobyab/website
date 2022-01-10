@@ -113,7 +113,7 @@ function MyApp({ Component, pageProps }) {
       shortcut: ["c", "v"],
       keywords: "c cv about all toby info more find",
       section: "Navigation",
-      perform: () => window.open("https://tobyb.notion.site/tobyb/All-about-me-7a2fa4d2c85f4bdeb8bf8556d7aac77a"),
+      perform: () => window.open("https://tobyb.notion.site/tobyb/All-about-me-7a2fa4d2c85f4bdeb8bf8556d7aac77a", "_blank"),
     },
     // Social
     {

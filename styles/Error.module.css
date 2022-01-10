@@ -15,17 +15,54 @@
     text-align: center
 }
 
-.return{
+.return {
+    padding: 12px 24px;
+    background-color: rgb(1, 1, 1);
+    color: #fff;
+    position: relative;
+    border-radius: 6px;
+    overflow: hidden;
+    z-index: 1;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 1450%);
+    cursor: pointer;
+    border: none !important;
+}
+.return span {
+    z-index: 1;
+    position: relative;
+}
+.return::before {
+    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, 200%);
-    background-color: #000;
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
+    transition: opacity .4s cubic-bezier(.19,1,.22,1),transform .75s cubic-bezier(.19,1,.22,1);
+    background-color: #fff;
+    opacity: 0;
+}
+.return:hover span {
     color: #fff;
-    height: 5vh;
-    width: 16vh;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    border: none;
-    cursor: pointer;
-    border-radius: 0.5vh
+}
+.return:hover::before {
+    opacity: 1;
+    transition-duration: .85s;
+    transform: translate3d(-50%,-50%,0) scale3d(1.2,1.2,1.2);
+}
+
+.contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 2200%);
+}
+.contactMeRef{
+    text-decoration: underline;
+    cursor: pointer
 }
