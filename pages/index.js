@@ -19,7 +19,7 @@ export default function Home() {
       <ChakraProvider>
 
           <div className={styles.popupDiv}>
-            <button className={styles.popupButton} onClick={MyApp}>⌘</button>
+            <button className={styles.popupButton} onClick={handleKeyDown}>⌘</button>
           </div>
 
           <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
@@ -32,4 +32,8 @@ export default function Home() {
         </ChakraProvider>
         </div>
   );
+}
+
+const handleKeyDown = () => {
+  console.log("keydown");
 }

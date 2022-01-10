@@ -8,7 +8,6 @@ import {
   KBarResults,
   useMatches,
 } from "kbar";
-import rotate from './index'
 
 const searchStyle = {
   padding: "12px 16px",
@@ -197,8 +196,6 @@ function MyApp({ Component, pageProps }) {
 }
 
 export default MyApp
-
-
 
 // MASSIVE thank you to Ella for helping me with kbar,
 // I strongly recommend you check out her github here: https://github.com/eilla1 :)
