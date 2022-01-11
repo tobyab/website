@@ -45,10 +45,11 @@
     transform: translate3d(-50%,-50%,0) scale3d(0,0,0);
     transition: opacity .4s cubic-bezier(.19,1,.22,1),transform .75s cubic-bezier(.19,1,.22,1);
     background-color: #fff;
+    color: #000;
     opacity: 0;
 }
 .return:hover span {
-    color: #fff;
+    color: #000;
 }
 .return:hover::before {
     opacity: 1;

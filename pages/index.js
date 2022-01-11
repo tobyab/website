@@ -1,12 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import Link from 'next/link'
-import styles from '../styles/Home.module.css'
-import { ChakraProvider } from '@chakra-ui/react'
-import ReactDOM from 'react-dom'
+import Head from 'next/head';
+import Image from 'next/image';
+import Link from 'next/link';
+import styles from '../styles/Home.module.css';
+import { ChakraProvider } from '@chakra-ui/react';
+import ReactDOM from 'react-dom';
 import React, {useEffect} from "react";
-import { useKBar } from 'kbar'
-import { MyApp } from "./_app.js";
+import { useKBar } from 'kbar';
+import { KbarPortal } from './_app.js';
+import { CommandBar } from "./_app.js";
 
 export default function Home() {
   return (
@@ -19,7 +20,7 @@ export default function Home() {
       <ChakraProvider>
 
           <div className={styles.popupDiv}>
-            <button className={styles.popupButton} onClick={handleKeyDown}>⌘</button>
+            <button className={styles.popupButton} onClick={CommandBar}>⌘</button>
           </div>
 
           <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>

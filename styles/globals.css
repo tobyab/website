@@ -33,10 +33,10 @@ a:active{
 }
 
 ::selection {
-  background: #000;
+  background: rgb(0, 0, 0);
   color: #fff
 }
 ::-moz-selection {
-  background: #ffb7b7;
+  background: rgb(0, 0, 0);
   color: #fff
 }

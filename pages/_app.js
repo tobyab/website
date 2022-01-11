@@ -8,6 +8,7 @@ import {
   KBarResults,
   useMatches,
 } from "kbar";
+import { useRouter } from "next/router"; 
 
 const searchStyle = {
   padding: "12px 16px",
@@ -37,6 +38,7 @@ const groupNameStyle = {
   color: "#8f8f8f",
   background: "rgba(255, 255, 255, 0.98)",
 };
+
 
 function RenderResults() {
   const { results } = useMatches();
