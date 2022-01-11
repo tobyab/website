@@ -9,7 +9,6 @@ import React, {useEffect} from "react";
 import { useKBar } from 'kbar';
 import { KbarPortal } from './_app.js';
 import { MyApp } from "./_app.js";
-import TextTransition from "./components/text";
 
 export default function Home() {
   return (
@@ -41,9 +40,4 @@ export default function Home() {
 
 const handleKeyDown = () => {
   console.log("keydown");
-}
-
-
-if (typeof window === 'object') {
-  ReactDOM.render(<TextTransition />, document.getElementById("root"));
 }
