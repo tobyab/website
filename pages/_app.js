@@ -156,7 +156,7 @@ function MyApp({ Component, pageProps }) {
     shortcut: ["s"],
     keywords: "status s",
     section: "Utilities",
-    perform: () => window.open("https://https://tobybxyz.statuspage.io/", "_blank"),
+    perform: () => window.open("https://tobybxyz.statuspage.io/", "_blank"),
   },
   {
     id: "sourcecode",
