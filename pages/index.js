@@ -9,6 +9,7 @@ import React, {useEffect} from "react";
 import { useKBar } from 'kbar';
 import { KbarPortal } from './_app.js';
 import { MyApp } from "./_app.js";
+import rotate from '../styles/Rotate.module.scss'
 
 export default function Home() {
   return (
@@ -26,7 +27,13 @@ export default function Home() {
           </div>
 
           <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
-          <h1 className={styles.info}>13 y/o full stack web dev & designer.</h1>
+          <h1 className={rotate.info}>13 y/o </h1>
+          <div className={rotate.TextRotateDiv}>
+          <h1 className={rotate.TextRotate}>full stack web developer.</h1>
+      <h1 className={rotate.TextRotate}>designer.</h1>
+    <h1 className={rotate.TextRotate}>hackclubber.</h1>
+    <h1 className={rotate.TextRotate}>nerd.</h1>
+  </div>
 
           <div className={styles.mediv}>
               <Image className={styles.me} src="/me.svg" alt="Toby" height="700" width="700" />
