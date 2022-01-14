@@ -166,6 +166,14 @@ function MyApp({ Component, pageProps }) {
     section: "Utilities",
     perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/", "_blank"),
   },
+  {
+    id: "commits",
+    name: "Latest Commits",
+    shortcut: ["l", "c"],
+    keywords: "code l c commit late",
+    section: "Utilities",
+    perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/commits/main", "_blank"),
+  },
   ];
 
   return (
