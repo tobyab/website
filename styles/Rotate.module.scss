@@ -23,9 +23,14 @@
     }  
     
     &:nth-of-type(3) { 
-      animation: fade-text-in 1.5s 3.25s forwards;
+      animation: fade-text-in 1.5s 3.25s;
+    }
+
+    &:nth-of-type(4) { 
+      animation: fade-text-in 1.5s 4.5s;
     }
   }
+
   
   @keyframes rotate-text-up { 
     0% {
