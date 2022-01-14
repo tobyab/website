@@ -9,7 +9,7 @@ import React, {useEffect} from "react";
 import { useKBar } from 'kbar';
 import { KbarPortal } from './_app.js';
 import { MyApp } from "./_app.js";
-import rotate from '../styles/Rotate.module.scss'
+import rotate from '../styles/Rotate.module.scss';
 
 export default function Home() {
   return (
