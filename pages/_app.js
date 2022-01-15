@@ -9,10 +9,6 @@ import {
   useMatches,
 } from "kbar";
 import { useRouter } from "next/router";
-import ReactGA from 'react-ga';
-
-const TRACKING_ID = "UA-12341234-1";
-ReactGA.initialize(TRACKING_ID);
 
 const searchStyle = {
   padding: "12px 16px",
@@ -208,6 +204,7 @@ function MyApp({ Component, pageProps }) {
       }
     }
 }
+
 
 export default MyApp
 
