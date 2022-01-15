@@ -7,10 +7,7 @@ import ReactDOM from 'react-dom';
 import { render } from "react-dom";
 import React, {useEffect} from "react";
 import { useKBar } from 'kbar';
-import { KbarPortal } from './_app.js';
-import  MyApp  from "./_app.js";
 import rotate from '../styles/Rotate.module.scss';
-import cmdIcon from './_app'
 
 export default function Home() {
 const { query } = useKBar();
@@ -31,7 +28,7 @@ const { query } = useKBar();
           property="og:description"
           content="13 y/o full stack web dev & designer."
         />
-        <meta property="og:image" content={"./banner.png"} />
+        <meta property="og:image" content={"../public/preview.svg"} />
       </Head>
       <body>
       <ChakraProvider>
@@ -42,19 +39,20 @@ const { query } = useKBar();
 
           <h1 className={styles.opentext}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
 
-      <div className={rotate.rotateText}>
+      <div className={rotate.TextRotateContainer}>
         <h1 className={rotate.info}>13 y/o </h1>
         <div className={rotate.TextRotateDiv}>
     <h1 className={rotate.TextRotate}>full stack web developer.</h1>
     <h1 className={rotate.TextRotate}>designer.</h1>
     <h1 className={rotate.TextRotate}>nerd.</h1>
     <h1 className={rotate.TextRotate}>hackclubber.</h1>
-    <h1 className={rotate.TextRotate}>pizza enthusiast.</h1>
+    <h1 className={rotate.TextRotate}>open source enthusiast.</h1>
+    <h1 className={rotate.TextRotate}>pizza liker.</h1>
     </div>
   </div>
 
           <div className={styles.mediv}>
-              <Image className={styles.me} src="/me.svg" alt="Toby" height="700" width="700" />
+              <Image className={styles.me} src="/meBlink.gif" alt="Toby" height="700" width="700" />
           </div>
 
           </cmdIcon>
@@ -62,8 +60,4 @@ const { query } = useKBar();
         </body>
         </div>
   );
-}
-
-const handleKeyDown = () => {
-  console.log("keydown");
 }
