@@ -119,3 +119,10 @@
       width: 5vh
     }
   }
+
+  .aboutRotate {
+    position: absolute;
+    margin: 50rem 0rem 0rem 1rem;
+    font-size: 2.5vh;
+    display: block
+  }
