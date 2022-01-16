@@ -1,186 +1,20 @@
-.Rethome{
-    position: absolute;
-    top: 2%;
-    left: 2%;
-    font-family: sans-serif;
-    font-weight: bold;
-    font-size: 2vh;
-    text-decoration: none;
-    color: rgba(15, 13, 19, 0.6) !important;
-}
-
 .title{
     position: absolute;
     top: -5%;
-    left: 8%;
-    font-size: 18vh;
-}
-
-@media only screen and (max-width: 600px) {
-.title{
-    position: absolute;
-    top: 10%;
-    left: 8%;
-    font-size: 8vh;
-    }
-}
-
-@media only screen and (max-width: 600px) {
-.subtitle{
-    position: absolute;
-    top: 1%;
-    left: 8%;
-    font-size: 3vh;
-    }
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 20vh
 }
 
 .subtitle{
     position: absolute;
-    font-weight: normal;
-    top: 26%;
-    left: 8%;
+    top: 32%;
+    left: 50%;
+    transform: translate(-50%, 0%);
     font-size: 3vh;
-    color: #6e6e6e;
+    font-weight: normal
 }
-
-.projectbox0{
-    position: absolute;
-    height: 45vh;
-    width: 60vh;
-    border-radius: 8px;
-    background: #d6d6d68a;
-    top: 45%;
-    left: 10%;
-}
-
-@media only screen and (max-width: 800px) {
-    .projectbox0{
-        position: absolute;
-        height: 30vh;
-        width: 30vh;
-        top: 50%;
-        left: 22%;
-    }
-}
-
-.homeadvisordesc{
-    position: absolute;
-    font-size: 3vh;
-    top: 76%;
-    left: 11%;
-    color: black;
-}
-
-@media only screen and (max-width: 800px) {
-.homeadvisordesc{
-    position: absolute;
-    font-size: 2vh;
-    top: 70%;
-    left: 25%;
-    z-index: 2;
-    font-size: 2vh;
-    color: black;
-    overflow: hidden;
-    min-width: 2vh;
-    inline-size: 29vh;
-    overflow-wrap: break-word;
-    }
-}
-
-
-.homeadvisorhref{
-    color: black !important;
-    text-decoration: none;
-}
-
-.homeadvisor{
-    position: absolute;
-    height: 30vh;
-    width: 60vh;
-    border-top-left-radius: 8px;
-    border-top-right-radius: 8px;
-    top: 45%;
-    left: 10%;
-}
-
-@media only screen and (max-width: 800px) {
-    .homeadvisor{
-        position: absolute;
-        height: 20vh;
-        width: 30vh;
-        top: 50%;
-        left: 22%;
-    }
-}
-
-.projectbox1{
-    position: absolute;
-    height: 45vh;
-    width: 60vh;
-    border-radius: 8px;
-    background: #d6d6d68a;
-    top: 45%;
-    left: 60%;
-}
-
-@media only screen and (max-width: 800px) {
-.projectbox1{
-    position: absolute;
-    height: 30vh;
-    width: 30vh;
-    top: 95%;
-    left: 22%;
-    }
-}
-
-.skapakitt{
-    position: absolute;
-    height: 30vh;
-    width: 60vh;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    top: 45%;
-    left: 60%;
-}
-
-@media only screen and (max-width: 800px) {
-.skapakitt{
-    position: absolute;
-    height: 20vh;
-    width: 30vh;
-    border-top-right-radius: 8px;
-    border-top-left-radius: 8px;
-    top: 95%;
-    left: 22%;
-    }
-}
-
-.skapadesc{
-    z-index: 2;
-    position: absolute;
-    font-size: 3vh;
-    top: 76%;
-    left: 61%;
-    color: black
-}
-
-@media only screen and (max-width: 800px) {
-.skapadesc{
-    z-index: 2;
-    position: absolute;
-    font-size: 2vh;
-    top: 115%;
-    left: 25%;
-    color: black;
-    overflow: hidden;
-    min-width: 2vh;
-    inline-size: 29vh;
-    overflow-wrap: break-word;
-    }
-}
-
-.skapahref{
-    z-index: 2;
-    color: black !important;
-    text-decoration: none;
+.gitRef{
+    cursor: pointer;
+    text-decoration: underline
 }

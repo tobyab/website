@@ -90,7 +90,7 @@ function MyApp({ Component, pageProps }) {
       shortcut: ["b"],
       keywords: "writing words blog b hello",
       section: "Navigation",
-      perform: () => window.open("/blog"),
+      perform: () => window.open("/blog", "_self"),
     },
     {
       id: "about",
@@ -98,7 +98,7 @@ function MyApp({ Component, pageProps }) {
       shortcut: ["a"],
       keywords: "about command who a toby me ",
       section: "Navigation",
-      perform: () => window.open("/about"),
+      perform: () => window.open("/about", "_self"),
     },
     {
       id: "projects",
@@ -106,15 +106,15 @@ function MyApp({ Component, pageProps }) {
       shortcut: ["p"],
       keywords: "projects p open source work",
       section: "Navigation",
-      perform: () => window.open("/projects"),
+      perform: () => window.open("/projects", "_self"),
     },
     {
-      id: "cv",
-      name: "CV",
-      shortcut: ["c", "v"],
-      keywords: "c cv about all toby info more find",
+      id: "home",
+      name: "Home",
+      shortcut: ["r", "h"],
+      keywords: "home return h index",
       section: "Navigation",
-      perform: () => window.open("https://tobyb.notion.site/tobyb/All-about-me-7a2fa4d2c85f4bdeb8bf8556d7aac77a", "_blank"),
+      perform: () => window.open("/", "_self"),
     },
     // Social
     {
@@ -173,6 +173,14 @@ function MyApp({ Component, pageProps }) {
     keywords: "code l c commit late",
     section: "Utilities",
     perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/commits/main", "_blank"),
+  },
+  {
+    id: "cv",
+    name: "CV",
+    shortcut: ["c", "v"],
+    keywords: "c v cv about detail more info",
+    section: "Utilities",
+    perform: () => window.open("https://tobyb.notion.site/tobyb/All-about-me-7a2fa4d2c85f4bdeb8bf8556d7aac77a", "_blank"),
   },
   ];
 
