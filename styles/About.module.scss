@@ -1,0 +1,70 @@
+.title{
+    position: absolute;
+    top: 7%;
+    left: 37%;
+    font-size: 6vh;
+}
+
+.subtitle{
+    position: absolute;
+    top: 29%;
+    left: 10%;
+    font-size: 4vh;
+    color: #6e6e6e;
+    font-weight: normal;
+    display: none
+}
+
+@media only screen and (max-width: 600px) {
+  .title{
+    top: 5%;
+    left: 5%;
+    font-size: 4vh
+  }
+}
+
+.para0{
+    font-weight: thin;
+    font-size: 3vh;
+    position: absolute;
+    top: 50%;
+    left: 38%;
+    display: left !important
+}
+
+
+@media only screen and (max-width: 600px) {
+  .para0{
+    top: 44%;
+    left: 15%;
+    font-size: 2vh
+  }
+}
+
+.Rethome{
+    position: absolute;
+    top: 2%;
+    left: 2%;
+    font-weight: bold;
+    font-size: 2vh;
+    text-decoration: none;
+    color: rgba(15, 13, 19, 0.6) !important;
+}
+
+.me{
+  height: 30vh;
+  width: auto;
+  position: absolute;
+  left: 37%;
+  top: 19%;
+  border-radius: 2vh
+}
+
+@media only screen and (max-width: 600px) {
+  .me{
+    top: 13%;
+    left: 2%;
+    height: 30vh;
+    width: 50vh
+  }
+}
