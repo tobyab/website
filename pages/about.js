@@ -1,6 +1,6 @@
 import styles from '../styles/About.module.scss'
 
-export default function Home() {
+export default function About() {
   return(
 <body>
     <h1 class="title">//About.</h1>
