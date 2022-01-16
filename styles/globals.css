@@ -40,3 +40,37 @@ a:active{
   background: rgb(0, 0, 0);
   color: #fff
 }
+
+.cmdkbutton{
+  position: absolute;
+  left: 95%;
+  top: 5%;
+  margin: 1rem 0rem 0rem 1.6rem;
+  cursor: pointer;
+  padding: 0.5% 0.1% !important;
+  background-color: white;
+  color: black;
+  height: 8vh;
+  width: 8vh;
+  font-size: 7vh !important;
+  transition: transform 250ms cubic-bezier(.2,.8,.4,1);
+  z-index: 1;
+} 
+
+.cmdkbutton:hover{
+    transform: scale(1.10);
+    background-color: #fff;
+}
+.cmdkbutton:active{
+    transform: scale(0.9);
+}  
+@media only screen and (max-width: 700px) {
+  .cmdkbutton{
+    position: absolute;
+    left: 90%;
+    margin: 0.5rem 0rem 0rem 1rem;
+    cursor: pointer;
+    height: 5vh;
+    width: 5vh
+  }
+}
