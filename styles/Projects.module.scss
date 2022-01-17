@@ -21,23 +21,33 @@
 
 .PStitle{
     position: absolute;
-    top: 70%;
-    left: 20%;
+    top: 71.75%;
+    left: 61%;
     font-size: 4.5vh
 }
 .PSdesc{
     position: absolute;
-    top: 77%;
-    left: 20%;
     font-size: 3vh;
+    top: 78%;
+    left: 61%;
 }
-.PSimg{
+.PSwrapper{
     position: absolute;
-    top: 10%;
-    left: 110%;
+    height: 30vh;
+    width: 60vh;
+    top: 30%;
+    left: 60%;
 }
+.PSimg{ border-radius: 5vh;}
 
 .HAimg{
     position: absolute;
-    top: 10%
+    top: 50%
+}
+.homeadvisordesc{
+    position: absolute;
+    font-size: 3vh;
+    top: 76%;
+    left: 11%;
+    color: black;
 }

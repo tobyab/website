@@ -29,14 +29,18 @@ export default function Projects() {
     <h1 className={styles.subtitle}> To see all of my projects, check out my <a className={styles.gitRef} onClick={githubRef}>GitHub</a>!</h1>
 
     <div className={styles.homeadvisorContatiner}>
-      <Image className={styles.HAimg} src="/homeAdv.svg" alt="Home Advisor" height= "500" width="500"/>
+      <div className={styles.HAwrapper}>
+    <Image className={styles.HAimg} src="/Homeadv.svg" alt="Home advisor" height="100" width="100" />
+    </div>
       <h1 className={styles.HAtitle}>Home advisor</h1>
       <p className={styles.HAdesc}>Home advisor is the perfect way 
       for students to find a home.</p>
     </div>
 
     <div className={styles.posstartContatiner}>
+    <div className={styles.PSwrapper}>
     <Image className={styles.PSimg} src="/ps.svg" alt="Positive Start" height= "500" width="500"/>
+    </div>
       <h1 className={styles.PStitle}>Positive start</h1>
       <p className={styles.PSdesc}>Positive start is an email newsletter that <br /> helps you look fowards to waking up.</p>
     </div>
