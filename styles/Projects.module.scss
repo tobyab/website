@@ -1,3 +1,7 @@
+.container{
+    padding: 0 2rem;
+}
+
 .title{
     position: absolute;
     top: -5%;
@@ -5,7 +9,6 @@
     transform: translate(-50%, 0%);
     font-size: 20vh
 }
-
 .subtitle{
     position: absolute;
     top: 32%;
@@ -21,28 +24,23 @@
 
 .PStitle{
     position: absolute;
-    top: 71.75%;
-    left: 61%;
+    margin: 35rem 0rem 0rem 73.1rem;
     font-size: 4.5vh
 }
 .PSdesc{
     position: absolute;
     font-size: 3vh;
-    top: 78%;
-    left: 61%;
+    margin: 38.5rem 0rem 0rem 73.1rem;
 }
 .PSwrapper{
     position: absolute;
-    height: 30vh;
-    width: 60vh;
-    top: 30%;
-    left: 60%;
+    margin: 10rem 0rem 0rem 73.1rem;
 }
 .PSimg{ border-radius: 5vh;}
 
-.HAimg{
+.HAwrapper{
     position: absolute;
-    top: 50%
+    margin: 16rem 0rem 0rem 20rem;
 }
 .homeadvisordesc{
     position: absolute;
@@ -51,3 +49,33 @@
     left: 11%;
     color: black;
 }
+.cmdkbutton{
+    position: absolute;
+    left: 95%;
+    top: 2%;
+    cursor: pointer;
+    padding: 0.5% 0.1% !important;
+    background-color: #ffffff00;
+    color: black;
+    height: 8vh;
+    width: 8vh;
+    font-size: 7vh !important;
+    transition: transform 250ms cubic-bezier(.2,.8,.4,1);
+    z-index: 1;
+  } 
+  
+  .cmdkbutton:hover{
+      transform: scale(1.10);
+      background-color: #fff;
+  }
+  .cmdkbutton:active{
+      transform: scale(0.9);
+  }  
+  @media only screen and (max-width: 700px) {
+    .cmdkbutton{
+      left: 90%;
+      margin: 0.5rem 0rem 0rem 1rem;
+      height: 5vh;
+      width: 5vh
+    }
+  }
