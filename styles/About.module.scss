@@ -12,7 +12,8 @@
   left: 50%;
   transform: translate(-50%, 0%);
   font-size: 3vh;
-  font-weight: normal
+  font-weight: normal;
+  text-align: center;
 }
 
 .aboutMe{
@@ -24,6 +25,12 @@
   text-align: left;
   overflow: none;
   width: 550px
+}
+
+@media only screen and (max-width: 700px) {
+  .aboutMe{
+    width: 400px
+  }
 }
 
 .contactRef {
@@ -55,10 +62,10 @@
   }  
   @media only screen and (max-width: 700px) {
     .cmdkbutton{
-      left: 90%;
-      margin: 0.5rem 0rem 0rem 1rem;
-      height: 5vh;
-      width: 5vh
+      top: 1.5%;
+      left: 89%;
+      height: 6vh;
+      width: 6vh
     }
   }
 
