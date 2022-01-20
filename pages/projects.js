@@ -34,7 +34,7 @@ export default function Projects() {
     <Image className={styles.HAimg} src="/Homeadv.svg" alt="Home advisor" height="500" width="500" />
     </div>
       <h1 className={styles.HAtitle}>Home advisor</h1>
-      <p className={styles.HAdesc}>Home advisor is the perfect way 
+      <p className={styles.HAdesc}>Home advisor is the perfect way <br />
       for students to find a home.</p>
     </div>
 
