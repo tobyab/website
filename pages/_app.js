@@ -131,7 +131,7 @@ function MyApp({ Component, pageProps }) {
     shortcut: ["e"],
     keywords: "email hello message send e talk communicate speak",
     section: "Social",
-    perform: () => window.open("mailto:toby@tobyb.xyz", "_blank"),
+    perform: () => window.open("mailto:mail.toby@icloud.com", "_blank"),
   },
   {
     id: "twitterAction",
