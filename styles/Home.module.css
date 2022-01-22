@@ -9,11 +9,10 @@
 
 @media only screen and (max-width: 700px) {
   .opentext{
-    position: absolute;
     left: 5%;
-    font-size: 40vh;
-    margin: 5rem 0rem 0rem 0rem;
-    line-height: 31vh
+    font-size: 18vh;
+    margin: 2rem 0rem 0rem 0rem;
+    line-height: 18vh;
   }
 }
 
@@ -28,19 +27,18 @@
 @media only screen and (max-width: 700px) {
   .mediv{
     left: 2%;
-    margin: 50rem 0rem 0rem 0rem;
-    height: 25vh !important;
-    width: 100vh !important
+    margin: 26rem 0rem 0rem 0rem;
+    width: 40vh !important
   }
 }
 
 .container {
-  padding: 0 2rem;
+  padding: 0rem;
 }
 
 .cmdkbutton{
   position: absolute;
-  left: 95%;
+  left: 93.5%;
   top: 5%;
   margin: 1rem 0rem 0rem 1.6rem;
   cursor: pointer;
@@ -64,11 +62,11 @@
 @media only screen and (max-width: 700px) {
   .cmdkbutton{
     position: absolute;
-    left: 90%;
-    margin: 2rem 0rem 0rem 25rem;
+    left: 5%;
+    margin: 1.5rem 0rem 0rem 15rem;
     cursor: pointer;
-    height: 15vh;
-    width: 15vh
+    height: 7vh;
+    width: 7vh
   }
 }
 
@@ -91,8 +89,8 @@
   }
   @media only screen and (max-width: 700px) {
     .aboutRotate{
-      font-size: 5vh;
+      font-size: 3vh;
       position: absolute;
-      margin: 12rem 0rem 0rem 2rem;
+      margin: -10rem 0rem 0rem 1rem;
     }
   } 
