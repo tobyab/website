@@ -61,5 +61,5 @@ const { query } = useKBar();
 }
 
 function contactMe() {
-  window.open("mailto:toby@tobyb.xyz", "_blank");
+  window.open("mailto:mail.toby@icloud.com", "_blank");
 }

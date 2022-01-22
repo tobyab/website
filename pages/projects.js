@@ -31,7 +31,7 @@ export default function Projects() {
 
     <div className={styles.homeadvisorContatiner}>
       <div className={styles.HAwrapper}>
-    <Image className={styles.HAimg} src="/HomeAdv.svg" alt="Home advisor" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
+    <Image className={styles.HAimg} src="/homeAdv.svg" alt="Home advisor" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
     </div>
       <h1 className={styles.HAtitle}>Home advisor</h1>
       <p className={styles.HAdesc}>Home advisor is the perfect way <br />
