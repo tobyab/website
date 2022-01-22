@@ -10,7 +10,7 @@
 @media only screen and (max-width: 700px) {
   .opentext{
     left: 5%;
-    font-size: 18vh;
+    font-size: 20vh;
     margin: 2rem 0rem 0rem 0rem;
     line-height: 18vh;
   }
@@ -26,9 +26,7 @@
 
 @media only screen and (max-width: 700px) {
   .mediv{
-    left: 2%;
-    margin: 27rem 0rem 0rem 0rem;
-    width: 40vh !important
+  display: none;
   }
 }
 
@@ -62,11 +60,9 @@
 @media only screen and (max-width: 700px) {
   .cmdkbutton{
     position: absolute;
-    left: 5%;
-    margin: 1.5rem 0rem 0rem 15rem;
+    margin: 1.5rem 0rem 0rem -5rem;
     cursor: pointer;
-    height: 7vh;
-    width: 7vh
+    width: 8vh
   }
 }
 
@@ -91,6 +87,6 @@
     .aboutRotate{
       font-size: 3vh;
       position: absolute;
-      margin: -10rem 0rem 0rem 1rem;
+      margin: -12rem 0rem 0rem 1rem;
     }
   } 
