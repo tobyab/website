@@ -28,7 +28,7 @@ const { query } = useKBar();
           property="og:description"
           content="13 y/o full stack web dev & designer."
         />
-        <meta property="og:image" content={"../public/preview.svg"} />
+        <meta property="og:image" content={"/preview.svg"} />
       </Head>
       <body>
       <ChakraProvider>

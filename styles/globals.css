@@ -24,7 +24,7 @@ a:visited{
 }
 
 a:hover{
-  opacity: 0.4;
+  opacity: 0.6;
   transition: 0.3s;
 }
 
