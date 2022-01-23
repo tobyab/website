@@ -85,12 +85,12 @@ function MyApp({ Component, pageProps }) {
   const actions = [
     // Navigation
     {
-      id: "blog",
-      name: "Blog",
-      shortcut: ["b"],
-      keywords: "writing words blog b hello",
+      id: "home",
+      name: "Home",
+      shortcut: ["r", "h"],
+      keywords: "home return h index",
       section: "Navigation",
-      perform: () => window.open("/blog", "_self"),
+      perform: () => window.open("/", "_self"),
     },
     {
       id: "about",
@@ -109,12 +109,12 @@ function MyApp({ Component, pageProps }) {
       perform: () => window.open("/projects", "_self"),
     },
     {
-      id: "home",
-      name: "Home",
-      shortcut: ["r", "h"],
-      keywords: "home return h index",
+      id: "blog",
+      name: "Blog",
+      shortcut: ["b"],
+      keywords: "writing words blog b hello",
       section: "Navigation",
-      perform: () => window.open("/", "_self"),
+      perform: () => window.open("/blog", "_self"),
     },
     {
       id: "cv",
