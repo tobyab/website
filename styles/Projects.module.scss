@@ -23,21 +23,38 @@
 }
 
 .PStitle{
+    display: flex;
     position: absolute;
-    margin: 39.5rem 0rem 0rem 73rem;
-    font-size: 4.5vh;
-    width: 500px
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 7vh;
 }
 .PSdesc{
     position: absolute;
     font-size: 3vh;
-    margin: 42.5rem 0rem 0rem 73rem;
-    width: 500px
+    width: 500px;
+    top: 73%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
 }
 .PSwrapper{
     position: absolute;
-    margin: 17rem 0rem 0rem 73rem;
-    width: 50vh !important
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 200vh !important
+}
+.PSref{
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #0076FF;
+    font-size: 2vh;
+    font-weight: 400;
+    cursor: pointer
 }
 
 .HAwrapper{
