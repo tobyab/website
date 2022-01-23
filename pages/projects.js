@@ -32,6 +32,7 @@ export default function Projects() {
       <div className={styles.HAwrapper}>
     <Image className={styles.HAimg} src="/HA-prev.svg" alt="Home advisor" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
     </div>
+    <a className={styles.HAref} onClick={showHA}>Check it out</a>
       <h1 className={styles.HAtitle}>Home advisor</h1>
       <p className={styles.HAdesc}>Home advisor is the perfect way <br />
       for students to find a home.</p>
@@ -62,4 +63,8 @@ function githubRef() {
 
 function showPS() {
   window.open("https://positivestart.vercel.app", "_blank");
+}
+
+function showHA() {
+  window.open("https://github.com/blueriver212/homeadvisor", "_blank");
 }

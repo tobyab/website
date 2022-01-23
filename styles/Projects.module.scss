@@ -23,7 +23,6 @@
 }
 
 .PStitle{
-    display: flex;
     position: absolute;
     top: 60%;
     left: 50%;
@@ -41,10 +40,11 @@
 }
 .PSwrapper{
     position: absolute;
-    top: 20%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, 0%);
-    width: 200vh !important
+    width: 150vh !important;
+    z-index: -1
 }
 .PSref{
     position: absolute;
@@ -59,21 +59,35 @@
 
 .HAwrapper{
     position: absolute;
-    margin: 17rem 0rem 0rem 20rem;
-    width: 50vh !important
+    top: 205%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    width: 150vh !important
 }
 .HAdesc{
     position: absolute;
     font-size: 3vh;
-    margin: 42.5rem 0rem 0rem 20rem;
-    width: 500px;
-    font-size: 3vh;
+    top: 213%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    text-align: center;
 }
 .HAtitle{
     position: absolute;
-    margin: 39.5rem 0rem 0rem 20rem;
-    width: 500px;
-    font-size: 4.5vh;
+    top: 200%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 7vh;
+}
+.HAref{
+    position: absolute;
+    top: 225%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    color: #0076FF;
+    font-size: 2vh;
+    font-weight: 400;
+    cursor: pointer
 }
 .cmdkbutton{
     position: absolute;
@@ -81,7 +95,6 @@
     top: 2%;
     cursor: pointer;
     padding: 0.5% 0.1% !important;
-    background-color: #ffffff00;
     color: black;
     height: 8vh;
     width: 8vh;
