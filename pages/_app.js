@@ -150,6 +150,14 @@ function MyApp({ Component, pageProps }) {
     perform: () => window.open("https://github.com/itstobez", "_blank"),
   },
   {
+    id: "donate",
+    name: "Buy Me A Coffee",
+    shortcut: ["g", "h"],
+    keywords: "buy coffee donate b m a c",
+    section: "Social",
+    perform: () => window.open("https://www.buymeacoffee.com/tobyb", "_blank"),
+  },
+  {
     id: "polyworkAction",
     name: "Polywork",
     shortcut: ["p", "w"],
