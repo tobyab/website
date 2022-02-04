@@ -33,7 +33,6 @@ export default function Blog() {
 
     <h1 className={styles.title}>Blog.</h1>
     <h1 className={styles.subtitle}>My thoughts and feelings about everything tech.</h1>
-    <h1 className={styles.notice}>Nothing has been published yet! Check back later.</h1>
     
 </body>
 </div>
