@@ -28,7 +28,10 @@
       width: 8vh
     }
   }
-
+.content {
+  background-color:rgb(197, 42, 42);
+  width: 1000px
+}
 .title {
   position: absolute;
   top: 15%;
@@ -44,3 +47,53 @@
   font-size: 1.3rem;
   text-align: center;
 }
+.intro {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 1.5rem
+}
+.stack h2 {
+  position: absolute;
+  top: 50%;
+  left: 27.5%;
+  transform: translate(-50%, 0%);
+  font-size: 2rem
+}
+.stack p {
+  position: absolute;
+  top: 58%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 1.5rem
+}
+.design h2 {
+  position: absolute;
+  top: 80%;
+  left: 27.5%;
+  transform: translate(-50%, 0%);
+  font-size: 2rem
+}
+.design p {
+  position: absolute;
+  top: 88%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 1.5rem
+}
+.inspiration h2 {
+  position: absolute;
+  top: 100%;
+  left: 29%;
+  transform: translate(-50%, 0%);
+  font-size: 2rem
+}
+.inspiration p {
+  position: absolute;
+  top: 108%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 1.5rem
+}
+.inspiration a { cursor: pointer;  text-decoration: underline}

@@ -36,40 +36,51 @@ export default function Blog() {
 
     <p className={styles.content}>
         <article>
+            <div className={styles.intro}>
         Hello world, and welcome to my first ever blog post! 
         In this blog I&apos;ll be talking about the creation of my personal website. 
         I&apos;ve always loved the idea of having my own website. In fact, I even created one 5 years ago using blogger. 
         However, this is my first ever time making a proper portfolio website using JavaScript. 
         So this is how I&apos;ve done it! 
+            </div>
+
             <div className={styles.stack}>
             <h2>
                 Stack
             </h2>
-            The tools you use to create something is incredibly important. Here&apos;s what I used:<br />
-                Next.js<br/>
-                SCSS & PostCSS<br/>
-                Chakra-ui<br/>
-                Vercel
+            <p>
+            The tools you use to create something is incredibly important. So, here&apos;s are the tools I used:<br/>
+            <br/>
+            •   Next.js<br/>
+            •   SCSS & PostCSS<br/>
+            •   Chakra-ui<br/>
+            •   Vercel
+                </p>
                 </div>
 
                 <div className={styles.design}>
                 <h2>
                 Design
             </h2>
+            <p>
             I&apos;ve always loved minimalism, and &apos;ve always loved creating websites. 
             So for this reason, I decided to create a minimalist personal website. 
             I really love a simple black and white colour scheme, so I decided to use it for this website.
+            </p>
             </div>
 
             <div className={styles.inspiration}>
                 <h2>Inspiration</h2>
+                <p>
                 It&apos;s extremely important to have inspiration. Everything starts because of inspiration or a random notion. 
-                And in my case it was inspiration. So, let&apos;s take a look at some of my main inspirations for creating this website: <br />
+                And in my case it was inspiration. So, let&apos;s take a look at some of my main inspirations for creating this website: <br/>
+                <br/>
                 <div className={styles.inspirationLinks}>
-                <a href="https://brianlovin.com">brianlovin.com</a><br />
-                <a href="https://emilkowal.ski">emilkowal.ski</a><br />
-                <a href="https://mattglei.ch">mattglei.ch</a>
+                <a onClick={siteRef0}>brianlovin.com</a><br />
+                <a onClick={siteRef1}>emilkowal.ski</a><br />
+                <a onClick={siteRef2}>mattglei.ch</a>
                 </div>
+                </p>
             </div>
 
             <div className={styles.initialMockups}>
@@ -90,6 +101,14 @@ export default function Blog() {
     )
 }
 
-function githubRef() {
-  window.open("https://github.com/itstobez?tab=repositories", "_blank");
+function siteRef0() {
+  window.open("https://brianlovin.com", "_blank");
 }
+
+function siteRef1() {
+    window.open("https://emilkowal.ski", "_blank");
+  }
+
+function siteRef2() {
+    window.open("https://mattglei.ch", "_blank");
+  }
