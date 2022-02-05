@@ -7,8 +7,8 @@ export default function notFound() {
     return ( 
         <div className={styles.container}>
             <Head>
-                <title>Toby B / 404</title>
-                <link rel="icon" href="/peep (3).png" />
+                <title>:(</title>
+                <link rel="icon" href="/icon.png" />
                 </Head>
                 <body>
                     <h1 className={styles.title}>404</h1>

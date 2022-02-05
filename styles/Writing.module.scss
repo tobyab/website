@@ -1,7 +1,7 @@
 .cmdkbutton{
     position: absolute;
     left: 93.5%;
-    top: 5%;
+    top: 0.5%;
     margin: 1rem 0rem 0rem 1.6rem;
     cursor: pointer;
     padding: 0.5% 0.1% !important;
@@ -38,6 +38,7 @@
   left: 50%;
   transform: translate(-50%, 0%);
   font-size: 3rem;
+  flex-direction: inline-block;
 }
 .subtitle {
   position: absolute;
@@ -49,16 +50,16 @@
 }
 .intro {
   position: absolute;
-  top: 35%;
+  top: 36%;
   left: 50%;
   transform: translate(-50%, 0%);
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  flex-direction: inline-block;
 }
 .stack h2 {
   position: absolute;
   top: 50%;
-  left: 27.5%;
-  transform: translate(-50%, 0%);
+  left: 25%;
   font-size: 2rem
 }
 .stack p {
@@ -66,13 +67,13 @@
   top: 58%;
   left: 50%;
   transform: translate(-50%, 0%);
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  flex-direction: inline-block;
 }
 .design h2 {
   position: absolute;
   top: 80%;
-  left: 27.5%;
-  transform: translate(-50%, 0%);
+  left: 25%;
   font-size: 2rem
 }
 .design p {
@@ -80,13 +81,13 @@
   top: 88%;
   left: 50%;
   transform: translate(-50%, 0%);
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  flex-direction: inline-block;
 }
 .inspiration h2 {
   position: absolute;
   top: 100%;
-  left: 29%;
-  transform: translate(-50%, 0%);
+  left: 25%;
   font-size: 2rem
 }
 .inspiration p {
@@ -94,6 +95,48 @@
   top: 108%;
   left: 50%;
   transform: translate(-50%, 0%);
-  font-size: 1.5rem
+  font-size: 1.5rem;
+  flex-direction: inline-block;
 }
 .inspiration a { cursor: pointer;  text-decoration: underline}
+.initialMockups h2 {
+  position: absolute;
+  top: 132%;
+  left: 25%;
+  font-size: 2rem
+}
+.initialMockups p {
+  position: absolute;
+  top: 140%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 1.5rem;
+  flex-direction: inline-block;
+}
+.mock1Container {
+  position: absolute;
+  top: 130%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100vh !important;
+}
+.mock2Container {
+  position: absolute;
+  top: 200%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  width: 100vh !important;
+}
+.conclusion h2 {
+  position: absolute;
+  top: 280%;
+  left: 25%;
+  font-size: 2rem
+}
+.conclusion p {
+  position: absolute;
+  top: 288%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  font-size: 1.5rem
+}

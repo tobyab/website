@@ -7,7 +7,7 @@ export default function notFound() {
     return ( 
         <div className={styles.container}>
             <Head>
-                <title>Toby B / 500</title>
+                <title>:(</title>
                 <link rel="icon" href="/peep (3).png" />
                 </Head>
                 <body>
