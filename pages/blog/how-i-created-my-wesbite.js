@@ -90,11 +90,13 @@ export default function Blog() {
                     Both of these images were the start of this website. Wherever starting a new project, 
                     I to love get out my iPad and create a rough mockup what I&apos;m going to be building.
                     </p>
+                    <div className={styles.mockImages}>
                     <div className={styles.mock1Container}>
                     <Image className={styles.mock1} alt="My first mockup" src="/IMG_0045.jpeg" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
                     </div>
                     <div className={styles.mock2Container}>
                     <Image className={styles.mock2} alt="My second mockup" src="/IMG_0044.jpeg" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
+                    </div>
                     </div>
             </div>
             <div className={styles.conclusion}>

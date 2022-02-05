@@ -183,11 +183,11 @@
       width: 5vh
     }
   }
-  .notice {
+  .blogOneContent {
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, 50%);
-    font-size: 3vh;
-    font-weight: normal
+    font-size: 2vh;
+    cursor: pointer;
 }
