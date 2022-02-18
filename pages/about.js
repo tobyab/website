@@ -20,8 +20,8 @@ const { query } = useKBar();
       <meta name="twitter:card" content="13 y/o full stack web dev & designer." />
       <meta
         property="og:description"
-        content="13 y/o full stack web dev & designer." />
-      <meta property="og:image" content={"../public/preview.svg"} />
+        content="About Toby." />
+      <meta property="og:image" content={"/banner.png"} />
     </Head>
     <body>
       <h1 className={styles.title}>About.</h1>

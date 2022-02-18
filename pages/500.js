@@ -8,13 +8,13 @@ export default function notFound() {
         <div className={styles.container}>
             <Head>
                 <title>:(</title>
-                <link rel="icon" href="/peep (3).png" />
+                <link rel="icon" href="/icon.png" />
                 </Head>
                 <body>
                     <h1 className={styles.title}>500</h1>
                     <h3 className={styles.subtitle}>Gadzooks! It appears something has gone wrong!</h3>
                     <button onClick={retHome} className={styles.return}>Back to the landing!</button>
-                    <p className={styles.contact}>If you&apos;re still having issues please <a className={styles.contactMeRef} onClick={contactMe}>email me</a>!</p>
+                    <p className={styles.contact}>Check the <a onClick={viewStatus}>website status</a>!</p>
                 </body>
                 </div>
      );
@@ -24,6 +24,6 @@ function retHome() {
     window.open("/", "_self");
 }
 
-function contactMe() {
-    window.open("mailto:toby@tobyb.xyz", "_blank");
+function viewStatus() {
+    window.open("https://tobybxyz.statuspage.io", "_blank");
 }

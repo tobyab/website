@@ -21,8 +21,8 @@ export default function Blog() {
       <meta name="twitter:card" content="13 y/o full stack web dev & designer." />
       <meta
         property="og:description"
-        content="13 y/o full stack web dev & designer." />
-      <meta property="og:image" content={"../public/preview.svg"} />
+        content="Toby's blog." />
+      <meta property="og:image" content={"/banner.png"} />
     </Head>
     <body>
 
@@ -32,13 +32,6 @@ export default function Blog() {
 
     <h1 className={styles.title}>Blog.</h1>
     <h1 className={styles.subtitle}>My thoughts and feelings about everything tech.</h1>
-    
-    <div className={styles.blogOneContent}>
-      <a onClick={toBlogOne}>
-    <h1>How I created my personal website.</h1>
-    <p>By Toby. &nbsp; &nbsp; &nbsp; 2-5 minutes read.</p>
-      </a>
-    </div>
     
 </body>
 </div>

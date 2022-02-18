@@ -22,7 +22,7 @@
     position: relative;
     border-radius: 6px;
     overflow: hidden;
-    z-index: 1;
+    z-index: 0;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     top: 50%;
     left: 50%;
@@ -63,7 +63,7 @@
     left: 50%;
     transform: translate(-50%, 2200%);
 }
-.contactMeRef{
+.contact a {
     text-decoration: underline;
-    cursor: pointer
+    cursor: pointer;
 }
