@@ -52,7 +52,7 @@ function RenderResults() {
           <div
             style={{
               background: active ? "#eee" : "rgba(255, 255, 255, 0.98)" ,
-              padding: "0.7rem 1.5rem",
+              padding: "0.8rem 1.5rem",
               boxShadow: "var(--shadow)",
               //borderLeft: `3px solid ${active ? "transparent" : "transparent"}`,
               alignItems: "center",
@@ -116,14 +116,6 @@ function MyApp({ Component, pageProps }) {
       section: "Navigation",
       perform: () => window.open("/blog", "_self"),
     },
-    {
-      id: "cv",
-      name: "CV",
-      shortcut: ["c", "v"],
-      keywords: "c v cv about detail more info",
-      section: "Navigation",
-      perform: () => window.open("https://tobyb.notion.site/tobyb/All-about-me-7a2fa4d2c85f4bdeb8bf8556d7aac77a", "_blank"),
-    },
     // Social
     {
     id: "email",
@@ -151,27 +143,11 @@ function MyApp({ Component, pageProps }) {
   },
   {
     id: "donate",
-    name: "Buy Me A Coffee",
+    name: "Donate",
     shortcut: ["g", "h"],
     keywords: "buy coffee donate b m a c",
     section: "Social",
     perform: () => window.open("https://www.buymeacoffee.com/tobyb", "_blank"),
-  },
-  {
-    id: "polyworkAction",
-    name: "Polywork",
-    shortcut: ["p", "w"],
-    keywords: "p poly work polywork",
-    section: "Social",
-    perform: () => window.open("https://www.polywork.com/itstobez", "_blank"),
-  },
-  {
-    id: "openseaAction",
-    name: "OpenSea",
-    shortcut: ["o", "s"],
-    keywords: "open s sea crypto currency nft",
-    section: "Social",
-    perform: () => window.open("https://opensea.io/tobyb", "_blank"),
   },
   // Utilities
   {
@@ -198,14 +174,6 @@ function MyApp({ Component, pageProps }) {
     section: "Utilities",
     perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/commits/main", "_blank"),
   },
-  {
-    id: "rr",
-    name: "???",
-    shortcut: ["r", "r"],
-    keywords: "??? ? rick roll r",
-    section: "Utilities",
-    perform: () => window.open("https://www.youtube.com/watch?v=a3Z7zEc7AXQ", "_blank"),
-  },
   ];
 
   return (
@@ -224,17 +192,6 @@ function MyApp({ Component, pageProps }) {
   }
 
 export default MyApp
-
-function cmdIcon() {
-  return (
-  <svg onClick={useKBar} width="100" height="100" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path
-        d="m19.681 10.406-7.09-6.179a.924.924 0 0 0-1.214.002l-7.06 6.179c-.642.561-.244 1.618.608 1.618.51 0 .924.414.924.924v5.395c0 .51.414.923.923.923h3.236V14.54c0-.289.234-.522.522-.522h2.94c.288 0 .522.233.522.522v4.728h3.073c.51 0 .924-.413.924-.923V12.95c0-.51.413-.924.923-.924h.163c.853 0 1.25-1.059.606-1.62Z"
-        fill="#000"
-      />
-    </svg>
-  );
-}
 
 // MASSIVE thank you to Ella for helping me with kbar,
 // I strongly recommend you check out her github here: https://github.com/eilla1 :)
