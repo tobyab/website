@@ -24,18 +24,8 @@ export default function Blog() {
         content="13 y/o full stack web dev & designer." />
       <meta property="og:image" content={"../public/preview.svg"} />
     </Head>
+    <h11>hello world</h11>
 </div>
     )
 }
 
-function siteRef0() {
-  window.open("https://brianlovin.com", "_blank");
-}
-
-function siteRef1() {
-    window.open("https://emilkowal.ski", "_blank");
-  }
-
-function siteRef2() {
-    window.open("https://mattglei.ch", "_blank");
-  }

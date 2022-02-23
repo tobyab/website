@@ -41,8 +41,3 @@ export default function Blog() {
 function toBlogOne() {
   window.open("blog/how-i-created-my-wesbite", "_self");
 }
-
-// node.js, "classic" way:
-var MarkdownIt = require('markdown-it'),
-    md = new MarkdownIt();
-var result = md.render('#hello world!');
