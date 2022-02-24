@@ -4,7 +4,6 @@ import Link from 'next/link'
 import Head from 'next/head'
 import { useKBar } from 'kbar'
 
-
 export default function Blog() {
   const { query } = useKBar();
   return (
@@ -32,6 +31,13 @@ export default function Blog() {
 
     <h1 className={styles.title}>Blog.</h1>
     <h1 className={styles.subtitle}>My thoughts and feelings about everything tech.</h1>
+
+  <div className={styles.postOne}>
+    <a Link href="/blog/how-i-built-my-website">
+      <h1>How I Built My Website.</h1>
+      <p>By Toby. &nbsp; 1 minute read.</p>
+    </a>
+  </div>
     
 </body>
 </div>
