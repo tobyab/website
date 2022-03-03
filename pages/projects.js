@@ -13,6 +13,7 @@ export default function Projects() {
       <link rel="icon" href="./icon.png" />
       <meta property="og:url" content="https://personal-sitev2.vercel.app" />
       <meta property="og:type" content="Personal website." />
+      <meta name="theme-color" content="#fff" />
       <meta
         property="og:title"
         content="Toby B." />

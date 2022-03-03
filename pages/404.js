@@ -9,6 +9,7 @@ export default function notFound() {
             <Head>
                 <title>:(</title>
                 <link rel="icon" href="/icon.png" />
+                <meta name="theme-color" content="#fff" />
                 </Head>
                 <body>
                     <h1 className={styles.title}>404</h1>

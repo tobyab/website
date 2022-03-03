@@ -17,6 +17,7 @@ const { query } = useKBar();
         <title>Toby B</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="./icon.png" />
+        <meta name="theme-color" content="#fff" />
         <meta property="og:url" content="https://tobyb.xyz" />
         <meta property="og:type" content="Personal website." />
         <meta

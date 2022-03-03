@@ -1,70 +1,70 @@
 .title{
-  position: absolute;
-  top: -5%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  font-size: 20vh
-}
-
-.subtitle{
-  position: absolute;
-  top: 28%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  font-size: 3vh;
-  font-weight: normal;
-  text-align: center;
-}
-
-.aboutMe{
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%, 0%);
-  font-size: 3vh;
-  text-align: left;
-  overflow: none;
-  width: 550px
-}
-
-@media only screen and (max-width: 700px) {
-  .aboutMe{
-    width: 400px
-  }
-}
-
-.contactRef {
-  cursor: pointer;
-  text-decoration: underline
-  }
-
-  .cmdkbutton{
     position: absolute;
-    left: 95%;
-    top: 2%;
-    cursor: pointer;
-    padding: 0.5% 0.1% !important;
-    background-color: white;
-    color: black;
-    height: 8vh;
-    width: 8vh;
-    font-size: 7vh !important;
-    transition: transform 250ms cubic-bezier(.2,.8,.4,1);
-    z-index: 1;
-  } 
-  
-  .cmdkbutton:hover{
-      transform: scale(1.10);
-      background-color: #fff;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 20vh
   }
-  .cmdkbutton:active{
-      transform: scale(0.9);
-  }  
+  
+  .subtitle{
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 3vh;
+    font-weight: normal;
+    text-align: center;
+  }
+  
+  .aboutMe{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 3vh;
+    text-align: left;
+    overflow: none;
+    width: 550px
+  }
+  
   @media only screen and (max-width: 700px) {
-    .cmdkbutton{
-      top: 1.5%;
-      left: 89%;
-      height: 6vh;
-      width: 6vh
+    .aboutMe{
+      width: 400px
     }
   }
+  
+  .contactRef {
+    cursor: pointer;
+    text-decoration: underline
+    }
+  
+    .cmdkbutton{
+      position: absolute;
+      left: 95%;
+      top: 2%;
+      cursor: pointer;
+      padding: 0.5% 0.1% !important;
+      background-color: white;
+      color: black;
+      height: 8vh;
+      width: 8vh;
+      font-size: 7vh !important;
+      transition: transform 250ms cubic-bezier(.2,.8,.4,1);
+      z-index: 1;
+    } 
+    
+    .cmdkbutton:hover{
+        transform: scale(1.10);
+        background-color: #fff;
+    }
+    .cmdkbutton:active{
+        transform: scale(0.9);
+    }  
+    @media only screen and (max-width: 700px) {
+      .cmdkbutton{
+        top: 1.5%;
+        left: 89%;
+        height: 6vh;
+        width: 6vh
+      }
+    }
