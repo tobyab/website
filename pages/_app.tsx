@@ -1,4 +1,4 @@
-import '../styles/globals.css'
+import '../styles/globals.css';
 import {
   KBarProvider,
   KBarPortal,
@@ -8,7 +8,9 @@ import {
   KBarResults,
   useMatches,
 } from "kbar";
-import { useRouter } from "next/router";
+import toast, { Toaster } from 'react-hot-toast'
+import copy from 'copy-to-clipboard';
+
 
 const searchStyle = {
   padding: "12px 16px",
@@ -32,10 +34,10 @@ const animatorStyle = {
 };
 
 const groupNameStyle = {
-  padding: "8px 16px",
+  padding: "8px 20px",
   fontSize: "10px",
   opacity: 1,
-  color: "#8f8f8f",
+  color: "#828282",
   background: "rgba(255, 255, 255, 0.98)",
 };
 
@@ -51,25 +53,18 @@ function RenderResults() {
         ) : (
           <div
             style={{
-              background: active ? "#eee" : "rgba(255, 255, 255, 0.98)" ,
+              background: active ? "rgb(230, 230, 230)" : "rgba(255, 255, 255, 0.98)",
               padding: "0.8rem 1.5rem",
               boxShadow: "var(--shadow)",
-              //borderLeft: `3px solid ${active ? "transparent" : "transparent"}`,
               alignItems: "center",
               justifyContent: "space-between",
               cursor: "pointer",
-              //padding: "12px 16px",
               height: "100",
                borderLeft: `0px solid ${
                active ? "var(--foreground)" : "transparent"
              }`,
               display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              cursor: "pointer",
-              display: "flex",
-              gap: "8px",
-              alignItems: "center",
+              gap: "0",
               fontSize: 16,
             }}
           >
@@ -82,6 +77,7 @@ function RenderResults() {
 }
 
 function MyApp({ Component, pageProps }) {
+ 
   const actions = [
     // Navigation
     {
@@ -117,14 +113,6 @@ function MyApp({ Component, pageProps }) {
       perform: () => window.open("/blog", "_self"),
     },
     // Social
-    {
-    id: "email",
-    name: "Email",
-    shortcut: ["e"],
-    keywords: "email hello message send e talk communicate speak",
-    section: "Social",
-    perform: () => window.open("mailto:mail.toby@icloud.com", "_blank"),
-  },
   {
     id: "twitterAction",
     name: "Twitter",
@@ -148,6 +136,26 @@ function MyApp({ Component, pageProps }) {
     keywords: "buy coffee donate b m a c",
     section: "Social",
     perform: () => window.open("https://www.buymeacoffee.com/tobyb", "_blank"),
+  },
+  // Contact
+  {
+    id: "email",
+    name: "Email",
+    shortcut: ["e"],
+    keywords: "email hello message send e talk communicate speak",
+    section: "Contact",
+    perform: () => window.open("mailto:mail.toby@icloud.com", "_blank"),
+  },
+  {
+    id: "discord",
+    name: "Discord",
+    shortcut: ["e"],
+    keywords: "discord hello message send d talk communicate speak offer",
+    section: "Contact",
+    perform: () => {
+        copy('Toby B#8552');
+        toast.success('Copied to clipboard!')  
+    },
   },
   // Utilities
   {
@@ -177,7 +185,7 @@ function MyApp({ Component, pageProps }) {
   ];
 
   return (
-      <KBarProvider actions={actions}>
+      <KBarProvider actions={actions} options={{ disableScrollbarManagement: true }}>
         <KBarPortal>
           <KBarPositioner>
             <KBarAnimator style={animatorStyle}>
@@ -187,6 +195,7 @@ function MyApp({ Component, pageProps }) {
           </KBarPositioner>
         </KBarPortal>
         <Component {...pageProps} />
+      <Toaster position="bottom-right"/>
       </KBarProvider>
     );
   }

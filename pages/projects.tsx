@@ -6,6 +6,7 @@ import { useKBar } from 'kbar'
 
 export default function Projects() {
   const { query } = useKBar();
+  
   return (
     <div className={styles.container}>
     <Head>
@@ -27,7 +28,7 @@ export default function Projects() {
 
     <h1 className={styles.title}>Projects.</h1>
     <h1 className={styles.subtitle}> To see all of my projects, check out my <a className={styles.gitRef} onClick={githubRef}>GitHub</a>.</h1>
-
+    
     <div className={styles.homeadvisorContatiner}>
       <div className={styles.HAwrapper}>
     <Image className={styles.HAimg} src="/conifer.svg" alt="Home advisor" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
