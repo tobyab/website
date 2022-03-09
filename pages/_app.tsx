@@ -10,7 +10,7 @@ import {
 } from "kbar";
 import toast, { Toaster } from 'react-hot-toast'
 import copy from 'copy-to-clipboard';
-
+import { SessionProvider } from "next-auth/react"
 
 const searchStyle = {
   padding: "12px 16px",
@@ -76,7 +76,7 @@ function RenderResults() {
   );
 }
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ session, Component, pageProps }) {
  
   const actions = [
     // Navigation
@@ -185,6 +185,7 @@ function MyApp({ Component, pageProps }) {
   ];
 
   return (
+  <SessionProvider session={session}>
       <KBarProvider actions={actions} options={{ disableScrollbarManagement: true }}>
         <KBarPortal>
           <KBarPositioner>
@@ -197,6 +198,7 @@ function MyApp({ Component, pageProps }) {
         <Component {...pageProps} />
       <Toaster position="bottom-right"/>
       </KBarProvider>
+      </SessionProvider>
     );
   }
 
