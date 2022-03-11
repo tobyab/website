@@ -37,9 +37,10 @@ const groupNameStyle = {
   padding: "8px 20px",
   fontSize: "10px",
   opacity: 1,
-  color: "#828282",
+  color: "#9c9c9c",
+  textTransform: "uppercase",
   background: "rgba(255, 255, 255, 0.98)",
-};
+} as React.CSSProperties
 
 
 function RenderResults() {
@@ -77,7 +78,6 @@ function RenderResults() {
 }
 
 function MyApp({ session, Component, pageProps }) {
- 
   const actions = [
     // Navigation
     {
@@ -129,14 +129,6 @@ function MyApp({ session, Component, pageProps }) {
     section: "Social",
     perform: () => window.open("https://github.com/itstobez", "_blank"),
   },
-  {
-    id: "donate",
-    name: "Donate",
-    shortcut: ["g", "h"],
-    keywords: "buy coffee donate b m a c",
-    section: "Social",
-    perform: () => window.open("https://www.buymeacoffee.com/tobyb", "_blank"),
-  },
   // Contact
   {
     id: "email",
@@ -182,6 +174,14 @@ function MyApp({ session, Component, pageProps }) {
     section: "Utilities",
     perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/commits/main", "_blank"),
   },
+  {
+    id: "donate",
+    name: "Donate",
+    shortcut: ["d", "n"],
+    keywords: "buy coffee donate b m a c d",
+    section: "Utilities",
+    perform: () => window.open("https://www.buymeacoffee.com/tobyb", "_blank"),
+  },
   ];
 
   return (
@@ -198,7 +198,7 @@ function MyApp({ session, Component, pageProps }) {
         <Component {...pageProps} />
       <Toaster position="bottom-right"/>
       </KBarProvider>
-      </SessionProvider>
+  </SessionProvider>
     );
   }
 

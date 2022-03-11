@@ -1,7 +1,6 @@
-.container{
+.container {
     padding: 0 2rem;
 }
-
 .title{
     position: absolute;
     top: -5%;
@@ -31,7 +30,6 @@
     cursor: pointer;
     text-decoration: underline
 }
-
 .PStitle{
     position: absolute;
     top: 60%;
@@ -154,61 +152,19 @@
         transform: translate(-50%, 0%);
     }
   }
-.cmdkbutton{
-    position: absolute;
-    left: 95%;
-    top: 2%;
-    cursor: pointer;
-    padding: 0.5% 0.1% !important;
-    color: black;
-    height: 8vh;
-    width: 8vh;
-    font-size: 7vh !important;
-    transition: transform 250ms cubic-bezier(.2,.8,.4,1);
-    z-index: 1;
-  } 
-  
-  .cmdkbutton:hover{
-      transform: scale(1.10);
-      background-color: #fff;
-  }
-  .cmdkbutton:active{
-      transform: scale(0.9);
-  }  
-  @media only screen and (max-width: 700px) {
-    .cmdkbutton{
-      left: 90%;
-      margin: 0.5rem 0rem 0rem 1rem;
-      height: 5vh;
-      width: 5vh
-    }
-  }
-.postOne {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    font-size: 2vh;
-    cursor: pointer;
-}
-.loginbutton {
+
+.posts {
     position: absolute;
     top: 40%;
     left: 50%;
     transform: translate(-50%, 50%);
-    font-size: 2vh;
-    cursor: pointer;
-    border: rgba(148, 146, 146, 0.447) solid 0.1px;
-    background-color: white;
-    box-shadow: 12px 12px 30px rgba(0, 0, 0, 0.25);
-    height: 5rem;
-    width: 30rem;
-    border-radius: 0.5rem;
-}
-.loginbutton svg {
-    width: 2em;
-    display: inline;
-    margin-right: 10px;
-    position: relative;
-    top: 0.15em;
-}
+  }
+
+/*
+position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    
+     position: absolute;
+    margin: 2rem 5rem;*/
