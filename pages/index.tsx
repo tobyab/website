@@ -5,9 +5,9 @@ import React, {useEffect} from "react";
 import { useKBar } from 'kbar';
 import { TextLoop } from "react-text-loop-next";
 import MenuButton from '../components/menuButton'
+import Link from 'next/link'
 
 export default function Home() {
-const { query } = useKBar();
   return (
     <div className={styles.container}>
       <Head>
@@ -34,7 +34,7 @@ const { query } = useKBar();
           <h1 className={styles.title}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
 
 <div className={styles.aboutRotate}>
-  <p className={styles.age}>13 y/o</p>
+  <p className={styles.age}> 13 y/o</p>
   <div className={styles.rotatingText}>
   <TextLoop delay={5}>
           <p>full stack web dev.</p>
@@ -47,6 +47,7 @@ const { query } = useKBar();
     </div>
 </div>
 
+<Link href="/guestbook">DEV TEST</Link>
           <div className={styles.mediv}>
               <Image className={styles.me} src="/me.svg" alt="Toby" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
           </div>

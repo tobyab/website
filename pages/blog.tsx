@@ -1,8 +1,5 @@
 import styles from '../styles/Projects.module.scss'
-import Image from 'next/image'
-import Link from 'next/link'
 import Head from 'next/head'
-import { useKBar } from 'kbar'
 import MenuButton from '../components/menuButton'
 
 export default function Blog() {
@@ -29,7 +26,7 @@ export default function Blog() {
 
     <h1 className={styles.title}>Blog.</h1>
     <h1 className={styles.subtitle}>My thoughts and feelings about everything tech.</h1>
-    
+
     <div className={styles.posts}>
     <div className={styles.postTwo}>
     <a href="/blog/favorite-tools">
