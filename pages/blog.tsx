@@ -1,6 +1,7 @@
 import styles from '../styles/Projects.module.scss'
 import Head from 'next/head'
 import MenuButton from '../components/menuButton'
+import Subscribe from '../components/subscribe'
 
 export default function Blog() {
   return (
@@ -21,7 +22,8 @@ export default function Blog() {
         content="Toby's blog." />
       <meta property="og:image" content={"/banner.png"} />
     </Head>
-    <MenuButton></MenuButton>
+    <Subscribe />
+    <MenuButton />
     <body>
 
     <h1 className={styles.title}>Blog.</h1>
@@ -29,7 +31,7 @@ export default function Blog() {
 
     <div className={styles.posts}>
     <div className={styles.postTwo}>
-    <a href="/blog/favorite-tools">
+    <a href="/blog/favourite-tools">
       <h1>My favourite tools.</h1>
       <p>
         By Toby. &nbsp; 5 minute read.</p>

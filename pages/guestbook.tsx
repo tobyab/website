@@ -2,9 +2,11 @@ import styles from '../styles/Projects.module.scss'
 import Head from 'next/head'
 import { signIn } from "next-auth/react"
 import prisma from '../utils/prisma';
+import Guestbook from '../components/guestbook';
 
-export default function Guestbook() {
+export default function GuestbookPage({ fallbackData }) {
   return (
+    <>
     <div className={styles.container}>
     <Head>
     <title>Toby B / Guestbook</title>
@@ -26,12 +28,36 @@ export default function Guestbook() {
 
     <h1 className={styles.title}>Guestbook.</h1>
     <h1 className={styles.subtitle}>Leave feedback, a joke or some advice! Everything is read by me, and any comments are appreciated!</h1>
-    <button  onClick={(e) => {
-              e.preventDefault();
-              signIn('github');
-              }}>Sign in</button>
 
 </body>
+<>
+<Guestbook fallbackData={fallbackData} />
+</>
 </div>
+</>
   )
 }
+
+export async function getStaticProps() {
+  const entries = await prisma.guestbook.findMany({
+    orderBy: {
+      updated_at: 'desc',
+    },
+  });
+
+  const fallbackData = entries.map((entry) => ({
+    id: entry.id.toString(),
+    body: entry.body,
+    created_by: entry.created_by.toString(),
+    updated_at: entry.updated_at.toString()
+  }));
+
+  return {
+    props: {
+      fallbackData
+    },
+    revalidate: 60
+  };
+}
+
+// Heavily inspired by Leerob! (leerob.io).

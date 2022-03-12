@@ -43,5 +43,5 @@ export default async function handler(
     });
   }
 
-  return res.send("Oi! This method isn't allowed!");
+  return res.send("Oi! That method isn't allowed!");
 }

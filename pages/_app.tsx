@@ -38,7 +38,6 @@ const groupNameStyle = {
   fontSize: "10px",
   opacity: 1,
   color: "#9c9c9c",
-  textTransform: "uppercase",
   background: "rgba(255, 255, 255, 0.98)",
 } as React.CSSProperties
 
@@ -128,6 +127,14 @@ function MyApp({ session, Component, pageProps }) {
     keywords: "source code g",
     section: "Social",
     perform: () => window.open("https://github.com/itstobez", "_blank"),
+  },
+  {
+    id: "linkedInAction",
+    name: "LinkedIn",
+    shortcut: ["l", "i"],
+    keywords: "l i about linked further contact link in",
+    section: "Social",
+    perform: () => window.open("https://www.linkedin.com/in/toby-b-987229232/", "_blank"),
   },
   // Contact
   {

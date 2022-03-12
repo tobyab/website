@@ -46,8 +46,6 @@ export default function Home() {
         </TextLoop>
     </div>
 </div>
-
-<Link href="/guestbook">DEV TEST</Link>
           <div className={styles.mediv}>
               <Image className={styles.me} src="/me.svg" alt="Toby" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
           </div>
