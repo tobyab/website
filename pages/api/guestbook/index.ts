@@ -1,6 +1,8 @@
 import prisma from '../../../utils/prisma';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getSession } from 'next-auth/react';
+var Filter = require('bad-words'),
+    filter = new Filter();
 
 export default async function handler(
   req: NextApiRequest,
@@ -32,7 +34,7 @@ export default async function handler(
     const newEntry = await prisma.guestbook.create({
       data: {
         email,
-        body: (req.body.body || '').slice(0, 500),
+        body: filter.clean(req.body.body || '').slice(0, 500),
         created_by: name
       }
     });
@@ -43,5 +45,5 @@ export default async function handler(
     });
   }
 
-  return res.send("Oi! That method isn't allowed!");
+  return res.send("Hey! That method isn't allowed!");
 }

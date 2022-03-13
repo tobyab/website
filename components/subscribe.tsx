@@ -9,7 +9,7 @@ export default function Subscribe() {
         e.preventDefault();
         setForm({ state: Form.Loading });
 
-        const res = fetch("../api/subscribe", {
+        const res = fetch("../pages/api/subscribe", {
             headers: {
                 'Content-Type': 'application/json'
               },
@@ -26,21 +26,14 @@ export default function Subscribe() {
             }
             setForm({
                 state: Form.Success,
-                message: `Hooray! You're now on the list.`
+                message: `Yay! You're now subscibed to my newsletter.`
               });
     }
     return (
         <>
         <form className="form" onSubmit={subscribe}>
             <h1>Stay up to date.</h1>
-            <input
-          ref={input}
-          aria-label="Email for newsletter"
-          placeholder="tim@apple.com"
-          type="email"
-          autoComplete="email"
-          required
-        />
+            <input ref={input} placeholder="mail.toby@icloud.com" type="email" autoComplete="email" required />
         <button type="submit">Subscribe</button>
         </form>
         </>

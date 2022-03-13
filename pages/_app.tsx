@@ -193,6 +193,7 @@ function MyApp({ session, Component, pageProps }) {
 
   return (
   <SessionProvider session={session}>
+        <link rel="icon" href="./icon.png" />
       <KBarProvider actions={actions} options={{ disableScrollbarManagement: true }}>
         <KBarPortal>
           <KBarPositioner>
