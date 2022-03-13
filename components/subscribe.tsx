@@ -22,7 +22,6 @@ export default function Subscribe() {
                 state: Form.Error,
                 message: error
               });
-              return;
             }
             setForm({
                 state: Form.Success,

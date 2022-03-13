@@ -1,0 +1,22 @@
+.container {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.signForm {
+    border: 0.01rem solid rgb(180, 178, 178);
+    border-radius: 0.4rem;
+    padding: 1.5rem;
+}
+.signForm form {
+    height: 2rem !important;
+    width: 5rem;
+}
+.Pagecontainer h1{
+    position: absolute;
+    top: -5%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+    font-size: 20vh
+}

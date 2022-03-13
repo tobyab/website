@@ -1,13 +1,12 @@
 import { useRef, useState } from 'react'
-import prisma from '../utils/prisma';
 import { Form, FormState } from '../utils/states';
 import { signIn, useSession } from 'next-auth/react';
 import useSWR, { useSWRConfig } from 'swr'
 import toast, { Toaster } from 'react-hot-toast'
 import Loader from './Loader'
 import fetcher from '../utils/fetcher'
-import { format, parseISO } from 'date-fns';
-
+import styles from '../styles/Guestbook.module.scss'
+import moment from 'moment'
 
 function GuestbookEntry({ entry, user }) {
   const { mutate } = useSWRConfig();
@@ -22,19 +21,20 @@ function GuestbookEntry({ entry, user }) {
   };
 
   return (
-    <div>
-      <div className="entryText">{entry.body}</div>
+    <div className={styles.entries}>
+      <div className="entryText"><b>{entry.body}</b></div>
       <div>
-        <p>{entry.created_by}</p>
+        <p>
+       <h1>{entry.created_by}</h1>
+        </p>
+        <p>
+         {( moment(entry.created_at).format('LL hh:mm'))}
+         </p>
+        
         {user && entry.created_by === user.name && (
-          <>
-            <a
-              className="text-sm text-red-600 dark:text-red-400"
-              onClick={deleteEntry}
-            >
+            <button onClick={deleteEntry}>
               Delete
-            </a>
-          </>
+            </button>
         )}
       </div>
     </div>
@@ -78,16 +78,19 @@ export default function Guestbook({ fallbackData }) {
         state: Form.Success,
         message: `Epic! Thank you for signing my guestbook!`
       });
+      toast('Thanks for signing my guestbook!')
     };
   
     return (
       <>
-  <div className="container">
-        <h2> Sign the Guestbook </h2>
+  <div className={styles.container}>
+    <div className={styles.signForm}>
+        <h2> Leave a message. </h2>
         <p className="my-1 text-gray-800 dark:text-gray-200">
-          Leave a comment below. It could be anything!
+          Leave a comment below for me, and all future visitors of this site!
         </p>
         {!session && (
+          <b>
           <a
             href="/api/auth/signin/github"
             onClick={(e) => {
@@ -97,6 +100,7 @@ export default function Guestbook({ fallbackData }) {
           >
             Sign in.
           </a>
+          </b>
         )}
 
         {session?.user && (
@@ -116,6 +120,7 @@ export default function Guestbook({ fallbackData }) {
         ) : form.state === Form.Success ? (
           toast.success("Yay! Thanks for signing my guestbook.")
         ) : null}
+        </div>
       <div>
          {entries?.map((entry) => (
        <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />

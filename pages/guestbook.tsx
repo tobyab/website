@@ -1,17 +1,16 @@
-import styles from '../styles/Projects.module.scss'
+import styles from '../styles/Guestbook.module.scss'
 import Head from 'next/head'
 import prisma from '../utils/prisma';
 import Guestbook from '../components/guestbook'
+import MenuButton from '../components/menuButton'
 
 export default function GuestbookPage({ fallbackData }) {
   return (
-    <div className="container">
+    <div className={styles.Pagecontainer}>
+    <MenuButton />
         <h1>
-          Guestbook
+          Guestbook.
         </h1>
-        <p className="text-gray-600 dark:text-gray-400 mb-4">
-          Leave a comment below. Everything is read an appreciated!
-        </p>
         <Guestbook fallbackData={fallbackData} />
       </div>
   )
@@ -39,4 +38,4 @@ export async function getStaticProps() {
   };
 }
 
-// Heavily inspired by Leerob! (leerob.io).
+// Heavily inspired by Leerob! (https://leerob.io).

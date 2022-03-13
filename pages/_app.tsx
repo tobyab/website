@@ -104,6 +104,14 @@ function MyApp({ session, Component, pageProps }) {
       perform: () => window.open("/projects", "_self"),
     },
     {
+      id: "guestbook",
+      name: "Guestbook",
+      shortcut: ["g"],
+      keywords: "writing words blog g hello leave feedback joke b book",
+      section: "Navigation",
+      perform: () => window.open("/guestbook", "_self"),
+    },
+    {
       id: "blog",
       name: "Blog",
       shortcut: ["b"],
