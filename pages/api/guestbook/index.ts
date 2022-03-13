@@ -19,6 +19,8 @@ export default async function handler(
       entries.map((entry) => ({
         id: entry.id.toString(),
         body: entry.body,
+        created_by: entry.created_by,
+        updated_at: entry.updated_at
       }))
     );
   }
@@ -35,13 +37,15 @@ export default async function handler(
       data: {
         email,
         body: filter.clean(req.body.body || '').slice(0, 500),
-        created_by: name
+        created_by: name,
       }
     });
 
     return res.status(200).json({
       id: newEntry.id.toString(),
       body: newEntry.body,
+      created_by: newEntry.created_by,
+      updated_at: newEntry.updated_at
     });
   }
 

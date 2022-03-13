@@ -25,17 +25,19 @@ function GuestbookEntry({ entry, user }) {
       <div className="entryText"><b>{entry.body}</b></div>
       <div>
         <p>
-       <h1>{entry.created_by}</h1>
         </p>
         <p>
-         {( moment(entry.created_at).format('LL hh:mm'))}
+        {entry.created_by} &nbsp;
+         {( moment(entry.updated_at).format('LL hh:mm'))}
+         &nbsp;
+         {user && entry.created_by === user.name && (
+            <a onClick={deleteEntry}>
+             Delete
+          </a>
+            )}
          </p>
         
-        {user && entry.created_by === user.name && (
-            <button onClick={deleteEntry}>
-              Delete
-            </button>
-        )}
+       
       </div>
     </div>
   );
