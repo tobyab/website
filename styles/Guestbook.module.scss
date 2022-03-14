@@ -9,9 +9,23 @@
     border-radius: 0.4rem;
     padding: 1.5rem;
 }
-.signForm form {
+.signForm input {
+    height: 2rem !important;
+    width: 25rem;
+    border-radius: 0.4rem 0rem 0rem 0.4rem;
+    border: none;
+    background-color:rgba(215, 215, 215, 0.44);
+    padding-left: 0.5rem
+}
+.signForm button {
     height: 2rem !important;
     width: 5rem;
+    background-color: black;
+    color: white;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 0rem 0.4rem 0.4rem 0rem;
 }
 .Pagecontainer h1{
     position: absolute;
@@ -20,3 +34,22 @@
     transform: translate(-50%, 0%);
     font-size: 20vh
 }
+.entries p {
+    color: rgb(142, 142, 142);
+    font-size: 0.8rem
+}
+.entries a {
+    color: rgba(255, 0, 0, 0.639);
+    cursor: pointer;
+}
+.entries b {
+    font-size: 1.2rem
+}
+.entryText {
+    padding-top: 1.5rem
+}
+.logoutState button {
+    border-radius: 0.4rem; background-color: #fff; border: 1px solid rgb(142, 142, 142); color: black; width: 10rem
+}
+.logoutState p {
+    color: rgb(142, 142, 142); font-size: 0.8rem }

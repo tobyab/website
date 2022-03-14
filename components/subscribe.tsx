@@ -32,7 +32,7 @@ export default function Subscribe() {
         <>
         <form className="form" onSubmit={subscribe}>
             <h1>Stay up to date.</h1>
-            <input ref={input} placeholder="mail.toby@icloud.com" type="email" autoComplete="email" required />
+            <input ref={input} autoComplete="email" type="email" placeholder="mail.toby@icloud.com" required />
         <button type="submit">Subscribe</button>
         </form>
         </>

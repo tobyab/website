@@ -1,4 +1,4 @@
-import prisma from '../../../utils/prisma';
+import prisma from '../../utils/prisma';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getSession } from 'next-auth/react';
 var Filter = require('bad-words'),

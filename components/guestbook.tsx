@@ -7,39 +7,18 @@ import Loader from './Loader'
 import fetcher from '../utils/fetcher'
 import styles from '../styles/Guestbook.module.scss'
 import moment from 'moment'
+import Link from 'next/link'
 
 function GuestbookEntry({ entry, user }) {
-  const { mutate } = useSWRConfig();
-  const deleteEntry = async (e) => {
-    e.preventDefault();
-
-    await fetch(`/api/guestbook/${entry.id}`, {
-      method: 'DELETE'
-    });
-
-    mutate('/api/guestbook');
-  };
-
   return (
     <div className={styles.entries}>
-      <div className="entryText"><b>{entry.body}</b></div>
-      <div>
+      <b>{entry.body}</b>
         <p>
-        </p>
-        <p>
-        {entry.created_by} &nbsp;
+        {entry.created_by} |&nbsp;
          {( moment(entry.updated_at).format('LL hh:mm'))}
          &nbsp;
-         {user && entry.created_by === user.name && (
-            <a onClick={deleteEntry}>
-             Delete
-          </a>
-            )}
          </p>
-        
-       
       </div>
-    </div>
   );
 }
 
@@ -80,29 +59,32 @@ export default function Guestbook({ fallbackData }) {
         state: Form.Success,
         message: `Epic! Thank you for signing my guestbook!`
       });
-      toast('Thanks for signing my guestbook!')
     };
   
     return (
       <>
   <div className={styles.container}>
     <div className={styles.signForm}>
-        <h2> Leave a message. </h2>
-        <p className="my-1 text-gray-800 dark:text-gray-200">
+        <h2>Leave a message. </h2>
+        <p>
           Leave a comment below for me, and all future visitors of this site!
         </p>
         {!session && (
+          <div className={styles.logoutState}>
           <b>
-          <a
-            href="/api/auth/signin/github"
+            <Link href="/api/auth/signin/github">
+          <button
             onClick={(e) => {
               e.preventDefault();
               signIn('github');
             }}
           >
-            Sign in.
-          </a>
+            Sign in with GitHub.
+          </button>
+          </Link>
           </b>
+          <p>Only public information is displayed.</p>
+          </div>
         )}
 
         {session?.user && (
@@ -113,20 +95,24 @@ export default function Guestbook({ fallbackData }) {
               required
             />
             <button type="submit">
-              {form.state === Form.Loading ? <Loader /> : 'Sign'}
+              {form.state === Form.Loading ? <Loader /> : "Sign"}
             </button>
           </form>
         )}
         {form.state === Form.Error ? (
           toast.error("Uh oh! Something went wrong. Try again.")
         ) : form.state === Form.Success ? (
-          toast.success("Yay! Thanks for signing my guestbook.")
+
+          toast("Thanks for signing my guestbook!", {
+            icon: "🎉",
+          })
+
         ) : null}
         </div>
-      <div>
-         {entries?.map((entry) => (
-       <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
-      ))}
+      <div className={styles.entryText}>
+      {entries?.map((entry) => (
+     <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
+     ))}
     </div>
   </div>
       </>
