@@ -14,7 +14,6 @@ export default function Home() {
         <title>Toby B</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="./icon.png" />
-        <meta name="theme-color" content="#000"/>
         <meta property="og:url" content="https://tobyb.xyz" />
         <meta property="og:type" content="Personal website." />
         <meta
@@ -28,8 +27,8 @@ export default function Home() {
         />
         <meta property="og:image" content={"/banner.png"} />
       </Head>
-      <MenuButton></MenuButton>
-      <body>
+      <MenuButton/>
+      <body> 
 
           <h1 className={styles.title}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
 

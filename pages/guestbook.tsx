@@ -7,7 +7,24 @@ import MenuButton from '../components/menuButton'
 export default function GuestbookPage({ fallbackData }) {
   return (
     <div className={styles.Pagecontainer}>
-    <MenuButton />
+    <Head>
+      <title>Toby B / Guestbook</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="icon" href="./icon.png" />
+        <meta property="og:url" content="https://tobyb.xyz" />
+        <meta property="og:type" content="Personal website." />
+        <meta
+          property="og:title"
+          content="Toby B."
+        />
+        <meta name="twitter:card" content="Toby's guestbook." />
+        <meta
+          property="og:description"
+          content="13 y/o full stack web dev & designer."
+        />
+        <meta property="og:image" content={"/banner.png"} />
+    </Head>
+    <MenuButton/>
         <h1>
           Guestbook.
         </h1>
