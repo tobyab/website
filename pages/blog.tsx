@@ -1,7 +1,6 @@
 import styles from '../styles/Projects.module.scss'
 import Head from 'next/head'
 import MenuButton from '../components/menuButton'
-import Subscribe from '../components/subscribe'
 
 export default function Blog() {
   return (
@@ -22,7 +21,6 @@ export default function Blog() {
         content="Toby's blog." />
       <meta property="og:image" content={"/banner.png"} />
     </Head>
-    <Subscribe />
     <MenuButton />
     <body>
 

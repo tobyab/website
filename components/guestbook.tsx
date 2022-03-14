@@ -72,7 +72,7 @@ export default function Guestbook({ fallbackData }) {
         {!session && (
           <div className={styles.logoutState}>
           <b>
-            <Link href="/api/auth/signin/github">
+            <Link href="/api/auth/signin/github" passHref>
           <button
             onClick={(e) => {
               e.preventDefault();
