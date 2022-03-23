@@ -39,10 +39,10 @@ const { query } = useKBar();
             building computers.
               </p>
               <h2>Present</h2>
-              <p>As of right now, I'm working on my own <Link href="/projects">side projects</Link>, 
+              <p>As of right now, I&apos;m working on my own <Link href="/projects">side projects</Link>, 
                meeting people at <Link href="https://hackclub.com">hack club</Link> and contributing 
-               to <Link href="https://github.com/ItsTobez">open source projects</Link>. I'm also currently
-                searching for internships for the summer, and It'd be a pleasure to <Link href="mailto:mail.toby@icloud.com">work with you</Link>!</p>
+               to <Link href="https://github.com/ItsTobez">open source projects</Link>. I&apos;m also currently
+                searching for internships for the summer, and It&apos;d be a pleasure to <Link href="mailto:mail.toby@icloud.com">work with you</Link>!</p>
           <h2>Previous</h2>
           <p>I built a tool to help you create your first personal website, <Link href="https://conifer.vercel.app">Conifer</Link>. 
           I also built myself a custom computer at the age of 10. Going way back, my first time programming was at the age of 7, where I started making games using my 
