@@ -48,7 +48,7 @@ const { query } = useKBar();
           I also built myself a custom computer at the age of 10. Going way back, my first time programming was at the age of 7, where I started making games using my 
           raspberry pi model B+.</p>
 
-          <Image className={styles.me} src="/toby.jpeg" alt="Toby" width="100%" height="100%" layout="responsive" objectFit="contain" priority caption="Source: giphy.com" captionSpacing={20} margin={2} />
+          <Image className={styles.me} src="/toby.jpeg" alt="Toby" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
             </div>
     </body>
     </div>
