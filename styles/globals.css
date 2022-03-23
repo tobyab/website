@@ -15,22 +15,14 @@ a {
   box-sizing: border-box;
 }
 
-a:link{
-  color: rgb(0, 0, 0)
-}
-
-a:visited{
-  color: rgb(0, 0, 0)
+a {
+  color: #0070F3 !important;
+  cursor: pointer;
 }
 
 a:hover{
-  opacity: 0.6;
-  transition: 0.3s;
-}
-
-a:active{
-  color: #686868;
-}
+  text-decoration: underline;
+ }
 
 ::selection {
   background: rgb(0, 0, 0);
@@ -54,7 +46,6 @@ a:active{
   transition: transform 250ms cubic-bezier(.2,.8,.4,1);
   z-index: 1;
 } 
-
 .cmdkbutton:hover{
     transform: scale(1.10);
 }
@@ -62,7 +53,7 @@ a:active{
     transform: scale(0.9);
 }  
 @media only screen and (max-width: 700px) {
-  .cmdkbutton{
+  .cmdkbutton {
     left: 85%;
     height: 7vh;
     width: 7vh

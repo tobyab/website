@@ -13,7 +13,6 @@
         font-size: 12vh;
         top: 7%;
         left: 50%;
-        transform: translate(-50%, 0%);
     }
   }
 .subtitle{
@@ -28,6 +27,7 @@
 }
 .gitRef{
     cursor: pointer;
+    color: black !important;
     text-decoration: underline
 }
 .PStitle{
@@ -159,12 +159,7 @@
     left: 50%;
     transform: translate(-50%, 50%);
   }
-
-/*
-position: absolute;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%, 50%);
-    
-     position: absolute;
-    margin: 2rem 5rem;*/
+  .posts a {
+    color: black !important;
+    text-decoration: none !important;
+  }

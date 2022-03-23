@@ -25,12 +25,11 @@ const { query } = useKBar();
         content="About Toby." />
       <meta property="og:image" content={"/banner.png"} />
     </Head>
-    <MenuButton></MenuButton>
+    <MenuButton/>
     <body>
       <h1 className={styles.title}>About.</h1>
       <h2 className={styles.subtitle}>A small paragraph about me.</h2>
       
-          <article>
             <div className={styles.aboutMe}>
               <p>
             Hi, I&apos;m Toby. I&apos;m a 13 year old full
@@ -39,7 +38,24 @@ const { query } = useKBar();
             with tech, from programming to
             building computers.
               </p>
-              <p>
+              <h2>Present</h2>
+              <p>As of right now, I'm working on my own <Link href="/projects">side projects</Link>, 
+               meeting people at <Link href="https://hackclub.com">hack club</Link> and contributing 
+               to <Link href="https://github.com/ItsTobez">open source projects</Link>. I'm also currently
+                searching for internships for the summer, and It'd be a pleasure to <Link href="mailto:mail.toby@icloud.com">work with you</Link>!</p>
+          <h2>Previous</h2>
+          <p>I built a tool to help you create your first personal website, <Link href="https://conifer.vercel.app">Conifer</Link>. 
+          I also built myself a custom computer at the age of 10. Going way back, my first time programming was at the age of 7, where I started making games using my 
+          raspberry pi model B+.</p>
+
+          <Image className={styles.me} src="/toby.jpeg" alt="Toby" width="100%" height="100%" layout="responsive" objectFit="contain" priority caption="Source: giphy.com" captionSpacing={20} margin={2} />
+            </div>
+    </body>
+    </div>
+  );
+}
+
+/*    <p>
             I started programming when I was only
             7 years old, and I built my first computer
             at 10 years old. Over the past few
@@ -53,14 +69,4 @@ const { query } = useKBar();
             helping loads of people with their own projects,
             and I&apos;d love to try and help you with yours.
             So, <a className={styles.contactRef} onClick={contactMe}>lets talk</a>.
-              </p>
-            </div>
-          </article>
-    </body>
-    </div>
-  );
-}
-
-function contactMe() {
-  window.open("mailto:mail.toby@icloud.com", "_blank");
-}
+              </p> */
