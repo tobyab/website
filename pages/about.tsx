@@ -44,9 +44,9 @@ const { query } = useKBar();
                to <Link href="https://github.com/ItsTobez">open source projects</Link>. I&apos;m also currently
                 searching for internships for the summer, and It&apos;d be a pleasure to <Link href="mailto:mail.toby@icloud.com">work with you</Link>!</p>
           <h2>Previous</h2>
-          <p>I built a tool to help you create your first personal website, <Link href="https://conifer.vercel.app">Conifer</Link>. 
-          I also built myself a custom computer at the age of 10. Going way back, my first time programming was at the age of 7, where I started making games using my 
-          raspberry pi model B+.</p>
+          <p>Over the years I&apos;ve worked on many things. However, here are a few of my favourite ones. First, I have <Link href="https://conifer.vercel.app">Conifer</Link>. Conifer is the easiest way to build your first ever personal website. 
+            My second project is <Link href="https://epicrepositories.vercel.app">Epic repositories</Link>. Epic repositories is a newsletter that sends you some of the coolest open source projects on GitHub every week.
+            If we go way back, my first ever time programming was at the age of 7, using my Raspberry Pi model B+.</p>
 
           <Image className={styles.me} src="/toby.jpeg" alt="Toby" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
             </div>
