@@ -54,19 +54,3 @@ const { query } = useKBar();
     </div>
   );
 }
-
-/*    <p>
-            I started programming when I was only
-            7 years old, and I built my first computer
-            at 10 years old. Over the past few
-            years, I&apos;ve become more and more
-            interested in all sorts of different projects,
-            tools and languages!
-              </p>
-              <p>
-            Recently, I&apos;ve been really interested in
-            open source programming and I&apos;ve been
-            helping loads of people with their own projects,
-            and I&apos;d love to try and help you with yours.
-            So, <a className={styles.contactRef} onClick={contactMe}>lets talk</a>.
-              </p> */
