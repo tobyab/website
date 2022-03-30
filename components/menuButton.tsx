@@ -1,6 +1,5 @@
 import { useKBar } from 'kbar'
 import Link from 'next/link'
-import { Circle } from 'react-shapes';
 
 export default function MenuButton() {
   const { query } = useKBar();

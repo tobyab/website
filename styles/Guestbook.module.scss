@@ -8,6 +8,7 @@
     border: 0.01rem solid rgb(180, 178, 178);
     border-radius: 0.4rem;
     padding: 1.5rem;
+    width: 30rem;
 }
 .signForm input {
     height: 2rem !important;
@@ -45,8 +46,10 @@
 .entries b {
     font-size: 1.2rem
 }
+
 .entryText {
-    padding-top: 1.5rem
+    padding-top: 1.5rem;
+    width: 20rem;
 }
 .logoutState button {
     border-radius: 0.4rem; background-color: #fff; border: 1px solid rgb(142, 142, 142); color: black; width: 10rem
