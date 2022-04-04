@@ -29,20 +29,20 @@ export default function Home() {
         <p className={styles.name}>Toby Brown</p>
       <h1 className={styles.title}>13 y/o full stack web dev.</h1>
       <div className={styles.paragraph}>
-        Hi, my name's Toby. I'm a 13 year old full stack web developer from London. I've been programming for about 6 years
-        and have worked on dozens of projects. As of right now, I'm interested in open source software and
+        Hi, my name&apos;s Toby. I&apos;m a 13 year old full stack web developer from London. I&apos;ve been programming for about 6 years
+        and have worked on dozens of projects. As of right now, I&apos;m interested in open source software and
         creating things for the web.
         <p className={styles.alert}>
           <Link href="mailto:mail.toby@icloud.com">
-            I'm currently searching for jobs →
+            I&apos;m currently searching for jobs →
             </Link>
         </p>
         I have experience in lots of areas of web development. My strongest of which being TypeScript, React and MySQL.
-        I also have experience in operating systems like Linux. Outside of web development, I'm interested in ethical hacking,
+        I also have experience in operating systems like Linux. Outside of web development, I&apos;m interested in ethical hacking,
          UI design, computers and music.
 
         <p>
-         My goal is to try and make a positive impact on the world through software, and to leave it better than I found it.
+          My goal is to try and make a positive impact on the world through software, and to leave it better than I found it.
           I attempt to inspire, teach and be a friend to everyone-
           no matter who they are.
          </p> 
