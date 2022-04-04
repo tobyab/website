@@ -10,7 +10,7 @@ import {
 } from "kbar";
 import toast, { Toaster } from 'react-hot-toast'
 import copy from 'copy-to-clipboard';
-import { SessionProvider } from "next-auth/react"
+import { SessionProvider } from 'next-auth/react'
 
 const searchStyle = {
   padding: "12px 16px",
@@ -40,7 +40,6 @@ const groupNameStyle = {
   color: "#9c9c9c",
   background: "rgba(255, 255, 255, 0.98)",
 } as React.CSSProperties
-
 
 function RenderResults() {
   const { results } = useMatches();
@@ -155,7 +154,7 @@ function MyApp({ session, Component, pageProps }) {
   },
   {
     id: "discord",
-    name: "Discord",
+    name: "Discord ",
     shortcut: ["e"],
     keywords: "discord hello message send d talk communicate speak offer",
     section: "Contact",
@@ -221,4 +220,4 @@ function MyApp({ session, Component, pageProps }) {
 export default MyApp
 
 // MASSIVE thank you to Ella for helping me with kbar,
-// I strongly recommend you check out her github here: https://github.com/eilla1 :)
+// I strongly recommend you check out her github here: https://github.com/exu3 :)

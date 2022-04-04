@@ -29,6 +29,7 @@
     "next": "12.1.0",
     "next-auth": "^4.2.1",
     "react": "17.0.2",
+    "react-awesome-shapes": "^0.1.12",
     "react-dom": "17.0.2",
     "react-ga": "^3.3.0",
     "react-hot-toast": "^2.2.0",
@@ -36,7 +37,8 @@
     "resolve-url-loader": "^4.0.0",
     "sass": "^1.48.0",
     "swr": "^1.2.2",
-    "typescript": "^4.6.2"
+    "typescript": "^4.6.2",
+    "use-lanyard": "^1.1.0"
   },
   "devDependencies": {
     "@types/react": "^17.0.42",

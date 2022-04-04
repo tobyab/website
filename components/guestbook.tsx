@@ -16,7 +16,6 @@ function GuestbookEntry({ entry, user }) {
         <p>
         {entry.created_by} |&nbsp;
          {( moment(entry.updated_at).format('LL hh:mm'))}
-         &nbsp;
          </p>
       </div>
   );
@@ -56,8 +55,7 @@ export default function Guestbook({ fallbackData }) {
   
       input.current.value = '';
       setForm({
-        state: Form.Success,
-        message: `Epic! Thank you for signing my guestbook!`
+        state: Form.Success
       });
     };
   
@@ -67,7 +65,7 @@ export default function Guestbook({ fallbackData }) {
     <div className={styles.signForm}>
         <h2>Leave a message. </h2>
         <p>
-          Leave a comment below for me, and all future visitors of this site!
+          Leave a message below for me, and all future visitors of this site!
         </p>
         {!session && (
           <div className={styles.logoutState}>
