@@ -29,7 +29,6 @@
     "next": "12.1.0",
     "next-auth": "^4.2.1",
     "react": "17.0.2",
-    "react-awesome-shapes": "^0.1.12",
     "react-dom": "17.0.2",
     "react-ga": "^3.3.0",
     "react-hot-toast": "^2.2.0",

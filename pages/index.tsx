@@ -3,7 +3,6 @@ import styles from '../styles/Home.module.scss';
 import React from "react";
 import MenuButton from '../components/menuButton'
 import Link from 'next/link'
-import { Circle } from "react-awesome-shapes";
 
 export default function Home() {
   return (
