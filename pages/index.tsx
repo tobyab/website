@@ -34,7 +34,7 @@ export default function Home() {
         creating things for the web.
         <p className={styles.alert}>
           <Link href="mailto:mail.toby@icloud.com">
-            I&apos;m currently searching for jobs →
+            I&apos;m currently searching for work →
             </Link>
         </p>
         I have experience in lots of areas of web development. My strongest of which being TypeScript, React and MySQL.
