@@ -133,7 +133,7 @@ function MyApp({ session, Component, pageProps }) {
     shortcut: ["g", "h"],
     keywords: "source code g",
     section: "Social",
-    perform: () => window.open("https://github.com/itstobez", "_blank"),
+    perform: () => window.open("https://github.com/developedbytoby", "_blank"),
   },
   {
     id: "linkedInAction",
