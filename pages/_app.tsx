@@ -11,7 +11,6 @@ import {
 import toast, { Toaster } from 'react-hot-toast'
 import copy from 'copy-to-clipboard';
 import { SessionProvider } from 'next-auth/react'
-import Footer from '../components/footer'
 import splitbee from '@splitbee/web'
 
 const searchStyle = {
@@ -195,7 +194,6 @@ function MyApp({ session, Component, pageProps }) {
 
   return (
   <SessionProvider session={session}>
-    <Footer/>
         <link rel="icon" href="./icon.png" />
       <KBarProvider actions={actions} options={{ disableScrollbarManagement: true }}>
         <KBarPortal>
