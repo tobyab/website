@@ -77,7 +77,9 @@ function RenderResults() {
 }
 
 function MyApp({ session, Component, pageProps }) {
-  splitbee.init()
+  splitbee.init({
+    token: process.env.SPLITBEE_TOKEN
+  })
   const actions = [
     // Navigation
     {
