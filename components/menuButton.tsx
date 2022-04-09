@@ -1,5 +1,4 @@
 import { useKBar } from 'kbar'
-import Link from 'next/link'
 
 export default function MenuButton() {
   const { query } = useKBar();
