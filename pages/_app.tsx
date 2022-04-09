@@ -11,6 +11,8 @@ import {
 import toast, { Toaster } from 'react-hot-toast'
 import copy from 'copy-to-clipboard';
 import { SessionProvider } from 'next-auth/react'
+import Footer from '../components/footer'
+import splitbee from '@splitbee/web'
 
 const searchStyle = {
   padding: "12px 16px",
@@ -76,6 +78,7 @@ function RenderResults() {
 }
 
 function MyApp({ session, Component, pageProps }) {
+  splitbee.init()
   const actions = [
     // Navigation
     {
@@ -178,15 +181,7 @@ function MyApp({ session, Component, pageProps }) {
     shortcut: ["s", "c"],
     keywords: "source code s",
     section: "Utilities",
-    perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/", "_blank"),
-  },
-  {
-    id: "commits",
-    name: "Latest Commits",
-    shortcut: ["l", "c"],
-    keywords: "code l c commit late",
-    section: "Utilities",
-    perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz-v2/commits/main", "_blank"),
+    perform: () => window.open("https://github.com/ItsTobez/tobyb.xyz/", "_blank"),
   },
   {
     id: "donate",
@@ -200,6 +195,7 @@ function MyApp({ session, Component, pageProps }) {
 
   return (
   <SessionProvider session={session}>
+    <Footer/>
         <link rel="icon" href="./icon.png" />
       <KBarProvider actions={actions} options={{ disableScrollbarManagement: true }}>
         <KBarPortal>

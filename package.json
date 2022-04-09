@@ -16,6 +16,7 @@
     "@mdx-js/mdx": "^2.0.0",
     "@next/mdx": "^12.1.0",
     "@prisma/client": "3.11.0",
+    "@splitbee/web": "^0.3.0",
     "@theme-ui/typography": "^0.13.1",
     "bad-words": "^3.0.4",
     "cmdk": "^0.0.4",

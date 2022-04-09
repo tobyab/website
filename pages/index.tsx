@@ -51,22 +51,3 @@ export default function Home() {
         </div>
   );
 }
-
-/*          <h1 className={styles.title}>Hi,<br></br> I&apos;m <br></br>Toby.</h1>
-
-<div className={styles.aboutRotate}>
-  <p className={styles.age}> 13 y/o</p>
-  <div className={styles.rotatingText}>
-  <TextLoop delay={5}>
-          <p>full stack web dev.</p>
-          <p>designer.</p>
-          <p>nerd.</p>
-          <p>hackclubber.</p>
-          <p>open source enthusiast.</p>
-          <p>pizza eater.</p>
-        </TextLoop>
-    </div>
-</div>
-          <div className={styles.mediv}>
-              <Image className={styles.me} src="/me.svg" alt="Toby" width="100%" height="100%" layout="responsive" objectFit="contain" priority />
-          </div> */
