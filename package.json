@@ -25,7 +25,7 @@
     "framer-motion": "^4.1.17",
     "graphql": "^16.3.0",
     "jquery": "^3.6.0",
-    "kbar": "^0.1.0-beta.24",
+    "kbar": "0.1.0-beta.36",
     "moment": "^2.29.4",
     "next": "12.1.0",
     "next-auth": "^4.10.3",
