@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "@auth0/nextjs-auth0": "^1.7.0",
-    "@chakra-ui/react": "^1.7.2",
+    "@chakra-ui/react": "1.8.9",
     "@emotion/react": "^11.7.0",
     "@emotion/styled": "^11.6.0",
     "@mdx-js/loader": "^2.1.0",
