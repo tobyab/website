@@ -4,18 +4,17 @@ import { signIn, useSession } from 'next-auth/react';
 import useSWR, { useSWRConfig } from 'swr'
 import toast, { Toaster } from 'react-hot-toast'
 import fetcher from '../utils/fetcher'
-import styles from '../styles/Guestbook.module.scss'
 import moment from 'moment'
 import Link from 'next/link'
 
 function GuestbookEntry({ entry, user }) {
   return (
-    <div className={styles.entries}>
+    <div>
       <b>{entry.body}</b>
         <p>
-        {entry.created_by} |&nbsp;
+          {entry.created_by} |&nbsp;
           {( moment(entry.updated_at).format('LL hh:mm'))}
-          </p>
+        </p>
       </div>
   );
 }
@@ -60,14 +59,14 @@ export default function Guestbook({ fallbackData }) {
   
     return (
       <>
-  <div className={styles.container}>
-    <div className={styles.signForm}>
+  <div>
+    <div>
         <h2>Leave a message. </h2>
         <p>
           Leave a message below for me, and all future visitors of this site!
         </p>
         {!session && (
-          <div className={styles.logoutState}>
+          <div>
           <b>
             <Link href="/api/auth/signin/github" passHref>
           <button
@@ -106,11 +105,11 @@ export default function Guestbook({ fallbackData }) {
 
         ) : null}
         </div>
-      <div className={styles.entryText}>
+    <div>
       {entries?.map((entry) => (
         <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
       ))}
     </div>
   </div>
       </>
-    )}
+  )}

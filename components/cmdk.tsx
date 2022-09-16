@@ -1,22 +1,22 @@
 import {
-  KBarProvider,
-  KBarPortal,
-  KBarPositioner,
-  KBarAnimator,
-  KBarSearch,
-  KBarResults,
-  useMatches,
+    KBarProvider,
+    KBarPortal,
+    KBarPositioner,
+    KBarAnimator,
+    KBarSearch,
+    KBarResults,
+    useMatches,
 } from "kbar";
 
 const searchStyle = {
-  padding: "12px 16px",
-  fontSize: "16px",
-  width: "100%",
-  outline: "none",
-  border: "none",
-  background: "rgba(255, 255, 255, 0.98)",
-  color: "var(--foreground)",
-  borderBottom: "0.5px solid #f0f0f0",
+    padding: "12px 16px",
+    fontSize: "16px",
+    width: "100%",
+    outline: "none",
+    border: "none",
+    background: "rgba(255, 255, 255, 0.98)",
+    color: "var(--foreground)",
+    borderBottom: "0.5px solid #f0f0f0",
 };
 
 const animatorStyle = {
