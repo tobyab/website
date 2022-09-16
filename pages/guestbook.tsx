@@ -1,4 +1,3 @@
-import styles from '../styles/Guestbook.module.scss'
 import Head from 'next/head'
 import prisma from '../utils/prisma';
 import Guestbook from '../components/guestbook'
@@ -6,7 +5,7 @@ import MenuButton from '../components/menuButton'
 
 export default function GuestbookPage({ fallbackData }) {
   return (
-    <div className={styles.Pagecontainer}>
+    <div>
     <Head>
       <title>Toby B / Guestbook</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -54,5 +53,3 @@ export async function getStaticProps() {
     revalidate: 60
   };
 }
-
-// Heavily inspired by Leerob! (https://leerob.io).

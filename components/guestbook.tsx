@@ -3,7 +3,6 @@ import { Form, FormState } from '../utils/states';
 import { signIn, useSession } from 'next-auth/react';
 import useSWR, { useSWRConfig } from 'swr'
 import toast, { Toaster } from 'react-hot-toast'
-import Loader from './Loader'
 import fetcher from '../utils/fetcher'
 import styles from '../styles/Guestbook.module.scss'
 import moment from 'moment'
@@ -15,8 +14,8 @@ function GuestbookEntry({ entry, user }) {
       <b>{entry.body}</b>
         <p>
         {entry.created_by} |&nbsp;
-         {( moment(entry.updated_at).format('LL hh:mm'))}
-         </p>
+          {( moment(entry.updated_at).format('LL hh:mm'))}
+          </p>
       </div>
   );
 }
@@ -93,7 +92,7 @@ export default function Guestbook({ fallbackData }) {
               required
             />
             <button type="submit">
-              {form.state === Form.Loading ? <Loader /> : "Sign"}
+              {form.state === Form.Loading ? <p>Loading</p> : "Sign"}
             </button>
           </form>
         )}
@@ -109,8 +108,8 @@ export default function Guestbook({ fallbackData }) {
         </div>
       <div className={styles.entryText}>
       {entries?.map((entry) => (
-     <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
-     ))}
+        <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
+      ))}
     </div>
   </div>
       </>
