@@ -86,7 +86,7 @@ export default function Home(props: Props, { fallbackData }) {
 
             <h2 className="font-medium text-2xl my-16">Some other cool things I&apos;m working on right now:</h2>
             <div className="flex space-x-4">
-              <div className="bg-gray-100 rounded-lg p-8 grid">
+              <div className="bg-gray-100 rounded-lg p-8 hover:border-2">
                 <div>
                 <img
                   className="w-auto rounded-lg"
@@ -95,12 +95,12 @@ export default function Home(props: Props, { fallbackData }) {
                 <h1 className="font-medium text-2xl">Tilde</h1>
                 <p className="text-xl w-2/3">An open source, simple Markdown editor built with electron!</p>
               </div>
-              <div className="bg-gray-100 rounded-lg p-8 grid">
+              <div className="bg-gray-100 rounded-lg p-8 hover:border-2">
                 <img
                   src=""
                 />
                 <h1 className="font-medium text-2xl">Aretav</h1>
-                <p className="text-xl w-2/3">The open source, simple Markdown editor built on electron!</p>
+                <p className="text-xl w-2/3">Aretav allows you to create a beutiful portfolio in a matter of minutes.</p>
               </div>
             </div>
           </div>

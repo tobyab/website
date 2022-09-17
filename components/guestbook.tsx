@@ -64,6 +64,7 @@ export default function Guestbook({ fallbackData }) {
                 <div>
                   <Link href="/api/auth/signin/github" passHref>
                     <button
+                      className="p-4 bg-gray-100 rounded-lg mb-8"
                       onClick={(e) => {
                         e.preventDefault();
                         signIn('github');
@@ -72,7 +73,6 @@ export default function Guestbook({ fallbackData }) {
                       Sign in with GitHub.
                     </button>
                   </Link>
-                <p>Only public information is displayed.</p>
                 </div>
               )}
 
