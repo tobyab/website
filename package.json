@@ -2,7 +2,7 @@
   "name": "next-personal-site",
   "private": true,
   "scripts": {
-    "dev": "NODE_OPTIONS=\"--max_old_space_size=2048\" next dev",
+    "dev": "NODE_OPTIONS=\"--max_old_space_size=4096\" next",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -25,7 +25,6 @@
     "framer-motion": "^4.1.17",
     "graphql": "^16.3.0",
     "jquery": "^3.6.0",
-    "kbar": "^0.1.0-beta.24",
     "moment": "^2.29.4",
     "next": "12.1.0",
     "next-auth": "^4.10.3",
