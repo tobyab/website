@@ -7,9 +7,10 @@ export type Repo = {
 }
 
 export function GetRepo() {
-    const get = useSWR<Repo[], Error>(
+    const get = useSWR<Repo[], Error> (
         "https://gh-pinned-repos.egoist.dev/?username=developedbytoby"
     )
+
     return {
         ...get,
         data: get.data?.map(item => {
