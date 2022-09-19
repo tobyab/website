@@ -1,7 +1,7 @@
 import { useRef, useState } from 'react'
 import { Form, FormState } from '../utils/states';
 import { signIn, useSession } from 'next-auth/react';
-import useSWR, { useSWRConfig } from 'swr'
+import useSWR from 'swr'
 import toast from 'react-hot-toast'
 import fetcher from '../utils/fetcher'
 import moment from 'moment'
@@ -21,7 +21,7 @@ function GuestbookEntry({ entry, user }) {
 export default function Guestbook({ fallbackData }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
   const input = useRef(null);
-  const { data: entries } = useSWR('/api/guestbook', fetcher, {
+  const { data: entries } = useSWR("/api/guestbook", fetcher, {
     fallbackData
   });
     
@@ -31,14 +31,14 @@ export default function Guestbook({ fallbackData }) {
       e.preventDefault();
       setForm({ state: Form.Loading });
   
-      const res = await fetch('/api/guestbook', {
+      const res = await fetch("/api/guestbook", {
         body: JSON.stringify({
           body: input.current.value
         }),
         headers: {
-          'Content-Type': 'application/json'
+          'Content-Type': "application/json"
         },
-        method: 'POST'
+        method: "POST"
       });
   
       const { error } = await res.json();
@@ -50,7 +50,7 @@ export default function Guestbook({ fallbackData }) {
         return;
       }
   
-      input.current.value = '';
+      input.current.value = "";
       setForm({
         state: Form.Success
       });
@@ -70,7 +70,7 @@ export default function Guestbook({ fallbackData }) {
                         signIn('github');
                       }}
                     >
-                      Sign in with GitHub.
+                      Sign in with GitHub
                     </button>
                   </Link>
                 </div>

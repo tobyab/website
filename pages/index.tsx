@@ -1,29 +1,11 @@
 import Image from "next/image"
 import Link from "next/link"
-import { GetRepo } from "../utils/hooks"
-import type { Repo } from "../utils/hooks"
 import { age, year, message } from "../utils/time"
 import prisma from "../utils/prisma"
 import Guestbook from "../components/guestbook"
+import { ProjectCard } from "../components/Cards"
 
-type Props = {
-  repository: Repo[];
-}
-
-function Card({ repository: projects }: { repository: Repo }) {
-  return (
-    <div>
-      <h1 className="capitalize">{projects.repo}</h1>
-      <p>Hello</p>
-    </div>
-  )
-}
-
-export default function Home(props: Props, { fallbackData }) {
-  const {data: projects = props.repository} = GetRepo();
-  //flex flex-col pt-24 space-x-4 text-left justify-center px-8 z-0 w-3/4 mx-auto
-  //flex justify-center flex-col place-items-center px-8 z-0 bg-green-300
-  //
+export default function Home({ fallbackData }) {
   return (
     <div className="">
         <div className="place-items-center justify-center flex flex-col w-3/5 px-8 mx-auto">
@@ -32,7 +14,7 @@ export default function Home(props: Props, { fallbackData }) {
             <div className="flex-col space-y-2 pt-48 mr-80">
               <p className="text-xl">Hey there, I&apos;m</p>
               <h1 className="text-6xl font-bold">Toby Brown!</h1>
-              <p className="text-xl">A {age} year old full stack web developer.</p>
+              <p className="text-xl">A year old {age} full stack web developer.</p>
               <div className="space-x-4 pt-2">
                 <Link href="mailto:mail.toby@icloud.com">
                   <a target="_blank" rel="noopener norefferer">
@@ -71,29 +53,45 @@ export default function Home(props: Props, { fallbackData }) {
                 width={500}
               />
           </div>
-
           <div className="my-64 w-auto">
             <h1 className="text-5xl font-bold">Projects</h1>
-            <p className="text-xl lg:w-1/2 w-2/3 mt-2">A collection of a few of my projects, pulled straight from my GitHub!</p>
-            <>
-              {projects?.map(project => (
-                <Card 
-                  key={project.repo} 
-                  repository={project}
+            <p className="text-xl lg:w-1/2 w-2/3 mt-2">A collection of a few small projects I&apos;ve worked on!</p>
+            <div className="space-y-4 mt-16">
+              <div className="md:flex space-x-4">
+                <ProjectCard
+                  title="Blog"
+                  description="📖 My blog powered by Next.js, Tailwind and ContentLayer"
+                  link="https://github.com/blog"
                 />
-              ))}
-            </>
-
+                <ProjectCard
+                  title="Conifer"
+                  description="🌲The (almost) perfect personal website template"
+                  link="https://github.com/developedbytoby/conifer"
+                />
+              </div>
+              <div className="md:flex space-x-4">
+                <ProjectCard
+                  title="Pluto"
+                  description="🤖 A small space themed quiz run by Pluto!"
+                  link="https://github.com/developedbytoby/pluto"
+                />
+                <ProjectCard
+                  title="Website"
+                  description="🏡 My personal website built with Next.js, TailwindCSS, Prisma and Planetscale"
+                  link="https://tobyb.wiki"
+                />
+              </div>
+            </div>
             <h2 className="font-medium text-2xl my-16">Some other cool things I&apos;m working on right now:</h2>
             <div className="md:flex space-x-4">
               <Link href="https://github.com/developedbytoby/tilde">
-                <a target="_blank" ref="noopener norefferer">
-                <div className="rounded-lg p-6 border-2 border-transparent hover:border-gray-200 bg-gray-100">
-                  <div className="">
-                  <img
-                    className="rounded-lg h-full"
-                    src="/screenshots/tilde.png"
-                  />
+                <a target="_blank" rel="noopener noreferrer">
+                <div className="rounded-lg p-8 border-2 border-transparent hover:border-gray-200 bg-gray-100">
+                  <div>
+                    <img
+                      className="rounded-lg h-full"
+                      src="/screenshots/tilde.png"
+                    />
                   </div>
                   <h1 className="font-medium text-2xl pt-4">Tilde</h1>
                   <p className="text-xl w-2/3">Tilde is a simple and open source Markdown editor built on electron!</p>
@@ -101,8 +99,8 @@ export default function Home(props: Props, { fallbackData }) {
                 </a>
               </Link>
               <Link href="https://aretav.com">
-                <a target="_blank" ref="noopener norefferer">
-                  <div className="bg-gray-100 rounded-lg p-6 border-2 border-transparent hover:border-gray-200">
+                <a target="_blank" rel="noopener noreferrer">
+                  <div className="bg-gray-100 rounded-lg p-8 border-2 border-transparent hover:border-gray-200">
                     <div className="">
                     <img
                       className="rounded-lg"
@@ -116,42 +114,47 @@ export default function Home(props: Props, { fallbackData }) {
               </Link>
             </div>
           </div>
-
+          <div className="my-64 w-auto">
+            <h1 className="text-5xl font-bold">About</h1>
+            <p className="text-xl lg:w-1/2 w-2/3 mt-2 mb-16">A small paragraph about me!</p>
+            <p className="w-2/3 text-xl">
+            </p>
+          </div>
           <div className="mb-64">
             <h1 className="text-5xl font-bold">Let&apos;s be friends</h1>
-            <p className="text-xl lg:w-1/2 w-2/3 mt-2">I love meeting new people, below are some ways you can contact me.</p>
+            <p className="text-xl lg:w-1/2 w-2/3 mt-2 mb-16">I love meeting new people, below are some of my social accounts.</p>
             <Link href="mailto:mail.toby@icloud.com">
-              <a className="bg-gray-100">
+              <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Email</h1>
                 <p className="text-xl w-2/3">Here&apos;s my email address, it&apos;s the best way to contact me</p>
               </a>
             </Link>
             <Link href="https://github.com/developedbytoby">
-              <a className="bg-gray-100">
+              <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">GitHub</h1>
                 <p className="text-xl w-2/3">The home of all of my code!</p>
               </a>
             </Link>
             <Link href="https://twitter.com/developedbytoby">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Twitter</h1>
                 <p className="text-xl w-2/3">I&apos;m not too active on Twitter, but occasinally, I do tweet!</p>
               </a>
             </Link>
             <Link href="https://aretav.com/toby">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Aretav</h1>
                 <p className="text-xl w-2/3">If you want more information on me, my Aretav page is the best place to find that!</p>
               </a>
             </Link>
             <Link href="https://www.linkedin.com/in/toby-b-987229232/">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">LinkedIn</h1>
                 <p className="text-xl w-2/3">Behold, my LinkedIn!</p>
               </a>
             </Link>
             <Link href="https://open.spotify.com/playlist/4aaUkXmc9FtFEdabNmYVuN?si=690955bc25ee4f12">
-              <a>
+              <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Spotify</h1>
                 <p className="text-xl w-2/3">Here&apos;s my Spotify playlist! I&apos;m almost always listening to it.</p>
               </a>
@@ -159,7 +162,7 @@ export default function Home(props: Props, { fallbackData }) {
           </div>
           <div className="flex-col">
             <h1 className="text-5xl font-bold">Guestbook</h1>
-            <p className="text-xl lg:w-1/2 w-2/3 mt-2 mb-6">Leave a message for me and everyone else who visits this website, it can be anything from advice to a joke!</p>
+            <p className="text-xl lg:w-1/2 w-2/3 mt-2 mb-8">Leave a message for me and everyone else who visits this website, it can be anything from advice to a joke!</p>
             <Guestbook fallbackData={fallbackData} />
           </div>
 
@@ -169,7 +172,7 @@ export default function Home(props: Props, { fallbackData }) {
                 <a 
                   className="underline" 
                   target="_blank"
-                  ref="noopener norefferer"
+                  rel="noopener noreferrer"
                 >here
                 </a>
               </Link>

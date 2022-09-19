@@ -6,18 +6,11 @@ export type Repo = {
     link: string,
 }
 
-export function GetRepo() {
-    const get = useSWR<Repo[], Error> (
-        "https://gh-pinned-repos.egoist.dev/?username=developedbytoby"
-    )
+const fetcher = (url) => fetch(url).then((res) => res.json());
 
-    return {
-        ...get,
-        data: get.data?.map(item => {
-            const data: Repo = {
-                ...item,
-            }
-            return data
-        })
-    }
+export function GetRepo() {
+    const { data, error } = useSWR(
+        "https://gh-pinned-repos.egoist.dev/?username=developedbytoby",
+        fetcher
+    )
 }
