@@ -62,7 +62,7 @@ export default function Home({ fallbackData }) {
                 <ProjectCard
                   title="Blog"
                   description="📖 My blog powered by Next.js, Tailwind and ContentLayer"
-                  link="https://github.com/blog"
+                  link="https://github.com/developedbytoby/blog"
                 />
                 <ProjectCard
                   title="Conifer"
@@ -118,12 +118,29 @@ export default function Home({ fallbackData }) {
           <div className="my-64 w-auto">
             <h1 className="text-5xl font-bold">About</h1>
             <p className="text-xl lg:w-1/2 w-2/3 mt-2 mb-16">A small paragraph about me!</p>
-            <p className="md:w-1/2 w-auto text-xl">
-            I&apos;m Toby, a {age} year old full stack web developer based in London. My some favourite technologies include TypeScript, Next.js and Postgresql.
-              Outside of web development, I&apos;m also interested in ethical hacking, UI design and Artifical Intelligence.
-              <br/>
-              As well as all of this, I also play piano, cello and I sing. If you want to chat, send me an email, DM me on Twitter, or leave an entry on my Guestbook below!
-            </p>
+            <div className="md:w-1/2 w-auto text-xl space-y-2">
+              <p>
+                I&apos;m Toby, a {age} year old full stack web developer from London. 
+                I have a passion for building intuitive, modern and speedy web apps. 
+              </p>
+              <p>
+                Before web development, I was really into hardware. 
+                At the age of 7, I got my first computer, a Raspberry Pi Model B. 
+                With that Raspberry Pi, I started learning how to code.
+                This is where my passion for computers really started. 
+                I started by developing simple games using Scratch, and later on I was building small games using Python. 
+                3 years later, at the age of 10, I built my first computer.
+              </p>
+              <p>
+                Since then, I&apos;ve really got into open source software. 
+                I&apos;ve also found amazing communities like Hack Club which have helped me learn more, and grow as a programmer!
+              </p>
+              <p>
+                As well as web development, I&apos;m also really interested in UI design, AI and ethical hacking. 
+                Outside of technology, I also play the cello, piano, and I sing. Also, according to my family, I&apos;m really bad at telling
+                jokes!
+              </p>
+            </div>
           </div>
           <div className="mb-64">
             <h1 className="text-5xl font-bold">Let&apos;s be friends</h1>
@@ -131,37 +148,37 @@ export default function Home({ fallbackData }) {
             <Link href="mailto:mail.toby@icloud.com">
               <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Email</h1>
-                <p className="text-xl w-2/3">Here&apos;s my email address, it&apos;s the best way to contact me</p>
+                <p className="text-xl w-2/3">Want to chat? Feel free to shoot me an email.</p>
               </a>
             </Link>
             <Link href="https://github.com/developedbytoby">
               <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">GitHub</h1>
-                <p className="text-xl w-2/3">The home of all of my code!</p>
+                <p className="text-xl w-2/3">The home of all of my code, one of my favourite places on the internet.</p>
               </a>
             </Link>
             <Link href="https://twitter.com/developedbytoby">
               <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Twitter</h1>
-                <p className="text-xl w-2/3">I&apos;m not too active on Twitter, but occasinally, I do tweet!</p>
+                <p className="text-xl w-2/3">Stay up to date with my projects, cool things I&apos;ve found or my random musings.</p>
               </a>
             </Link>
             <Link href="https://aretav.com/toby">
               <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Aretav</h1>
-                <p className="text-xl w-2/3">If you want more information on me, my Aretav page is the best place to find that!</p>
+                <p className="text-xl w-2/3">Check my Aretav page out for more info on me!</p>
               </a>
             </Link>
             <Link href="https://www.linkedin.com/in/toby-b-987229232/">
               <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">LinkedIn</h1>
-                <p className="text-xl w-2/3">Here&apos;s my LinkedIn!</p>
+                <p className="text-xl w-2/3">There&apos;s not too much here, but let&apos;s connect!</p>
               </a>
             </Link>
             <Link href="https://open.spotify.com/playlist/4aaUkXmc9FtFEdabNmYVuN?si=690955bc25ee4f12">
               <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Spotify</h1>
-                <p className="text-xl w-2/3">Here&apos;s my Spotify playlist! I&apos;m almost always listening to it.</p>
+                <p className="text-xl w-2/3">Basically my life&apos;s soundtrack.</p>
               </a>
             </Link>
           </div>
