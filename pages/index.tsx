@@ -5,10 +5,12 @@ import prisma from "../utils/prisma"
 import Guestbook from "../components/guestbook"
 import { ProjectCard } from "../components/Cards"
 import { Toaster } from "react-hot-toast"
+import Meta from "../components/Meta"
 
 export default function Home({ fallbackData }) {
   return (
     <div>
+      <Meta/>
       <div className="place-items-center justify-center flex flex-col px-6 mx-auto">
         <div className="flex-col place-items-center w-4/5 md:w-2/3">
           <div className="lg:flex md:mt-48">
