@@ -3,7 +3,7 @@ import Link from "next/link"
 export function ProjectCard({ title, description, link }) {
     return (
         <Link href={link}>
-            <a target="_blank" rel="noopener noreferrer" className="p-8 bg-gray-100 rounded-lg w-1/2 border-2 border-transparent hover:border-gray-200">
+            <a target="_blank" rel="noopener noreferrer" className="p-8 bg-gray-100 rounded-lg md:w-1/2 w-auto border-2 border-transparent hover:border-gray-200 md:my-0 my-2">
                 <h1 className="font-medium text-2xl">
                     {title}
                 </h1>
