@@ -12,7 +12,7 @@ function GuestbookEntry({ entry, user }) {
     <div className="py-2">
       <p className="text-xl">{entry.body}</p>
         <p>
-          <p className="text-gray-600">{entry.created_by} |&nbsp;{( moment(entry.updated_at).format('MMMM D h:m, y'))}</p> 
+          <p className="text-gray-600">{entry.created_by} |&nbsp;{( moment(entry.updated_at).format('D MMMM y, h:m'))}</p> 
         </p>
       </div>
   );
@@ -64,7 +64,7 @@ export default function Guestbook({ fallbackData }) {
                 <div>
                   <Link href="/api/auth/signin/github" passHref>
                     <button
-                      className="p-4 bg-gray-100 rounded-lg mb-8"
+                      className="p-4 bg-gray-100 rounded-lg mb-8 border-2 border-transparent hover:border-gray-200"
                       onClick={(e) => {
                         e.preventDefault();
                         signIn('github');

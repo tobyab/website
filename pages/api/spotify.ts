@@ -14,11 +14,18 @@ export default async (_, res) => {
     const album = song.item.album.name
     const songUrl = song.item.external_urls.spotify
 
-    return res.status(200).json({
-        isPlaying,
-        title,
-        artist,
-        album,
-        songUrl
-    })
+    return new res.status(200)(
+        JSON.stringify({
+            isPlaying,
+            title,
+            artist,
+            album,
+            songUrl
+        }), {
+            headers: {
+                "content-type": "application/json",
+                "cache-control": "public, s-maxage=60, stale-while-revalidate=30"
+            }
+        }
+    )
 }

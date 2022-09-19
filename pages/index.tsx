@@ -26,7 +26,7 @@ export default function Home(props: Props, { fallbackData }) {
   //
   return (
     <div className="">
-        <div className="place-items-center justify-center flex flex-col">
+        <div className="place-items-center justify-center flex flex-col w-3/5 px-8 mx-auto">
           <div>
           <div className="flex mt-48">
             <div className="flex-col space-y-2 pt-48 mr-80">
@@ -72,7 +72,7 @@ export default function Home(props: Props, { fallbackData }) {
               />
           </div>
 
-          <div className="my-64">
+          <div className="my-64 w-auto">
             <h1 className="text-5xl font-bold">Projects</h1>
             <p className="text-xl lg:w-1/2 w-2/3 mt-2">A collection of a few of my projects, pulled straight from my GitHub!</p>
             <>
@@ -85,24 +85,77 @@ export default function Home(props: Props, { fallbackData }) {
             </>
 
             <h2 className="font-medium text-2xl my-16">Some other cool things I&apos;m working on right now:</h2>
-            <div className="flex space-x-4">
-              <div className="bg-gray-100 rounded-lg p-8 hover:border-2">
-                <div>
-                <img
-                  className="w-auto rounded-lg"
-                />
+            <div className="md:flex space-x-4">
+              <Link href="https://github.com/developedbytoby/tilde">
+                <a target="_blank" ref="noopener norefferer">
+                <div className="rounded-lg p-6 border-2 border-transparent hover:border-gray-200 bg-gray-100">
+                  <div className="">
+                  <img
+                    className="rounded-lg h-full"
+                    src="/screenshots/tilde.png"
+                  />
+                  </div>
+                  <h1 className="font-medium text-2xl pt-4">Tilde</h1>
+                  <p className="text-xl w-2/3">Tilde is a simple and open source Markdown editor built on electron!</p>
                 </div>
-                <h1 className="font-medium text-2xl">Tilde</h1>
-                <p className="text-xl w-2/3">An open source, simple Markdown editor built with electron!</p>
-              </div>
-              <div className="bg-gray-100 rounded-lg p-8 hover:border-2">
-                <img
-                  src=""
-                />
-                <h1 className="font-medium text-2xl">Aretav</h1>
-                <p className="text-xl w-2/3">Aretav allows you to create a beutiful portfolio in a matter of minutes.</p>
-              </div>
+                </a>
+              </Link>
+              <Link href="https://aretav.com">
+                <a target="_blank" ref="noopener norefferer">
+                  <div className="bg-gray-100 rounded-lg p-6 border-2 border-transparent hover:border-gray-200">
+                    <div className="">
+                    <img
+                      className="rounded-lg"
+                      src="/screenshots/aretav.png"
+                    />
+                    </div>
+                    <h1 className="font-medium text-2xl pt-4">Aretav</h1>
+                    <p className="text-xl w-2/3">Aretav provides you with an quick and easy way to create a beautiful personal portfolio.</p>
+                  </div>
+                </a>
+              </Link>
             </div>
+          </div>
+
+          <div className="mb-64">
+            <h1 className="text-5xl font-bold">Let&apos;s be friends</h1>
+            <p className="text-xl lg:w-1/2 w-2/3 mt-2">I love meeting new people, below are some ways you can contact me.</p>
+            <Link href="mailto:mail.toby@icloud.com">
+              <a className="bg-gray-100">
+                <h1 className="font-medium text-2xl mt-4 mb-2">Email</h1>
+                <p className="text-xl w-2/3">Here&apos;s my email address, it&apos;s the best way to contact me</p>
+              </a>
+            </Link>
+            <Link href="https://github.com/developedbytoby">
+              <a className="bg-gray-100">
+                <h1 className="font-medium text-2xl mt-4 mb-2">GitHub</h1>
+                <p className="text-xl w-2/3">The home of all of my code!</p>
+              </a>
+            </Link>
+            <Link href="https://twitter.com/developedbytoby">
+              <a>
+                <h1 className="font-medium text-2xl mt-4 mb-2">Twitter</h1>
+                <p className="text-xl w-2/3">I&apos;m not too active on Twitter, but occasinally, I do tweet!</p>
+              </a>
+            </Link>
+            <Link href="https://aretav.com/toby">
+              <a>
+                <h1 className="font-medium text-2xl mt-4 mb-2">Aretav</h1>
+                <p className="text-xl w-2/3">If you want more information on me, my Aretav page is the best place to find that!</p>
+              </a>
+            </Link>
+            <Link href="https://www.linkedin.com/in/toby-b-987229232/">
+              <a>
+                <h1 className="font-medium text-2xl mt-4 mb-2">LinkedIn</h1>
+                <p className="text-xl w-2/3">Behold, my LinkedIn!</p>
+              </a>
+            </Link>
+            <Link href="https://open.spotify.com/playlist/4aaUkXmc9FtFEdabNmYVuN?si=690955bc25ee4f12">
+              <a>
+                <h1 className="font-medium text-2xl mt-4 mb-2">Spotify</h1>
+                <p className="text-xl w-2/3">Here&apos;s my Spotify playlist! I&apos;m almost always listening to it.</p>
+              </a>
+            </Link>
           </div>
           <div className="flex-col">
             <h1 className="text-5xl font-bold">Guestbook</h1>
@@ -120,29 +173,14 @@ export default function Home(props: Props, { fallbackData }) {
                 >here
                 </a>
               </Link>
-            . And, I hope you have an awesome {message}!</p>
+            . And, I hope you&apos;re having an awesome {message}!
+            </p>
           </div>
 
         </div>
         </div>
       </div>
   );
-}
-
-function GuestbookComponent({ fallbackData }) {
-  return (
-    <div>
-      <div className="mb-8">
-        <h1 className="text-5xl font-bold">
-          Guestbook
-        </h1>
-        <p className="text-xl mt-2">
-          Leave a message below for me, and all future visitors of this site!
-        </p>
-      </div>
-        <Guestbook fallbackData={fallbackData} />
-      </div>
-  )
 }
 
 export async function getStaticProps() {
