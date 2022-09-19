@@ -3453,6 +3453,11 @@ micromatch@^4.0.4:
     braces "^3.0.2"
     picomatch "^2.3.1"
 
+million@^1.12.6-beta.0:
+  version "1.12.6-beta.0"
+  resolved "https://registry.yarnpkg.com/million/-/million-1.12.6-beta.0.tgz#7b14e0333f9b070a7801ec4de6be7281df65ee4e"
+  integrity sha512-goPLuaTicGdB8Li5eHfyEqoi/bFcoGNY9N6r/x4etsMx5lYo5gRQe1htNEsIHoA5TCkHQN6P1iakXzLw8YOlgg==
+
 mimic-response@^1.0.0:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/mimic-response/-/mimic-response-1.0.1.tgz#4923538878eef42063cb8a3e3b0798781487ab1b"

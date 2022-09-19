@@ -7,11 +7,10 @@ import { ProjectCard } from "../components/Cards"
 
 export default function Home({ fallbackData }) {
   return (
-    <div className="">
-        <div className="place-items-center justify-center flex flex-col w-3/5 px-8 mx-auto">
-          <div>
-          <div className="flex mt-48">
-            <div className="flex-col space-y-2 pt-48 mr-80">
+        <div className="place-items-center justify-center flex flex-col  px-6 mx-auto">
+          <div className="flex-col place-items-center w-4/5 md:w-2/3">
+          <div className="lg:flex md:mt-48">
+            <div className="flex-col space-y-2 pt-48 lg:pr-80 pr-24">
               <p className="text-xl">Hey there, I&apos;m</p>
               <h1 className="text-6xl font-bold">Toby Brown!</h1>
               <p className="text-xl">A year old {age} full stack web developer.</p>
@@ -55,9 +54,9 @@ export default function Home({ fallbackData }) {
           </div>
           <div className="my-64 w-auto">
             <h1 className="text-5xl font-bold">Projects</h1>
-            <p className="text-xl lg:w-1/2 w-2/3 mt-2">A collection of a few small projects I&apos;ve worked on!</p>
+            <p className="text-xl mt-2 mx-auto">A collection of a few small projects I&apos;ve worked on!</p>
             <div className="space-y-4 mt-16">
-              <div className="md:flex space-x-4">
+              <div className="md:flex grid md:space-x-4">
                 <ProjectCard
                   title="Blog"
                   description="📖 My blog powered by Next.js, Tailwind and ContentLayer"
@@ -69,7 +68,7 @@ export default function Home({ fallbackData }) {
                   link="https://github.com/developedbytoby/conifer"
                 />
               </div>
-              <div className="md:flex space-x-4">
+              <div className="md:flex grid md:space-x-4">
                 <ProjectCard
                   title="Pluto"
                   description="🤖 A small space themed quiz run by Pluto!"
@@ -83,7 +82,7 @@ export default function Home({ fallbackData }) {
               </div>
             </div>
             <h2 className="font-medium text-2xl my-16">Some other cool things I&apos;m working on right now:</h2>
-            <div className="md:flex space-x-4">
+            <div className="md:flex grid md:space-x-4">
               <Link href="https://github.com/developedbytoby/tilde">
                 <a target="_blank" rel="noopener noreferrer">
                 <div className="rounded-lg p-8 border-2 border-transparent hover:border-gray-200 bg-gray-100">
@@ -118,6 +117,10 @@ export default function Home({ fallbackData }) {
             <h1 className="text-5xl font-bold">About</h1>
             <p className="text-xl lg:w-1/2 w-2/3 mt-2 mb-16">A small paragraph about me!</p>
             <p className="w-2/3 text-xl">
+            I&apos;m Toby, a {age} year old full stack web developer based in London. My some favourite technologies include TypeScript, Next.js and Postgresql.
+              Outside of web development, I&apos;m also interested in ethical hacking, UI design and Artifical Intelligence.
+              <br/>
+              On top of all of this, I also play piano, cello and I sing. If you want to chat, send me an email, DM me on Twitter, or leave an entry on my Guestbook below!
             </p>
           </div>
           <div className="mb-64">
@@ -176,13 +179,20 @@ export default function Home({ fallbackData }) {
                 >here
                 </a>
               </Link>
+            . Or, if you&apos;re looking for a cute picture of my dog, Pepper, <Link href="/pepper.png">
+                <a 
+                  className="underline" 
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >here you go
+                </a>
+              </Link>
             . And, I hope you&apos;re having an awesome {message}!
             </p>
           </div>
 
         </div>
         </div>
-      </div>
   );
 }
 
