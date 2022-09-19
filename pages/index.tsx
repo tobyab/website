@@ -85,24 +85,10 @@ export default function Home({ fallbackData }) {
             </div>
             <h2 className="font-medium text-2xl my-16">Some other cool things I&apos;m working on right now:</h2>
             <div className="md:flex grid md:space-x-4">
-              <Link href="https://github.com/developedbytoby/tilde">
-                <a target="_blank" rel="noopener noreferrer">
-                <div className="rounded-lg p-8 border-2 border-transparent hover:border-gray-200 bg-gray-100 md:my-0 my-2">
-                  <div>
-                    <img
-                      className="rounded-lg h-full"
-                      src="/screenshots/tilde.png"
-                    />
-                  </div>
-                  <h1 className="font-medium text-2xl pt-4">Tilde</h1>
-                  <p className="text-xl w-2/3">Tilde is a simple, easy to use and open source Markdown editor built on electron!</p>
-                </div>
-                </a>
-              </Link>
               <Link href="https://aretav.com">
                 <a target="_blank" rel="noopener noreferrer">
                   <div className="bg-gray-100 rounded-lg p-8 border-2 border-transparent hover:border-gray-200 md:my-0 my-2">
-                    <div className="">
+                    <div>
                     <img
                       className="rounded-lg"
                       src="/screenshots/aretav.png"
@@ -111,6 +97,20 @@ export default function Home({ fallbackData }) {
                     <h1 className="font-medium text-2xl pt-4">Aretav</h1>
                     <p className="text-xl w-2/3">Aretav provides you with an quick and easy way to create a beautiful personal portfolio.</p>
                   </div>
+                </a>
+              </Link>
+              <Link href="https://github.com/developedbytoby/tilde">
+                <a target="_blank" rel="noopener noreferrer">
+                <div className="bg-gray-100 rounded-lg p-8 border-2 border-transparent hover:border-gray-200 md:my-0 my-2">
+                  <div>
+                    <img
+                      className="rounded-lg"
+                      src="/screenshots/tilde.png"
+                    />
+                  </div>
+                  <h1 className="font-medium text-2xl pt-4">Tilde</h1>
+                  <p className="text-xl w-2/3">Tilde is a simple, easy to use and open source Markdown editor built on electron!</p>
+                </div>
                 </a>
               </Link>
             </div>
