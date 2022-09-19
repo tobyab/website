@@ -29,7 +29,7 @@ export default async function handler(
   const { email, name } = session.user;
 
   if (!session) {
-    return res.status(403).send("You're not allowed to do this. Try again!");
+    return res.status(403).send("Sign in, please!");
   }
 
   if (req.method === 'POST') {

@@ -1,22 +1,19 @@
 import { useRef, useState } from 'react'
 import { Form, FormState } from '../utils/states';
 import { signIn, useSession } from 'next-auth/react';
-import useSWR, { useSWRConfig } from 'swr'
-import toast, { Toaster } from 'react-hot-toast'
-import Loader from './Loader'
+import useSWR from 'swr'
+import toast from 'react-hot-toast'
 import fetcher from '../utils/fetcher'
-import styles from '../styles/Guestbook.module.scss'
 import moment from 'moment'
 import Link from 'next/link'
 
 function GuestbookEntry({ entry, user }) {
   return (
-    <div className={styles.entries}>
-      <b>{entry.body}</b>
+    <div className="py-2">
+      <p className="text-xl">{entry.body}</p>
         <p>
-        {entry.created_by} |&nbsp;
-         {( moment(entry.updated_at).format('LL hh:mm'))}
-         </p>
+          <p className="text-gray-600">{entry.created_by} | {( moment(entry.updated_at).format('D MMMM y, h:m'))}</p> 
+        </p>
       </div>
   );
 }
@@ -24,7 +21,7 @@ function GuestbookEntry({ entry, user }) {
 export default function Guestbook({ fallbackData }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
   const input = useRef(null);
-  const { data: entries } = useSWR('/api/guestbook', fetcher, {
+  const { data: entries } = useSWR("/api/guestbook", fetcher, {
     fallbackData
   });
     
@@ -34,17 +31,17 @@ export default function Guestbook({ fallbackData }) {
       e.preventDefault();
       setForm({ state: Form.Loading });
   
-      const res = await fetch('/api/guestbook', {
+      const response = await fetch("/api/guestbook", {
         body: JSON.stringify({
           body: input.current.value
         }),
         headers: {
-          'Content-Type': 'application/json'
+          "Content-Type": "application/json"
         },
-        method: 'POST'
+        method: "POST"
       });
   
-      const { error } = await res.json();
+      const { error } = await response.json();
       if (error) {
         setForm({
           state: Form.Error,
@@ -52,66 +49,63 @@ export default function Guestbook({ fallbackData }) {
         });
         return;
       }
-  
-      input.current.value = '';
+
+      input.current.value = "";
       setForm({
-        state: Form.Success
+        state: Form.Success,
       });
     };
-  
+
     return (
       <>
-  <div className={styles.container}>
-    <div className={styles.signForm}>
-        <h2>Leave a message. </h2>
-        <p>
-          Leave a message below for me, and all future visitors of this site!
-        </p>
-        {!session && (
-          <div className={styles.logoutState}>
-          <b>
-            <Link href="/api/auth/signin/github" passHref>
-          <button
-            onClick={(e) => {
-              e.preventDefault();
-              signIn('github');
-            }}
-          >
-            Sign in with GitHub.
-          </button>
-          </Link>
-          </b>
-          <p>Only public information is displayed.</p>
+        <div>
+          <div>
+              {!session && (
+                <div>
+                  <Link href="/api/auth/signin/github" passHref>
+                    <button
+                      className="p-4 bg-gray-100 rounded-lg mb-8 border-2 border-transparent hover:border-gray-200"
+                      onClick={(e) => {
+                        e.preventDefault();
+                        signIn('github');
+                      }}
+                    >
+                      Sign in with GitHub
+                    </button>
+                  </Link>
+                </div>
+              )}
+
+              {session?.user && (
+                <form onSubmit={leaveEntry} className="mb-16 flex">
+                  <input
+                    className="bg-gray-100 py-4 md:w-1/3 w-auto px-4 rounded-lg mr-4"
+                    ref={input}
+                    placeholder="Your message"
+                    required
+                  />
+                  <button 
+                    type="submit"
+                    className="bg-gray-100 py-4 px-4 rounded-lg"
+                  >
+                    {form.state === Form.Loading ? <p>Loading...</p> : <img src="/icons/send.svg"/>}
+                  </button>
+                </form>
+              )}
+              {form.state === Form.Error ? (
+                toast.error(`Something's up. Here's your error message: ${Form.Error}`)
+              ): form.state === Form.Success ? (
+                toast("Thanks for signing my guestbook!", {
+                  icon: "🎉",
+                })
+
+              ): null}
+              </div>
+          <div>
+            {entries?.map((entry) => (
+              <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
+            ))}
           </div>
-        )}
-
-        {session?.user && (
-          <form onSubmit={leaveEntry}>
-            <input
-              ref={input}
-              placeholder="Enter your message."
-              required
-            />
-            <button type="submit">
-              {form.state === Form.Loading ? <Loader /> : "Sign"}
-            </button>
-          </form>
-        )}
-        {form.state === Form.Error ? (
-          toast.error("Uh oh! Something went wrong. Try again.")
-        ) : form.state === Form.Success ? (
-
-          toast("Thanks for signing my guestbook!", {
-            icon: "🎉",
-          })
-
-        ) : null}
         </div>
-      <div className={styles.entryText}>
-      {entries?.map((entry) => (
-     <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
-     ))}
-    </div>
-  </div>
       </>
-    )}
+  )}
