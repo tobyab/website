@@ -62,15 +62,15 @@ export default function Guestbook({ fallbackData }) {
           <div>
               {!session && (
                 <div>
-                  <Link href="/api/auth/signin/twitter" passHref>
+                  <Link href="/api/auth/signin/github" passHref>
                     <button
                       className="p-4 bg-gray-100 rounded-lg mb-8 border-2 border-transparent hover:border-gray-200"
                       onClick={(e) => {
                         e.preventDefault();
-                        signIn('twitter');
+                        signIn('github');
                       }}
                     >
-                      Sign in with Twitter
+                      Sign in with GitHub
                     </button>
                   </Link>
                 </div>
