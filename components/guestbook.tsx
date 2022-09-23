@@ -5,7 +5,6 @@ import useSWR from 'swr'
 import toast from 'react-hot-toast'
 import fetcher from '../utils/fetcher'
 import moment from 'moment'
-import Link from 'next/link'
 
 function GuestbookEntry({ entry, user }) {
   return (
@@ -62,7 +61,6 @@ export default function Guestbook({ fallbackData }) {
           <div>
               {!session && (
                 <div>
-                  <Link href="/api/auth/signin/github" passHref>
                     <button
                       className="p-4 bg-gray-100 rounded-lg mb-8 border-2 border-transparent hover:border-gray-200"
                       onClick={(e) => {
@@ -72,7 +70,6 @@ export default function Guestbook({ fallbackData }) {
                     >
                       Sign in with GitHub
                     </button>
-                  </Link>
                 </div>
               )}
 
