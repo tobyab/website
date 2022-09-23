@@ -26,6 +26,7 @@ export default function Home({ fallbackData }) {
                       src="/icons/mail.svg"
                       height={24}
                       width={24}
+                      alt="Mail icon"
                     />
                   </a>
                 </Link>
@@ -35,6 +36,7 @@ export default function Home({ fallbackData }) {
                       src="/icons/github.svg"
                       height={24}
                       width={24}
+                      alt="GitHub icon"
                     />
                   </a>
                 </Link>
@@ -44,6 +46,7 @@ export default function Home({ fallbackData }) {
                       src="/icons/twitter.svg"
                       height={24}
                       width={24}
+                      alt="Twitter icon"
                     />
                   </a>
                 </Link>
@@ -54,6 +57,7 @@ export default function Home({ fallbackData }) {
                 src="/toby.png"
                 height={500}
                 width={500}
+                alt="Toby&apos;s memoji"
               />
           </div>
           <div className="my-64 w-auto">
@@ -94,6 +98,7 @@ export default function Home({ fallbackData }) {
                     <img
                       className="rounded-lg"
                       src="/screenshots/aretav.png"
+                      alt="A screenshot of aretav.com's landing page."
                     />
                     </div>
                     <h1 className="font-medium text-2xl pt-4">Aretav</h1>
@@ -108,6 +113,7 @@ export default function Home({ fallbackData }) {
                     <img
                       className="rounded-lg"
                       src="/screenshots/tilde.png"
+                      alt="a screenshot of Tilde"
                     />
                   </div>
                   <h1 className="font-medium text-2xl pt-4">Tilde</h1>

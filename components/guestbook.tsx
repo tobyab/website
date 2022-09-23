@@ -1,17 +1,18 @@
-import { useRef, useState } from 'react'
-import { Form, FormState } from '../utils/states';
-import { signIn, useSession } from 'next-auth/react';
-import useSWR from 'swr'
-import toast from 'react-hot-toast'
-import fetcher from '../utils/fetcher'
-import moment from 'moment'
+import { useRef, useState } from "react"
+import { Form, FormState } from "../utils/states"
+import { signIn, useSession } from "next-auth/react"
+import useSWR from "swr"
+import toast from "react-hot-toast"
+import fetcher from "../utils/fetcher"
+import { format } from "date-fns"
+import Image from "next/image"
 
 function GuestbookEntry({ entry, user }) {
   return (
     <div className="py-2">
       <p className="text-xl">{entry.body}</p>
         <p>
-          <p className="text-gray-600">{entry.created_by} | {( moment(entry.updated_at).format('D MMMM y, h:m'))}</p> 
+          <p className="text-gray-600">{entry.created_by} | {format(new Date(entry.updated_at), "d MMMM y, h:m")}</p> 
         </p>
       </div>
   );
@@ -85,7 +86,7 @@ export default function Guestbook({ fallbackData }) {
                     type="submit"
                     className="bg-gray-100 py-4 px-4 rounded-lg"
                   >
-                    {form.state === Form.Loading ? <p>Loading...</p> : <img src="/icons/send.svg"/>}
+                    {form.state === Form.Loading ? <p>Loading...</p> : <Image src="/icons/send.svg" alt="Send icon" height="24" width="24"/>}
                   </button>
                 </form>
               )}

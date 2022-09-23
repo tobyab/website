@@ -1,8 +1,12 @@
 import Link from "next/link"
+import Head from "next/head"
 
 export default function FourOhFour() {
     return (
         <div className="place-items-center justify-center flex flex-col mt-48 text-left px-8">
+            <Head>
+                <title>404!</title>
+            </Head>
             <div>
                 <h1 className="text-6xl font-bold mb-6">404- the page was lost in space. 🧑‍🚀</h1>
                 <p className="text-xl mb-8">Just kidding. I&apos;m guessing you just typed the url wrong. Maybe give it double check?</p>
