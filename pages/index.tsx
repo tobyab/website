@@ -17,7 +17,7 @@ export default function Home({ fallbackData }) {
             <div className="flex-col space-y-2 pt-48 xl:pr-80 pr-24">
               <p className="text-xl">Hey there, I&apos;m</p>
               <h1 className="text-6xl font-bold">Toby Brown!</h1>
-              <p className="text-xl">A year old {age} full stack web developer.</p>
+              <p className="text-xl">A {age} year old full stack web developer.</p>
               <div className="space-x-4 pt-2">
                 <Link href="mailto:mail.toby@icloud.com">
                   <a target="_blank" rel="noopener norefferer">
