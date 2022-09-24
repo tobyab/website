@@ -17,9 +17,7 @@ export default function FourOhFour() {
                         Let&apos;s head home
                     </button>
                 </Link>
-                
             </div>
-            
         </div>
     )
 }

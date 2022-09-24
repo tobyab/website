@@ -1,8 +1,9 @@
-import prisma from '../../utils/prisma';
-import type { NextApiRequest, NextApiResponse } from 'next';
-import { getSession } from 'next-auth/react';
-var Filter = require('bad-words'),
-    filter = new Filter();
+import prisma from "../../utils/prisma"
+import type { NextApiRequest, NextApiResponse } from "next"
+import { getSession } from "next-auth/react"
+var Filter = require("bad-words"),
+
+filter = new Filter();
 
 export default async function handler(
   req: NextApiRequest,

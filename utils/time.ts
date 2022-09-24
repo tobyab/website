@@ -8,8 +8,8 @@ var dayTime = new Date()
 var currentHour = dayTime.getHours()
 export var message;
 if (currentHour < 12)
-    message = 'morning';
+    message = "morning"
 else if (currentHour >= 12 && currentHour <= 17)
-    message = 'afternoon';
+    message = "afternoon"
 else if (currentHour >= 17 && currentHour <= 24)
-    message = 'evening';
+    message = "evening"

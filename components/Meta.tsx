@@ -8,7 +8,7 @@ export default function Meta() {
             <link rel="icon" href="/favicon.ico"/>
             <meta name="description" content="Toby&apos;s personal website"/>
             <meta property="og:url" content="https://tobyb.dev"/>
-            <meta property="og:image" content="/card.png"/>
+            <meta property="og:image" content="/meta.png"/>
             <meta property="og:type" content="website"/>
             <meta property="og:site_name" content="Toby Brown!"/>
 

@@ -5,7 +5,6 @@ import useSWR from "swr"
 import toast from "react-hot-toast"
 import fetcher from "../utils/fetcher"
 import { format } from "date-fns"
-import Image from "next/image"
 
 function GuestbookEntry({ entry, user }) {
   return (
@@ -30,7 +29,7 @@ export default function Guestbook({ fallbackData }) {
     const leaveEntry = async (e) => {
       e.preventDefault();
       setForm({ state: Form.Loading });
-  
+
       const response = await fetch("/api/guestbook", {
         body: JSON.stringify({
           body: input.current.value
@@ -40,7 +39,7 @@ export default function Guestbook({ fallbackData }) {
         },
         method: "POST"
       });
-  
+
       const { error } = await response.json();
       if (error) {
         setForm({
@@ -84,9 +83,9 @@ export default function Guestbook({ fallbackData }) {
                   />
                   <button 
                     type="submit"
-                    className="bg-gray-100 py-4 px-4 rounded-lg"
+                    className="bg-gray-100 py-4 px-4 rounded-lg border-2 border-transparent hover:border-gray-200"
                   >
-                    {form.state === Form.Loading ? <p>Loading...</p> : <Image src="/icons/send.svg" alt="Send icon" height="24" width="24"/>}
+                    {form.state === Form.Loading ? <p>Loading...</p> : <img src="/icons/send.svg" alt="Send icon"/>}
                   </button>
                 </form>
               )}

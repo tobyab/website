@@ -1,4 +1,4 @@
-# developedbytoby/website
+## developedbytoby/website
 
 🏡 My personal website built with Next.js, Tailwind, Prisma and Planetscale
 

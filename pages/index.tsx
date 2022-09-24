@@ -19,13 +19,13 @@ export default function Home({ fallbackData }) {
               <h1 className="text-6xl font-bold">Toby Brown!</h1>
               <p className="text-xl">A {age} year old full stack web developer.</p>
               <div className="space-x-4 pt-2">
-                <Link href="mailto:mail.toby@icloud.com">
+                <Link href="mailto:hi@tobyb.dev">
                   <a target="_blank" rel="noopener norefferer">
                     <Image
                       className="mx-16"
-                      src="/icons/mail.svg"
                       height={24}
                       width={24}
+                      src="/icons/mail.svg"
                       alt="Mail icon"
                     />
                   </a>
@@ -153,7 +153,7 @@ export default function Home({ fallbackData }) {
           <div className="mb-64">
             <h1 className="text-5xl font-bold">Let&apos;s be friends</h1>
             <p className="text-xl lg:w-1/2 w-2/3 mt-2 mb-16">I love meeting new people, below are some of my social accounts.</p>
-            <Link href="mailto:mail.toby@icloud.com">
+            <Link href="mailto:hi@tobyb.dev">
               <a target="_blank" rel="noopener noreferrer">
                 <h1 className="font-medium text-2xl mt-4 mb-2">Email</h1>
                 <p className="text-xl w-2/3">Want to chat? Feel free to shoot me an email.</p>
