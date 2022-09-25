@@ -11,7 +11,7 @@ function GuestbookEntry({ entry, user }) {
     <div className="py-2">
       <p className="text-xl">{entry.body}</p>
         <p>
-          <p className="text-gray-600">{entry.created_by} | {format(new Date(entry.updated_at), "d MMMM y, h:m")}</p> 
+          <p className="text-gray-600">{entry.created_by} | {format(new Date(entry.updated_at), "d MMMM y, h:mm")}</p> 
         </p>
       </div>
   );
