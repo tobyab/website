@@ -32,3 +32,23 @@ export function BlogCard({ title, date, description, link }) {
         </Link>
     )
 }
+
+export function BigProjectCard({ title, link, description, imgSrc, imgAlt }){
+    return (
+        <Link href={link}>
+            <a target="_blank" rel="noopener noreferrer">
+                <div className="bg-gray-100 rounded-lg p-8 border-2 border-transparent hover:border-gray-200 md:my-0 my-2">
+                    <div>
+                        <img
+                            className="rounded-lg"
+                            src={imgSrc}
+                            alt={imgAlt}
+                        />
+                    </div>
+                    <h1 className="font-medium text-2xl pt-4">{title}</h1>
+                    <p className="text-xl w-2/3">{description}</p>
+                </div>
+            </a>
+        </Link>
+    )
+}

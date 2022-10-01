@@ -8,7 +8,7 @@ import { format } from "date-fns"
 
 function GuestbookEntry({ entry, user }) {
   return (
-    <div className="py-2">
+    <div className="py-2 md:w-1/2 w-auto">
       <p className="text-xl">{entry.body}</p>
         <p>
           <p className="text-gray-600">{entry.created_by} | {format(new Date(entry.updated_at), "d MMMM y, h:mm")}</p> 
