@@ -13,7 +13,7 @@ export default function Home({ fallbackData }) {
       <Meta/>
       <div className="place-items-center justify-center flex flex-col px-6 mx-auto">
         <div className="flex-col place-items-center w-4/5 md:w-2/3">
-          <div className="lg:flex md:mt-48">
+          <div className="lg:flex md:mt-32">
             <div className="flex-col space-y-2 pt-48 xl:pr-80 pr-24">
               <p className="text-xl">Hey there, I&apos;m</p>
               <h1 className="text-6xl font-bold">Toby Brown!</h1>
