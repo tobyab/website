@@ -1053,26 +1053,26 @@
   resolved "https://registry.yarnpkg.com/@tailwindcss/aspect-ratio/-/aspect-ratio-0.4.2.tgz#9ffd52fee8e3c8b20623ff0dcb29e5c21fb0a9ba"
   integrity sha512-8QPrypskfBa7QIMuKHg2TA7BqES6vhBrDLOv8Unb6FcFyd3TjKbc6lcmb9UPQHxfl24sXoJ41ux/H7qQQvfaSQ==
 
-"@theme-ui/css@0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.13.1.tgz#872e80a03af89c8bde21be29dbfd02f53b0b6f83"
-  integrity sha512-O85gC3SLKM7HhFYBTnTuhfLdieY+kZCnSuYG+P5quf3XFJEZTYtpwucoU2NDNALSOAoSgfGb7pgTB9cmNHRB5Q==
+"@theme-ui/css@^0.15.3":
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/@theme-ui/css/-/css-0.15.3.tgz#c73b99f3770838c7a95137622fb38d8e405f9d41"
+  integrity sha512-WcXph/+17ZXUwlyUD9+PTXAz8ca0B/5a1vhUhikWN3UGBiMj7vwqpf9F9U30jNyqWxCfuuhrnZqSaplB/isHjA==
   dependencies:
     csstype "^3.0.10"
 
-"@theme-ui/typography@0.13.1":
-  version "0.13.1"
-  resolved "https://registry.yarnpkg.com/@theme-ui/typography/-/typography-0.13.1.tgz#e7d0702ea9b69e053d6e0cda9eb9e7279862d399"
-  integrity sha512-ow3Ha541UFKUTCzuqF6IPw3+ipl9oMh+3j0XeZU94DbzIXz6sXk+s102jqIUKmpDwQKRM8KklwU5dzIg7U4sNw==
+"@theme-ui/typography@0.15.3":
+  version "0.15.3"
+  resolved "https://registry.yarnpkg.com/@theme-ui/typography/-/typography-0.15.3.tgz#3526a8c0b573592919f67c0abfb8f0bc501e50c1"
+  integrity sha512-+PPeb0ZlGJKP4voK9kf4MyiKQ31dwDjAz1Gux+wZSALB4efCdzNC9T/iX/Jadk3ZTAQUjmel0Elnj/Iyt0D+6Q==
   dependencies:
-    "@theme-ui/css" "0.13.1"
+    "@theme-ui/css" "^0.15.3"
     "@types/compass-vertical-rhythm" "^1.4.2"
     "@types/modularscale" "^2.0.0"
     "@types/typography" "^0.16.4"
     compass-vertical-rhythm "^1.4.5"
     csstype "^3.0.10"
     modularscale "^2.0.1"
-    type-fest "^2.5.4"
+    type-fest "^2.18.0"
 
 "@types/acorn@^4.0.0":
   version "4.0.6"
@@ -4566,7 +4566,7 @@ type-fest@^0.20.2:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.20.2.tgz#1bf207f4b28f91583666cb5fbd327887301cd5f4"
   integrity sha512-Ne+eE4r0/iWnpAxD852z3A+N0Bt5RN//NjJwRd2VFHEmrywxf5vsZlh4R6lixl6B+wz/8d+maTSAkN1FIkI3LQ==
 
-type-fest@^2.5.4:
+type-fest@^2.18.0:
   version "2.19.0"
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-2.19.0.tgz#88068015bb33036a598b952e55e9311a60fd3a9b"
   integrity sha512-RAH822pAdBgcNMAfWnCBU3CFZcfZ/i1eZjwFU/dsLKumyuuP3niueg2UAukXYF0E2AAoc82ZSSf9J0WQBinzHA==
