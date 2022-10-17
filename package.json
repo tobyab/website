@@ -19,7 +19,7 @@
     "@splitbee/web": "0.3.0",
     "@theme-ui/typography": "0.13.1",
     "bad-words": "3.0.4",
-    "cmdk": "0.0.4",
+    "cmdk": "0.1.20",
     "copy-to-clipboard": "3.3.2",
     "date-fns": "2.29.3",
     "framer-motion": "4.1.17",
