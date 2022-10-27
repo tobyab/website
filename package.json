@@ -42,7 +42,7 @@
   },
   "devDependencies": {
     "@tailwindcss/aspect-ratio": "0.4.2",
-    "@types/react": "18.0.1",
+    "@types/react": "18.0.24",
     "autoprefixer": "10.4.11",
     "eslint": "8.25.0",
     "eslint-config-next": "12.0.6",
