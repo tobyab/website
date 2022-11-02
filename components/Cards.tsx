@@ -2,53 +2,44 @@ import Link from "next/link"
 
 export function ProjectCard({ title, description, link }) {
     return (
-        <Link href={link}>
-            <a target="_blank" rel="noopener noreferrer" className="p-8 bg-gray-100 rounded-lg md:w-1/2 w-auto border-2 border-transparent hover:border-gray-200 md:my-0 my-2">
-                <h1 className="font-medium text-2xl">
+        <Link
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-8 bg-grey rounded-lg md:w-1/2 w-auto border-2 border-grey border-transparent hover:border-gray-200 md:my-0 my-2"
+        >
+                <h1 className="font-medium text-2xl mb-2">
                     {title}
                 </h1>
                 <p className="text-xl w-2/3">
                     {description}
                 </p>
-            </a>
-        </Link>
-    )
-}
-
-export function BlogCard({ title, date, description, link }) {
-    return (
-        <Link href={link}>
-            <a target="_blank" rel="noopener noreferrer" className="p-8 bg-gray-100 rounded-lg w-1/2 border-2 border-transparent hover:border-gray-200">
-                <h1 className="font-medium text-2xl">
-                    {title}
-                </h1>
-                <p className="text-xl w-2/3">
-                    {description}
-                </p>
-                <p className="text-xl w-2/3">
-                    {date}
-                </p>
-            </a>
         </Link>
     )
 }
 
 export function BigProjectCard({ title, link, description, imgSrc, imgAlt }){
     return (
-        <Link href={link}>
-            <a target="_blank" rel="noopener noreferrer">
-                <div className="bg-gray-100 rounded-lg p-8 border-2 border-transparent hover:border-gray-200 md:my-0 my-2">
-                    <div>
+        <Link
+            href={link}
+            target="_blank"
+            rel="noopener noreferrer"
+        >
+            <div className="w-auto">
+                <div>
+                    <div className="mb-6">
+                        <h1 className="font-medium text-2xl pt-4 mb-2">{title}</h1>
+                        <p className="text-xl md:w-2/3">{description}</p>
+                    </div>
+                    <picture>
                         <img
-                            className="rounded-lg"
                             src={imgSrc}
                             alt={imgAlt}
+                            className="rounded-lg"
                         />
-                    </div>
-                    <h1 className="font-medium text-2xl pt-4">{title}</h1>
-                    <p className="text-xl w-2/3">{description}</p>
+                    </picture>
                 </div>
-            </a>
+            </div>
         </Link>
     )
 }

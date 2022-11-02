@@ -4,8 +4,9 @@ export var age = Math.floor(diff / 31536000000);
 
 export var year = new Date().getFullYear()
 
-var dayTime = new Date()
+export var dayTime = new Date()
 var currentHour = dayTime.getHours()
+
 export var message;
 if (currentHour < 12)
     message = "morning"

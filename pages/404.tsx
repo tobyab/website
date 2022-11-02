@@ -12,7 +12,7 @@ export default function FourOhFour() {
                 <p className="text-xl mb-8">Just kidding. I&apos;m guessing you just typed the url wrong. Maybe give it double check?</p>
                 <Link href="/">
                     <button
-                        className="p-4 bg-gray-100 rounded-lg mb-8 border-2 border-transparent hover:border-gray-200"
+                        className="p-4 bg-grey rounded-lg mb-8 border-2 border-transparent hover:border-gray-200"
                     >
                         Let&apos;s head home
                     </button>
