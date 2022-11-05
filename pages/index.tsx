@@ -1,5 +1,3 @@
-"use client";
-
 import { age } from "../utils/time"
 import Guestbook from "../components/Guestbook"
 import { ProjectCard, BigProjectCard } from "../components/Cards"
