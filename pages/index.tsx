@@ -1,12 +1,12 @@
 import { age } from "../utils/time"
-import Guestbook from "../components/Guestbook"
-import { ProjectCard, BigProjectCard } from "../components/Cards"
-import Meta from "../components/Meta"
-import Now from "../components/Now"
-import Social from "../components/Links"
-import Footer from "../components/Footer"
-import Header from "../components/Header"
-import Hero from "../components/Hero"
+import Guestbook from "../components/guestbook"
+import { ProjectCard, BigProjectCard } from "../components/cards"
+import Meta from "../components/meta"
+import Now from "../components/now"
+import Social from "../components/links"
+import Footer from "../components/footer"
+import Header from "../components/header"
+import Hero from "../components/hero"
 
 export default function Home({ fallbackData }) {
   return (
@@ -97,10 +97,16 @@ export default function Home({ fallbackData }) {
             <h1 className="text-5xl font-bold">Now</h1>
             <p className="text-xl lg:w-1/2 w-auto mt-2 mb-16">Here&apos;s a super quick summary of what I&apos;m up to right now!</p>
             <Now
+                Title="Hack Club"
+                Description="Community engineer @ Hack Club"
+                Img="https://assets.hackclub.com/icon-square.svg"
+                LinkToProject="https://hackclub.com"
+            />
+            <Now
               Title="Tilde"
               Description="An easier way to take notes"
               Img="https://github.com/developedbytoby/tilde/raw/master/resources/icon.png"
-              LinkToProject="https://tilde.tobyb.dev"
+              LinkToProject="https://github.com/developedbytoby/tilde"
             />
             <Now
               Title="Aretav"
@@ -109,10 +115,10 @@ export default function Home({ fallbackData }) {
               LinkToProject="https://aretav.com"
             />
             <Now
-                Title="Hack Club"
-                Description="Community engineer @ Hack Club"
-                Img="https://assets.hackclub.com/icon-square.svg"
-                LinkToProject="https://hackclub.com"
+                Title="grooovy"
+                Description="A very much unfinished project, I'm building right now!"
+                Img="https://grooovy-sable.vercel.app/logo.png"
+                LinkToProject="https://grooovy-sable.vercel.app/"
             />
           </div>
           <div className="mb-64">
