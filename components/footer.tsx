@@ -34,5 +34,3 @@ export default function Footer() {
         </div>
     )
 }
-
-//© Toby Brown {year}

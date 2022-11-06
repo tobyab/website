@@ -1,6 +1,6 @@
 import Image from "next/image";
 import hero from "../public/hero.png";
-import {age} from "../utils/time";
+import { age } from "../utils/time";
 
 export default function Hero() {
     return (

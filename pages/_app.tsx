@@ -1,5 +1,5 @@
 import "../styles/globals.css"
-import splitbee from "@splitbee/web"
+import { Analytics } from '@vercel/analytics/react';
 
 import { SessionProvider } from "next-auth/react"
 import type { AppProps } from "next/app"
@@ -9,12 +9,11 @@ function MyApp({
                    Component,
                    pageProps: { session, ...pageProps },
                }: AppProps<{ session: Session }>) {
-  splitbee.init({
-    token: process.env.SPLITBEE_TOKEN
-  })
+
   return (
       <SessionProvider session={session}>
         <Component {...pageProps}/>
+          <Analytics />
       </SessionProvider>
   );
 }
