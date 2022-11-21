@@ -120,6 +120,12 @@ export default function Home({ fallbackData }) {
                 Img="https://grooovy-sable.vercel.app/logo.png"
                 LinkToProject="https://grooovy-sable.vercel.app/"
             />
+            <Now
+                Title="Conifer"
+                Description="I&apos;m building version 2 of Conifer!"
+                Img="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/apple/325/potted-plant_1fab4.png"
+                LinkToProject="https://github.com/developedbytoby/conifer/tree/v2"
+            />
           </div>
           <div className="mb-64">
             <h1 className="text-5xl font-bold">Let&apos;s be friends</h1>
