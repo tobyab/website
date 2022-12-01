@@ -1,4 +1,4 @@
-![SCR-20220919-pke](https://user-images.githubusercontent.com/77097223/191184711-5c64f09e-f145-4733-a0fa-37f56a35b183.png)
+![A screenshot of tobyb.dev](https://user-images.githubusercontent.com/77097223/205148026-7d82f6e3-0465-4435-91e6-879020d2a12f.png)
 
 # developedbytoby/website
 
