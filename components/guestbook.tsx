@@ -6,15 +6,15 @@ import fetcher from "../utils/fetcher"
 import { format } from "date-fns"
 import Image from "next/image"
 
-import send from "../public/icons/send.svg"
+import send from "../public/send.svg"
 
 function GuestbookEntry({ entry, user }) {
-  return (
-    <div className="py-2 md:w-1/2 w-auto">
-      <p className="text-xl">{entry.body}</p>
-        <p className="text-gray-600">{entry.created_by} <span className="mx-1">/</span> {format(new Date(entry.updated_at), "d MMM y, h:mm")}</p>
-      </div>
-  );
+    return (
+        <div className="py-2 md:w-1/2 w-auto">
+            <p className="text-xl">{entry.body}</p>
+            <p className="text-gray-600">{entry.created_by} <span className="mx-1">/</span> {format(new Date(entry.updated_at), "d MMM y, h:mm")}</p>
+        </div>
+    );
 }
 
 export default function Guestbook({ fallbackData }) {

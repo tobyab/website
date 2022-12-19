@@ -8,6 +8,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@hackclub/icons": "^0.0.12",
     "@prisma/client": "^4.5.0",
     "@splitbee/web": "^0.3.0",
     "@vercel/analytics": "^0.1.3",

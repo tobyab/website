@@ -1,5 +1,5 @@
-import { message } from "../utils/time";
-import Link from "next/link";
+import { message } from "../utils/time"
+import Link from "next/link"
 
 export default function Footer() {
     return (

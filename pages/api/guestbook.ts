@@ -1,8 +1,8 @@
 import prisma from "../../utils/prisma"
 import type { NextApiRequest, NextApiResponse } from "next"
 import { getSession } from "next-auth/react"
-var Filter = require("bad-words"),
 
+let Filter = require("bad-words"),
 filter = new Filter();
 
 export default async function handler(
@@ -17,12 +17,12 @@ export default async function handler(
     });
 
     return res.json(
-      entries.map((entry) => ({
-        id: entry.id.toString(),
-        body: entry.body,
-        created_by: entry.created_by,
-        updated_at: entry.updated_at
-      }))
+        entries.map((entry) => ({
+          id: entry.id.toString(),
+          body: entry.body,
+          created_by: entry.created_by,
+          updated_at: entry.updated_at
+        }))
     );
   }
 

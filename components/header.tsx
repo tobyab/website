@@ -1,13 +1,9 @@
-import Link from "next/link";
-import Image from "next/image";
-
-import mail from "../public/icons/mail.svg";
-import github from "../public/icons/github.svg";
-import twitter from "../public/icons/twitter.svg";
+import Link from "next/link"
+import Icon from "@hackclub/icons"
 
 export default function Header() {
     return (
-        <div className="z-50">
+        <div>
             <Link
                 href="#"
                 className="fixed m-8 text-xl"
@@ -20,30 +16,21 @@ export default function Header() {
                     target="_blank"
                     rel="noopener norefferer"
                 >
-                    <Image
-                        src={mail}
-                        alt="Mail icon"
-                    />
+                    <Icon glyph="email-fill" size={32}/>
                 </Link>
                 <Link
                     href="https://github.com/developedbytoby"
                     target="_blank"
                     rel="noopener norefferer"
                 >
-                    <Image
-                        src={github}
-                        alt="GitHub icon"
-                    />
+                    <Icon glyph="github" size={32} />
                 </Link>
                 <Link
                     href="https://twitter.com/developedbytoby"
                     target="_blank"
                     rel="noopener norefferer"
                 >
-                    <Image
-                        src={twitter}
-                        alt="Twitter icon"
-                    />
+                    <Icon glyph="twitter" size={32} />
                 </Link>
             </div>
         </div>

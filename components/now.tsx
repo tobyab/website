@@ -1,6 +1,6 @@
 import Link from "next/link"
 
-export default function Now({ Title, Description, Img, LinkToProject }: any) {
+export default function Now({ Title, Description, Img, LinkToProject }) {
     return (
         <div className="my-4">
             <Link
@@ -9,11 +9,11 @@ export default function Now({ Title, Description, Img, LinkToProject }: any) {
                 rel="noopener norefferer"
             >
                 <div className="flex py-4 space-x-4">
-                    <picture>
+                    <picture className="self-center w-12 h-12">
                         <img
                             src={Img}
                             alt={Title}
-                            className="rounded-lg w-12 h-12 self-center"
+                            className="rounded-lg"
                         />
                     </picture>
                     <div>
