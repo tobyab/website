@@ -28,7 +28,7 @@ export default function Home({ fallbackData }) {
                   />
                   <ProjectCard
                       title="Conifer"
-                      description="🌲The (almost) perfect personal website template"
+                      description="🪴 The (almost) perfect personal website template"
                       link="https://github.com/developedbytoby/conifer"
                   />
                 </div>
