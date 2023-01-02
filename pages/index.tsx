@@ -98,25 +98,25 @@ export default function Home({ fallbackData }) {
               <p className="text-xl lg:w-1/2 w-auto mt-2 mb-16">Here&apos;s a super quick summary of what I&apos;m up to right now!</p>
               <Now
                   Title="Hack Club"
-                  Description="I&apos;m a community engineer @ Hack Club"
+                  Description="I&apos;m a community engineer at Hack Club"
                   Img="https://assets.hackclub.com/icon-square.svg"
                   LinkToProject="https://hackclub.com"
               />
               <Now
                   Title="Tilde"
-                  Description="Trying to make an easier way to take notes"
-                  Img="https://github.com/developedbytoby/tilde/raw/master/resources/icon.png"
+                  Description="Trying to make note-taking as easy as possible"
+                  Img="https://cdn.tobyb.dev/tilde.png"
                   LinkToProject="https://github.com/developedbytoby/tilde"
               />
               <Now
                   Title="Aretav"
-                  Description="I&apos;m working on version 2, and open sourcing Aretav"
+                  Description="I&apos;m currently working on open sourcing Aretav"
                   Img="https://aretav.com/logo.png"
                   LinkToProject="https://aretav.com"
               />
               <Now
                   Title="grooovy"
-                  Description="A very much unfinished project, which I'm building right now"
+                  Description="I&apos;m trying to make sharing your project progress easier"
                   Img="https://grooovy.tobyb.dev/logo.png"
                   LinkToProject="https://grooovy.tobyb.dev"
               />
