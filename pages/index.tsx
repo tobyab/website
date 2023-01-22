@@ -145,7 +145,7 @@ export default function Home({ fallbackData }) {
                   Description="Here's my portfolio, made with Aretav!"
               />
               <Social
-                  SocialLink="https://www.linkedin.com/in/toby-b-987229232/"
+                  SocialLink="https://www.linkedin.com/in/developedbytoby/"
                   Name="LinkedIn"
                   Description="There's not too much here, but let's connect!"
               />
