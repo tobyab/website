@@ -100,7 +100,7 @@ export default function Guestbook({ fallbackData }) {
                     ) : null}
                 </div>
                 <div>
-                    {entries?.map((entry) => (
+                    {((entries as Array<any>) || []).map((entry) => (
                         <GuestbookEntry
                             key={entry.id}
                             entry={entry}
