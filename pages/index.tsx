@@ -1,4 +1,3 @@
-import { age } from "../utils/time"
 import Guestbook from "../components/guestbook"
 import { ProjectCard, BigProjectCard } from "../components/cards"
 import Meta from "../components/meta"
@@ -16,9 +15,9 @@ export default function Home({ fallbackData }) {
         <div className="place-items-center justify-center flex flex-col px-6 mx-auto z-10">
           <div className="flex-col place-items-center w-4/5 md:w-2/3 z-10">
             <Hero/>
-            <div className="my-64 w-auto">
+            <div className="mb-64 w-auto">
               <h1 className="text-5xl font-bold">Projects</h1>
-              <p className="text-xl mt-2 mx-auto">A collection of a few small projects I&apos;ve worked on!</p>
+              <p className="text-xl my-2 mx-auto">A collection of a few small projects I&apos;ve worked on!</p>
               <div className="sm:space-y-4 mt-16">
                 <div className="md:flex grid md:space-x-4">
                   <ProjectCard
@@ -63,35 +62,6 @@ export default function Home({ fallbackData }) {
                 />
               </div>
             </div>
-            <div className="my-64 w-auto">
-              <h1 className="text-5xl font-bold">About</h1>
-              <p className="text-xl lg:w-1/2 w-auto mt-2 mb-16">A small paragraph about me!</p>
-              <div className="md:w-1/2 w-auto text-xl space-y-2 flex space-x-16">
-                <div>
-                  <p>
-                    I&apos;m Toby, a {age} year old full stack web developer from London.
-                    I have a passion for building intuitive, modern and speedy web apps.
-                  </p>
-                  <p>
-                    Before web development, I was really into hardware.
-                    At the age of 7, I got my first computer, a Raspberry Pi Model B.
-                    With that Raspberry Pi, I started learning how to code.
-                    This is where my passion for computers really started.
-                    I started by developing simple games using Scratch, and later on I was building small games using Python.
-                    3 years later, at the age of 10, I built my first computer.
-                  </p>
-                  <p>
-                    Since then, I&apos;ve really got into open source software.
-                    I&apos;ve also found amazing communities like Hack Club which have helped me learn more, and grow as a programmer!
-                  </p>
-                  <p>
-                    As well as web development, I&apos;m also really interested in UI design, AI and ethical hacking.
-                    Outside of technology, I also play the cello, piano, and I sing. Also, according to my family, I&apos;m really bad at telling
-                    jokes!
-                  </p>
-                </div>
-              </div>
-            </div>
 
             <div className="mb-64">
               <h1 className="text-5xl font-bold">Now</h1>
@@ -103,16 +73,22 @@ export default function Home({ fallbackData }) {
                   LinkToProject="https://hackclub.com"
               />
               <Now
+                  Title="SineRider"
+                  Description="I&apos;m currently building a Twitter bot for SineRider"
+                  Img="https://sinerider.com/sr_logo.webp"
+                  LinkToProject="https://sinerider.com"
+              />
+              <Now
+                  Title="Aretav"
+                  Description="I&apos;m working on open sourcing Aretav"
+                  Img="https://aretav.com/logo.png"
+                  LinkToProject="https://aretav.com"
+              />
+              <Now
                   Title="Tilde"
                   Description="Trying to make note-taking as easy as possible"
                   Img="https://cdn.tobyb.dev/tilde.png"
                   LinkToProject="https://github.com/developedbytoby/tilde"
-              />
-              <Now
-                  Title="Aretav"
-                  Description="I&apos;m currently working on open sourcing Aretav"
-                  Img="https://aretav.com/logo.png"
-                  LinkToProject="https://aretav.com"
               />
               <Now
                   Title="grooovy"
@@ -138,6 +114,12 @@ export default function Home({ fallbackData }) {
                   SocialLink="https://twitter.com/developedbytoby"
                   Name="Twitter"
                   Description="Stay up to date with my projects, cool things I&apos;ve found or my random musings."
+              />
+              <Social
+                  SocialLink="https://mas.to/@tobyb"
+                  Name="Mastodon"
+                  Description="Stay even more up to date with my projects, cool things I&apos;ve found or my random musings."
+                  rel="me"
               />
               <Social
                   SocialLink="https://aretav.com/toby"

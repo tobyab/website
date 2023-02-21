@@ -4,7 +4,7 @@ import { age } from "../utils/time"
 
 export default function Hero() {
     return (
-        <div className="lg:flex md:mt-16">
+        <div className="lg:flex md:mt-16 mb-64">
             <div className="flex-col space-y-2 lg:pt-16 pt-24 relative">
                 <Image
                     src={hero}
