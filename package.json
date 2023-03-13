@@ -16,7 +16,7 @@
     "date-fns": "^2.29.3",
     "million": "^1.12.6-beta.2",
     "next": "^13.1.6",
-    "next-auth": "^4.19.2",
+    "next-auth": "^4.20.1",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
