@@ -1,0 +1,8 @@
+/node_modules
+/.next/
+.idea
+.yarn
+.env
+/public
+/next.config.js
+yarn.lock

@@ -26,6 +26,7 @@ yarn
 ```
 yarn dev
 ```
+
 And, make sure to create a `.env` file in the root directory with all of your environment variables!
 
 Copyright (c) 2022 Toby Brown under the MIT license.

@@ -1,150 +1,196 @@
-import Guestbook from "../components/guestbook"
-import { ProjectCard, BigProjectCard } from "../components/cards"
-import Meta from "../components/meta"
-import Now from "../components/now"
-import Social from "../components/links"
-import Footer from "../components/footer"
-import Header from "../components/header"
-import Hero from "../components/hero"
+import { H1 } from "../components/design/typography";
+import Np from "../components/np";
+import Image from "next/image";
+import { age } from "../utils/time";
+import Nav from "../components/nav";
 
-export default function Home({ fallbackData }) {
+import hammer from "../public/icons/hammer.svg";
+import sparkles from "../public/icons/sparkles.svg";
+import globe from "../public/icons/globe.svg";
+import pen from "../public/icons/pen.svg";
+import Transition from "../components/transition";
+import React from "react";
+
+type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
+
+export default function Home(ref: IndexPageRef) {
   return (
-      <div>
-        <Meta/>
-        <Header/>
-        <div className="place-items-center justify-center flex flex-col px-6 mx-auto z-10">
-          <div className="flex-col place-items-center w-4/5 md:w-2/3 z-10">
-            <Hero/>
-            <div className="mb-64 w-auto">
-              <h1 className="text-5xl font-bold">Projects</h1>
-              <p className="text-xl my-2 mx-auto">A collection of a few small projects I&apos;ve worked on!</p>
-              <div className="sm:space-y-4 mt-16">
-                <div className="md:flex grid md:space-x-4">
-                  <ProjectCard
-                      title="Blog"
-                      description="📖 My blog powered by Next.js, Tailwind and ContentLayer"
-                      link="https://github.com/developedbytoby/blog"
-                  />
-                  <ProjectCard
-                      title="Conifer"
-                      description="🪴 The (almost) perfect personal website template"
-                      link="https://github.com/developedbytoby/conifer"
-                  />
-                </div>
-                <div className="md:flex grid md:space-x-4">
-                  <ProjectCard
-                      title="Pluto"
-                      description="🤖 A small space themed quiz run by Pluto!"
-                      link="https://github.com/developedbytoby/pluto"
-                  />
-                  <ProjectCard
-                      title="Website"
-                      description="🏡 My personal website built with Next.js, TailwindCSS, Prisma and PlanetScale"
-                      link="https://github.com/developedbytoby/website"
-                  />
-                </div>
-              </div>
-              <h2 className="font-medium text-2xl my-16">Some other cool things I&apos;m working on right now:</h2>
-              <div className="grid space-y-8">
-                <BigProjectCard
-                    title="Aretav"
-                    description="Aretav provides you with an quick and easy way to create a beautiful personal portfolio."
-                    link="https://aretav.com/"
-                    imgSrc="/screenshots/aretav.png"
-                    imgAlt="A screenshot of aretav.com's landing page."
-                />
-                <BigProjectCard
-                    title="Tilde"
-                    description="Tilde is a simple, easy to use and open source Markdown editor built on electron."
-                    link="https://github.com/developedbytoby/tilde"
-                    imgSrc="/screenshots/tilde.png"
-                    imgAlt="A screenshot of Tilde"
-                />
-              </div>
-            </div>
-
-            <div className="mb-64">
-              <h1 className="text-5xl font-bold">Now</h1>
-              <p className="text-xl lg:w-1/2 w-auto mt-2 mb-16">Here&apos;s a super quick summary of what I&apos;m up to right now!</p>
-              <Now
-                  Title="Hack Club"
-                  Description="I&apos;m a community engineer at Hack Club"
-                  Img="https://assets.hackclub.com/icon-square.svg"
-                  LinkToProject="https://hackclub.com"
-              />
-              <Now
-                  Title="SineRider"
-                  Description="I&apos;m currently building a Twitter bot for SineRider"
-                  Img="https://sinerider.com/sr_logo.webp"
-                  LinkToProject="https://sinerider.com"
-              />
-              <Now
-                  Title="Aretav"
-                  Description="I&apos;m working on open sourcing Aretav"
-                  Img="https://aretav.com/logo.png"
-                  LinkToProject="https://aretav.com"
-              />
-              <Now
-                  Title="Tilde"
-                  Description="Trying to make note-taking as easy as possible"
-                  Img="https://cdn.tobyb.dev/tilde.png"
-                  LinkToProject="https://github.com/developedbytoby/tilde"
-              />
-              <Now
-                  Title="grooovy"
-                  Description="I&apos;m trying to make sharing your project progress easier"
-                  Img="https://grooovy.tobyb.dev/logo.png"
-                  LinkToProject="https://grooovy.tobyb.dev"
-              />
-            </div>
-            <div className="mb-64">
-              <h1 className="text-5xl font-bold">Let&apos;s be friends</h1>
-              <p className="text-xl lg:w-1/2 w-auto mt-2 mb-16">I love meeting new people, here are some of my social accounts!</p>
-              <Social
-                  SocialLink="mailto:hi@tobyb.dev"
-                  Name="Email"
-                  Description="Want to chat? Feel free to shoot me an email."
-              />
-              <Social
-                  SocialLink="https://github.com/developedbytoby"
-                  Name="GitHub"
-                  Description="The home of all of my code, one of my favourite places on the internet."
-              />
-              <Social
-                  SocialLink="https://twitter.com/developedbytoby"
-                  Name="Twitter"
-                  Description="Stay up to date with my projects, cool things I&apos;ve found or my random musings."
-              />
-              <Social
-                  SocialLink="https://mas.to/@tobyb"
-                  Name="Mastodon"
-                  Description="Stay even more up to date with my projects, cool things I&apos;ve found or my random musings."
-                  rel="me"
-              />
-              <Social
-                  SocialLink="https://aretav.com/toby"
-                  Name="Aretav"
-                  Description="Here's my portfolio, made with Aretav!"
-              />
-              <Social
-                  SocialLink="https://www.linkedin.com/in/developedbytoby/"
-                  Name="LinkedIn"
-                  Description="There's not too much here, but let's connect!"
-              />
-              <Social
-                  SocialLink="https://music.apple.com/profile/developedbytoby"
-                  Name="Apple Music"
-                  Description="Take a listen to some of my favourite songs!"
-              />
-            </div>
-            <div className="flex-col">
-              <h1 className="text-5xl font-bold">Guestbook</h1>
-              <p className="text-xl md:w-2/3 w-auto mt-2 mb-8">Leave a message for me and everyone else who visits this website, it can be anything from advice to a joke!</p>
-              <Guestbook fallbackData={fallbackData}/>
-            </div>
-            <Footer/>
-          </div>
+    <div className="mx-8">
+      <Transition ref={ref}>
+        <div className="grid justify-center place-items-center h-screen">
+          <H1 className="max-w-2xl">
+            Hey, I&apos;m Toby. I&apos;m a {age} year old full stack web
+            developer{" "}
+            <Image
+              src={hammer}
+              alt="Hammer icon"
+              className="h-8 w-8 object-cover inline self-center"
+            />{" "}
+            with a passion for making delightful websites{" "}
+            <Image
+              src={sparkles}
+              alt="Sparkles icon"
+              className="h-8 w-8 object-cover inline self-center"
+            />{" "}
+            . Right now, I&apos;m working as a Community Engineer at{" "}
+            <Np href="https://hackclub.com">Hack Club</Np>, a community for
+            teenage hackers across the globe{" "}
+            <Image
+              src={globe}
+              alt="Globe icon"
+              className="h-8 w-8 object-cover inline self-center"
+            />{" "}
+            , and building <Np href="https://aretav.com">Aretav</Np>, a tool for
+            anyone to craft{" "}
+            <Image
+              src={pen}
+              alt="Pen nib icon"
+              className="h-8 w-8 object-cover inline self-center"
+            />{" "}
+            their own website - as painlessly as possible.
+          </H1>
         </div>
-      </div>
+      </Transition>
+      <Nav />
+    </div>
   );
 }
+
+/*
+
+-----------------
+Potential version
+-----------------
+
+ <div className="grid justify-center place-items-center">
+      <Meta />
+      <div className="max-w-xl space-y-16 my-32 mx-8">
+        <div>
+          <Image
+            src={toby}
+            alt="Toby Brown"
+            className="rounded-full h-10 w-10 object-cover mb-8"
+          />
+          <P>Toby Brown</P>
+          <div className="space-y-4 mt-2">
+            <S>
+              Hey, I&apos;m Toby. I&apos;m a {age} year old full stack web
+              developer, designer and (occasional) musician from London. Right
+              now, I&apos;m working as a community engineer at{" "}
+              <Np href="https://hackclub.com">Hack Club</Np>, a community for
+              teenage hackers across the globe.
+            </S>
+            <S>
+              As well as Hack Club, I&apos;m also building{" "}
+              <Np href="https://aretav.com">Aretav</Np>. A tool to help anyone
+              make creating a website more accessible for everyone.
+            </S>
+            <S>
+              I&apos;ve also built{" "}
+              <Link href="https://aretav.com">Conifer</Link>, which is a super
+              simple template for creating a personal website. And, I helped
+              build{" "}
+              <Np href="https://twitter.com/sineriderbot">
+                SineRider&apos;s Twitter bot
+              </Np>
+              ; a bot which tweets out random maths equations everyday.
+            </S>
+            <S>
+              As well as all of this, I love listening to, and creating music
+              with my cello and piano! Right now, my favourite music artist is
+              probably{" "}
+              <Np href="https://en.wikipedia.org/wiki/Caroline_Polachek">
+                Caroline Polacheck
+              </Np>
+              . You can check out all of my playlists over on{" "}
+              <Np href="https://music.apple.com/profile/developedbytoby">
+                Apple Music
+              </Np>
+              .
+            </S>
+            <Button>
+              <Link href="mailto:hi@tobyb.dev">Shoot me an email</Link>
+            </Button>
+          </div>
+        </div>
+        <div className="space-y-4">
+          <H1>Socials</H1>
+          <Profile name="GitHub" link="https://github.com/developedbytoby" />
+          <Profile name="Twitter" link="https://twitter.com/developedbytoby" />
+          <Profile name="Mastodon" link="https://mas.to/@tobyb" />
+        </div>
+        <div className="space-y-4">
+          <H1>Work</H1>
+          <Work
+            title="Community Engineer"
+            company="Hack Club"
+            start="2022"
+            link="https://hackclub.com"
+          />
+          <Work
+            title="Founding Developer"
+            company="Aretav"
+            start="2022"
+            link="https://aretav.com"
+          />
+        </div>
+        <div className="space-y-4">
+          <H1>Projects</H1>
+          <Project
+            title="SineRider Twitter Bot"
+            link="https://twitter.com/sineriderbot"
+            date="2023"
+          />
+          <Project
+            title="Conifer"
+            link="https://conifer.tobyb.dev"
+            date="2022"
+          />
+          <Project
+            title="Tilde"
+            link="https://github.com/developedbytoby/tilde"
+            date="2022"
+          />
+        </div>
+        <div>
+          <H1>Guestbook</H1>
+          <Guestbook fallbackData={fallbackData} />
+        </div>
+        <div>
+          <P>✨ Built with groovy 80s music.</P>
+          <S className="mt-4">
+            Hey! Thanks for checking out my website. If you&apos;re interested,
+            check out the source code{" "}
+            <Link
+              href="https://github.com/developedbytoby/website"
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here
+            </Link>
+            . Or, if you&apos;re looking for a cute picture of my dog, Pepper,{" "}
+            <Link
+              href="/pepper.png"
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              here you go
+            </Link>
+            . Oh, and one more thing, if you feel like doing something kind
+            today,{" "}
+            <Link
+              href="https://github.com/sponsors/developedbytoby"
+              className="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              click here
+            </Link>
+            . I hope you&apos;re having an awesome day!
+          </S>
+        </div>
+      </div>
+    </div>
+ */
