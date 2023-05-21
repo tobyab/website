@@ -26,7 +26,7 @@ export default async function handler(
   const session = await getSession({ req });
 
   if (!session || !session.user) {
-    return res.status(403).send("Sign in, please!");
+    return res.status(403).send("Sign in");
   }
 
   if (req.method === "POST") {

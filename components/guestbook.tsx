@@ -28,6 +28,13 @@ export default function Guestbook({ fallbackData }) {
 
   const { data: session } = useSession();
 
+  if (session) {
+    console.log("----------------");
+    console.log(session.user.email);
+    console.log(session.user.name);
+    console.log("----------------");
+  }
+
   async function leaveEntry(e) {
     e.preventDefault();
     setForm({ state: Form.Loading });
