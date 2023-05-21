@@ -6,6 +6,8 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
+  const session = await getSession({ req });
+
   if (req.method === "GET") {
     const entries = await prisma.guestbook.findMany({
       orderBy: {
@@ -23,13 +25,11 @@ export default async function handler(
     );
   }
 
-  const session = await getSession({ req });
   if (!session || !session.user) {
     return res.status(403).send("Unauthorized");
   }
 
-  const email = session.user.email as string;
-  const name = session.user.name as string;
+  const { email, name } = session.user;
 
   if (req.method === "POST") {
     await prisma.guestbook.create({

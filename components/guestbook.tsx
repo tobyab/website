@@ -41,12 +41,15 @@ export default function Guestbook({ fallbackData }) {
     const response = await fetch("/api/guestbook", {
       body: JSON.stringify({
         body: input.current.value,
+        email: session.user.email,
+        name: session.user.name,
       }),
       headers: {
         "Content-Type": "application/json",
       },
       method: "POST",
     });
+
     const { error } = await response.json();
     if (error) {
       setForm({

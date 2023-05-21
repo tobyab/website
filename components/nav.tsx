@@ -32,9 +32,11 @@ export default function Nav() {
           <Link href="/projects">
             <P className="md:text-lg text-sm">Projects</P>
           </Link>
-          <Link href="/guestbook">
-            <P className="md:text-lg text-sm">Guestbook</P>
-          </Link>
+          {/*
+            <Link href="/guestbook">
+              <P className="md:text-lg text-sm">Guestbook</P>
+            </Link>
+          */}
         </div>
       </div>
     </div>
