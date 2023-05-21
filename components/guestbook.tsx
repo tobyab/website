@@ -19,18 +19,16 @@ function GuestbookEntry({ entry, user }) {
   );
 }
 
-export default function Guestbook() {
+export default function Guestbook({ fallbackData }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
   const input = useRef(null);
-
-  const { data: entries } = useSWR("/api/guestbook", fetcher);
-
+  const { data: entries } = useSWR("/api/guestbook", fetcher, {
+    fallbackData,
+  });
   const { data: session } = useSession();
-
   const leaveEntry = async (e) => {
     e.preventDefault();
     setForm({ state: Form.Loading });
-
     const response = await fetch("/api/guestbook", {
       body: JSON.stringify({
         body: input.current.value,
@@ -40,7 +38,6 @@ export default function Guestbook() {
       },
       method: "POST",
     });
-
     const { error } = await response.json();
     if (error) {
       setForm({
@@ -49,7 +46,6 @@ export default function Guestbook() {
       });
       return;
     }
-
     input.current.value = "";
     setForm({
       state: Form.Success,

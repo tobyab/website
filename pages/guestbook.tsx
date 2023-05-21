@@ -6,7 +6,7 @@ import React from "react";
 
 type GuestbookPageRef = React.ForwardedRef<HTMLDivElement>;
 
-export default function GuestbookPage(ref: GuestbookPageRef) {
+export default function GuestbookPage(ref: GuestbookPageRef, { fallbackData }) {
   return (
     <div className="grid justify-center place-items-center">
       <Transition ref={ref}>
@@ -17,7 +17,7 @@ export default function GuestbookPage(ref: GuestbookPageRef) {
               Leave a message for me and everyone else who visits this website.
             </span>
           </H1>
-          <Guestbook />
+          <Guestbook fallbackData={fallbackData} />
         </div>
       </Transition>
       <Nav />
