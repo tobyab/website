@@ -8,9 +8,9 @@ type WorkPageRef = React.ForwardedRef<HTMLDivElement>;
 
 export default function Work(ref: WorkPageRef) {
   return (
-    <div className="grid justify-center place-items-center">
+    <div className="grid justify-center place-items-center mx-8">
       <Transition ref={ref}>
-        <div className="flex mt-32 space-x-16">
+        <div className="md:flex mt-32 md:space-x-16 space-y-8 md:space-y-0">
           <H1 className="max-w-2xl">
             Work -{" "}
             <span className="text-darkGrey">

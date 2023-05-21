@@ -8,9 +8,9 @@ type ProjectsPageRef = React.ForwardedRef<HTMLDivElement>;
 
 export default function ProjectsPage(ref: ProjectsPageRef) {
   return (
-    <div className="grid justify-center place-items-center">
+    <div className="grid justify-center place-items-center mx-8">
       <Transition ref={ref}>
-        <div className="flex mt-32 space-x-16">
+        <div className="md:flex mt-32 md:space-x-16 space-y-8 md:space-y-0">
           <H1 className="max-w-2xl">
             Projects -{" "}
             <span className="text-darkGrey">
@@ -48,6 +48,11 @@ export default function ProjectsPage(ref: ProjectsPageRef) {
               creationDate="2022"
               name="Grooovy"
               link="https://github.com/developedbytoby/grooovy"
+            />
+            <Widget
+              creationDate="2021"
+              name="Pluto"
+              link="https://github.com/developedbytoby/pluto"
             />
           </div>
         </div>

@@ -11,8 +11,8 @@ function GuestbookEntry({ entry, user }) {
   return (
     <div className="py-2 w-auto">
       <P>{entry.body}</P>
-      <S>
-        {entry.created_by} <span className="mx-1">/</span>{" "}
+      <S className="font-mono">
+        {entry.created_by} -{" "}
         {format(new Date(entry.updated_at), "d MMM y, h:mm")}
       </S>
     </div>
@@ -58,18 +58,16 @@ export default function Guestbook() {
 
   return (
     <div className="max-w-2xl">
-      <div>
+      <div className="mb-8">
         {!session ? (
-          <div>
-            <Button
-              onClick={(e) => {
-                e.preventDefault();
-                signIn("github");
-              }}
-            >
-              Continue with GitHub
-            </Button>
-          </div>
+          <Button
+            onClick={(e) => {
+              e.preventDefault();
+              signIn("github");
+            }}
+          >
+            Continue with GitHub
+          </Button>
         ) : (
           <form onSubmit={leaveEntry} className="flex space-x-4">
             <input
@@ -84,17 +82,14 @@ export default function Guestbook() {
           </form>
         )}
       </div>
+      <div className="mb-6">
+        {form.state === Form.Error ? (
+          <P>Uh oh! Something&apos;s gone wrong. Please try again later.</P>
+        ) : form.state === Form.Success ? (
+          <P>Thanks for signing my guestbook!</P>
+        ) : null}
+      </div>
 
-      {form.state === Form.Error ? (
-        <h1 className="text-xl lg:w-1/2 w-auto mt-2 mb-16">
-          Uh oh! Something&apos;s gone wrong. Here&apos;s your error code:{" "}
-          {Form.Error}.
-        </h1>
-      ) : form.state === Form.Success ? (
-        <h1 className="text-xl lg:w-1/2 w-auto mt-2 mb-16">
-          🎉 Wahoo! Thanks for signing the guestbook.
-        </h1>
-      ) : null}
       {((entries as Array<any>) || []).map((entry) => (
         <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
       ))}

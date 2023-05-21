@@ -8,18 +8,28 @@ function Transition(
   { children, ...rest }: PageTransitionProps,
   ref: PageTransitionRef
 ) {
-  const fadedOut = { opacity: 0 };
-  const fadeIn = { opacity: 1 };
+  const fadeIn = {
+    opacity: 1,
+    transition: {
+      duration: 0.8,
+      ease: "easeOut",
+    },
+  };
 
-  const transition = { duration: 0.8, ease: "easeInOut" };
+  const exitTransition = {
+    opacity: 0,
+    transition: {
+      duration: 0.4,
+      ease: "easeIn",
+    },
+  };
 
   return (
     <motion.div
       ref={ref}
-      initial={fadedOut}
+      initial={{ opacity: 0 }}
       animate={fadeIn}
-      exit={fadedOut}
-      transition={transition}
+      exit={exitTransition}
       {...rest}
     >
       {children}
