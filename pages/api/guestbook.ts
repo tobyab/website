@@ -24,26 +24,23 @@ export default async function handler(
   }
 
   const session = await getSession({ req });
-
   if (!session || !session.user) {
-    return res.status(403).send("Sign in");
+    return res.status(403).send("Unauthorized");
   }
 
+  const email = session.user.email as string;
+  const name = session.user.name as string;
+
   if (req.method === "POST") {
-    const newEntry = await prisma.guestbook.create({
+    await prisma.guestbook.create({
       data: {
-        email: session.user.email as string,
-        body: req.body.slice(0, 500),
-        created_by: session.user.name as string,
+        email,
+        body: (req.body || "").slice(0, 500),
+        created_by: name,
       },
     });
 
-    return res.status(200).json({
-      id: newEntry.id.toString(),
-      body: newEntry.body,
-      created_by: newEntry.created_by,
-      updated_at: newEntry.updated_at,
-    });
+    return res.status(200).json({ error: null });
   }
 
   return res.send("Hey! That method isn't allowed!");
