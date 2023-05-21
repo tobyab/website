@@ -8,15 +8,13 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@hackclub/icons": "^0.0.12",
     "@prisma/client": "^4.10.1",
-    "@splitbee/web": "^0.3.0",
     "@vercel/analytics": "^0.1.10",
     "date-fns": "^2.29.3",
     "framer-motion": "^10.12.12",
     "million": "^1.12.6-beta.2",
     "next": "^13.1.6",
-    "next-auth": "^4.20.1",
+    "next-auth": "^4.22.1",
     "query-string": "^8.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
