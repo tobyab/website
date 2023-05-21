@@ -25,6 +25,7 @@ export default function Guestbook({ fallbackData }) {
   const { data: entries } = useSWR("/api/guestbook", fetcher, {
     fallbackData,
   });
+
   const { data: session } = useSession();
 
   async function leaveEntry(e) {
@@ -88,7 +89,7 @@ export default function Guestbook({ fallbackData }) {
       </div>
 
       {((entries as Array<any>) || []).map((entry) => (
-        <GuestbookEntry key={entry.id} entry={entry} user={session?.user} />
+        <GuestbookEntry key={entry.id} entry={entry} user={entry.created_by} />
       ))}
     </div>
   );
