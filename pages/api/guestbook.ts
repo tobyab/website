@@ -25,16 +25,16 @@ export default async function handler(
 
   const session = await getSession({ req });
 
-  if (!session) {
+  if (!session || !session.user) {
     return res.status(403).send("Sign in, please!");
   }
 
   if (req.method === "POST") {
     const newEntry = await prisma.guestbook.create({
       data: {
-        email: session.user.email,
+        email: session.user.email as string,
         body: req.body.slice(0, 500),
-        created_by: session.user.name,
+        created_by: session.user.name as string,
       },
     });
 
