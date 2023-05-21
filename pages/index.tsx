@@ -33,21 +33,26 @@ export default function Home(ref: IndexPageRef) {
               className="h-8 w-8 object-cover inline self-center"
             />{" "}
             . Right now, I&apos;m working as a Community Engineer at{" "}
-            <Np href="https://hackclub.com">Hack Club</Np>, a community for
-            teenage hackers across the globe{" "}
+            <Np href="https://hackclub.com" className="underline">
+              Hack Club
+            </Np>
+            , a community for teenage hackers across the globe{" "}
             <Image
               src={globe}
               alt="Globe icon"
               className="h-8 w-8 object-cover inline self-center"
             />{" "}
-            , and building <Np href="https://aretav.com">Aretav</Np>, a tool for
-            anyone to craft{" "}
+            , and building{" "}
+            <Np href="https://aretav.com" className="underline">
+              Aretav
+            </Np>
+            , a tool for anyone to craft{" "}
             <Image
               src={pen}
               alt="Pen nib icon"
               className="h-8 w-8 object-cover inline self-center"
             />{" "}
-            their own website - as painlessly as possible.
+            their own website as painlessly as possible.
           </H1>
         </div>
       </Transition>

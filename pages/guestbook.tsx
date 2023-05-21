@@ -8,9 +8,9 @@ type GuestbookPageRef = React.ForwardedRef<HTMLDivElement>;
 
 export default function GuestbookPage(ref: GuestbookPageRef) {
   return (
-    <div className="grid justify-center place-items-center mx-8">
+    <div className="grid justify-center place-items-center">
       <Transition ref={ref}>
-        <div className="md:flex mt-32 md:space-x-16 space-y-8 md:space-y-0 mb-16">
+        <div className="md:flex mt-32 md:space-x-16 space-y-8 md:space-y-0 mb-16 mx-8">
           <H1 className="max-w-2xl">
             Guestbook -{" "}
             <span className="text-darkGrey">

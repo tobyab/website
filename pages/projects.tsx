@@ -1,8 +1,8 @@
 import { H1, P, S } from "../components/design/typography";
 import Nav from "../components/nav";
-import Link from "next/link";
 import Transition from "../components/transition";
 import React from "react";
+import Np from "../components/np";
 
 type ProjectsPageRef = React.ForwardedRef<HTMLDivElement>;
 
@@ -14,8 +14,7 @@ export default function ProjectsPage(ref: ProjectsPageRef) {
           <H1 className="max-w-2xl">
             Projects -{" "}
             <span className="text-darkGrey">
-              Here&apos;s some things that I&apos;ve built. Some better than
-              others!
+              Here&apos;s some things that I&apos;ve built.
             </span>
           </H1>
           <div className="w-full space-y-4">
@@ -64,9 +63,9 @@ export default function ProjectsPage(ref: ProjectsPageRef) {
 
 function Widget({ creationDate, name, link }) {
   return (
-    <Link href={link} className="flex max-w-2xl justify-between">
+    <Np href={link} className="flex max-w-2xl justify-between">
       <P>{name}</P>
       <S className="font-mono self-center">{creationDate}</S>
-    </Link>
+    </Np>
   );
 }
