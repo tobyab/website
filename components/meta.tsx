@@ -5,7 +5,6 @@ export default function Meta() {
     <Head>
       <title>Toby Brown</title>
       <meta property="og:title" content="Toby Brown" />
-      <link rel="icon" href="/favicon.ico" />
       <meta name="description" content="Toby's personal website" />
       <meta property="og:url" content="https://tobyb.dev" />
       <meta property="og:image" content="https://tobyb.dev/meta.svg" />
