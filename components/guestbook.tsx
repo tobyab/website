@@ -26,7 +26,8 @@ export default function Guestbook({ fallbackData }) {
     fallbackData,
   });
   const { data: session } = useSession();
-  const leaveEntry = async (e) => {
+
+  async function leaveEntry(e) {
     e.preventDefault();
     setForm({ state: Form.Loading });
     const response = await fetch("/api/guestbook", {
@@ -50,7 +51,7 @@ export default function Guestbook({ fallbackData }) {
     setForm({
       state: Form.Success,
     });
-  };
+  }
 
   return (
     <div className="max-w-2xl">
@@ -73,7 +74,7 @@ export default function Guestbook({ fallbackData }) {
               required
             />
             <Button type="submit">
-              {form.state === Form.Loading ? <P>Loading...</P> : <>Sign</>}
+              {form.state === Form.Loading ? <P>Signing...</P> : <>Sign</>}
             </Button>
           </form>
         )}
