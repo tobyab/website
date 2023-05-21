@@ -8,7 +8,7 @@ export default function Meta() {
       <link rel="icon" href="/favicon.ico" />
       <meta name="description" content="Toby's personal website" />
       <meta property="og:url" content="https://tobyb.dev" />
-      <meta property="og:image" content="/meta.svg" />
+      <meta property="og:image" content="https://tobyb.dev/meta.svg" />
       <meta property="og:type" content="website" />
 
       <meta name="twitter:card" content="summary_large_image" />
