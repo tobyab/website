@@ -25,31 +25,19 @@ export default function Guestbook({ fallbackData }) {
   const { data: entries } = useSWR("/api/guestbook", fetcher, {
     fallbackData,
   });
-
   const { data: session } = useSession();
-
-  if (session) {
-    console.log("----------------");
-    console.log(session.user.email);
-    console.log(session.user.name);
-    console.log("----------------");
-  }
-
-  async function leaveEntry(e) {
+  const leaveEntry = async (e) => {
     e.preventDefault();
     setForm({ state: Form.Loading });
     const response = await fetch("/api/guestbook", {
       body: JSON.stringify({
         body: input.current.value,
-        email: session.user.email,
-        name: session.user.name,
       }),
       headers: {
         "Content-Type": "application/json",
       },
       method: "POST",
     });
-
     const { error } = await response.json();
     if (error) {
       setForm({
@@ -62,7 +50,7 @@ export default function Guestbook({ fallbackData }) {
     setForm({
       state: Form.Success,
     });
-  }
+  };
 
   return (
     <div className="max-w-2xl">

@@ -1,13 +1,12 @@
 import prisma from "../../utils/prisma";
 import type { NextApiRequest, NextApiResponse } from "next";
-import { getSession } from "next-auth/react";
+import { authOptions } from "./auth/[...nextauth]";
+import { getServerSession } from "next-auth/next";
 
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const session = await getSession({ req });
-
   if (req.method === "GET") {
     const entries = await prisma.guestbook.findMany({
       orderBy: {
@@ -25,22 +24,27 @@ export default async function handler(
     );
   }
 
-  if (!session || !session.user) {
+  const session = await getServerSession(req, res, authOptions);
+
+  if (!session) {
     return res.status(403).send("Unauthorized");
   }
 
-  const { email, name } = session.user;
-
   if (req.method === "POST") {
-    await prisma.guestbook.create({
+    const newEntry = await prisma.guestbook.create({
       data: {
-        email,
-        body: (req.body || "").slice(0, 500),
-        created_by: name,
+        email: session.user.email,
+        body: (req.body.body || "").slice(0, 500),
+        created_by: session.user.name,
       },
     });
 
-    return res.status(200).json({ error: null });
+    return res.status(200).json({
+      id: newEntry.id.toString(),
+      body: newEntry.body,
+      created_by: newEntry.created_by,
+      updated_at: newEntry.updated_at,
+    });
   }
 
   return res.send("Hey! That method isn't allowed!");
