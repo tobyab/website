@@ -67,7 +67,7 @@ export default function Guestbook({ fallbackData }) {
         ) : (
           <form onSubmit={leaveEntry} className="flex space-x-4">
             <input
-              className="bg-grey p-2 px-4 rounded-xl w-full placeholder-darkGrey"
+              className="bg-grey p-2 px-4 rounded-xl w-full placeholder-darkGrey outline-none"
               ref={input}
               placeholder="Your message..."
               required
