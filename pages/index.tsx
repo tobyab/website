@@ -3,13 +3,13 @@ import Np from "../components/np";
 import Image from "next/image";
 import { age } from "../utils/time";
 import Nav from "../components/nav";
+import Transition from "../components/transition";
+import React from "react";
 
 import hammer from "../public/icons/hammer.svg";
 import sparkles from "../public/icons/sparkles.svg";
 import globe from "../public/icons/globe.svg";
 import pen from "../public/icons/pen.svg";
-import Transition from "../components/transition";
-import React from "react";
 
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
 
@@ -17,7 +17,7 @@ export default function Home(ref: IndexPageRef) {
   return (
     <div>
       <Transition ref={ref}>
-        <div className="grid justify-center place-items-center h-screen mx-8">
+        <div className="grid justify-center place-items-center h-screen m-8">
           <H1 className="max-w-2xl">
             Hey, I&apos;m Toby. I&apos;m a {age} year old full stack web
             developer{" "}

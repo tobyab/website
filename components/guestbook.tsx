@@ -7,7 +7,7 @@ import { format } from "date-fns";
 import { P, S } from "./design/typography";
 import { Button } from "./design/button";
 
-function GuestbookEntry({ entry, user }) {
+function GuestbookEntry({ entry }) {
   return (
     <div className="py-2 w-auto">
       <P>{entry.body}</P>
@@ -87,7 +87,7 @@ export default function Guestbook({ fallbackData }) {
       </div>
 
       {((entries as Array<any>) || []).map((entry) => (
-        <GuestbookEntry key={entry.id} entry={entry} user={entry.created_by} />
+        <GuestbookEntry key={entry.id} entry={entry} />
       ))}
     </div>
   );
