@@ -1,34 +1,30 @@
 import { useRef, useState } from "react";
 import { Form, FormState } from "../utils/states";
 import { signIn, useSession } from "next-auth/react";
-import useSWR from "swr";
-import fetcher from "../utils/fetcher";
 import { format } from "date-fns";
 import { P, S } from "./design/typography";
 import { Button } from "./design/button";
 
-function GuestbookEntry({ entry }) {
+function GuestbookEntry({ data }) {
   return (
     <div className="py-2 w-auto">
-      <P>{entry.body}</P>
+      <P>{data.body}</P>
       <S className="font-mono">
-        {entry.created_by} -{" "}
-        {format(new Date(entry.updated_at), "d MMM y, h:mm")}
+        {data.created_by} - {format(new Date(data.created_at), "MMM y")}
       </S>
     </div>
   );
 }
 
-export default function Guestbook({ fallbackData }) {
+export default function Guestbook({ data }: { data: Array<any> }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
   const input = useRef(null);
-  const { data: entries } = useSWR("/api/guestbook", fetcher, {
-    fallbackData,
-  });
+
   const { data: session } = useSession();
-  const leaveEntry = async (e) => {
+  const leaveEntry = async (e: any) => {
     e.preventDefault();
     setForm({ state: Form.Loading });
+
     const response = await fetch("/api/guestbook", {
       body: JSON.stringify({
         body: input.current.value,
@@ -38,6 +34,7 @@ export default function Guestbook({ fallbackData }) {
       },
       method: "POST",
     });
+
     const { error } = await response.json();
     if (error) {
       setForm({
@@ -46,7 +43,9 @@ export default function Guestbook({ fallbackData }) {
       });
       return;
     }
+
     input.current.value = "";
+
     setForm({
       state: Form.Success,
     });
@@ -86,8 +85,8 @@ export default function Guestbook({ fallbackData }) {
         ) : null}
       </div>
 
-      {((entries as Array<any>) || []).map((entry) => (
-        <GuestbookEntry key={entry.id} entry={entry} />
+      {((data as Array<any>) || []).map((data) => (
+        <GuestbookEntry key={data.id} data={data} />
       ))}
     </div>
   );

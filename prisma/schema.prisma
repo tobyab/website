@@ -1,19 +1,16 @@
 generator client {
-  provider        = "prisma-client-js"
-  previewFeatures = ["referentialIntegrity"]
+  provider = "prisma-client-js"
 }
 
 datasource db {
-  provider             = "mysql"
-  url                  = env("DATABASE_URL")
-  referentialIntegrity = "prisma"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 model guestbook {
-  id         BigInt @id @default(autoincrement())
-  email      String @db.VarChar(256)
-  body       String @db.VarChar(500)
-  created_by String @db.VarChar(256)
+  id         BigInt   @id @default(autoincrement())
+  email      String   @db.VarChar(256)
+  body       String   @db.VarChar(500)
+  created_by String   @db.VarChar(256)
   created_at DateTime @default(now()) @db.DateTime(6)
-  updated_at DateTime @default(now()) @db.DateTime(6)
 }
