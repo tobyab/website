@@ -20,6 +20,11 @@ export default function ProjectsPage(ref: ProjectsPageRef) {
           <div className="w-full space-y-4">
             <Widget
               creationDate="2023"
+              name="Numbers"
+              link="https://numbers.tobyb.dev/"
+            />
+            <Widget
+              creationDate="2023"
               name="ReverseGPT"
               link="https://github.com/developedbytoby/reversegpt"
             />
