@@ -19,7 +19,7 @@ export default function Home(ref: IndexPageRef) {
       <Transition ref={ref}>
         <div className="grid justify-center place-items-center h-screen m-8 sm:m-0">
           <H1 className="max-w-2xl">
-            Hey, I&apos;m Toby. I&apos;m a {age} year old full stack web
+            Hey, I&apos;m Toby. I&apos;m a <>{age}</> year old full stack web
             developer{" "}
             <Image
               src={hammer}

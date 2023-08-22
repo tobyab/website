@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth/next";
 
 export default async function handler(
   req: NextApiRequest,
-  res: NextApiResponse
+  res: NextApiResponse,
 ) {
   const session = await getServerSession(req, res, authOptions);
 
@@ -16,9 +16,10 @@ export default async function handler(
   if (req.method === "POST") {
     await prisma.guestbook.create({
       data: {
-        email: session.user.email,
         body: (req.body.body || "").slice(0, 500),
         created_by: session.user.name,
+        created_at: new Date().toISOString(),
+        email: session.user.email,
       },
     });
 
