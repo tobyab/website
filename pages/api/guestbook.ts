@@ -23,6 +23,7 @@ export default async function handler(
       },
     });
 
-    return res.status(200);
+    return res.status(200).json("Success!");
   }
+  return res.status(200).json("Good, day! Send a POST request.");
 }
