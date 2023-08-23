@@ -26,7 +26,7 @@ export default function GuestbookPage({ data }, ref: GuestbookPageRef) {
   );
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const data = await prisma.guestbook.findMany({
     orderBy: {
       created_at: "desc",
