@@ -12,6 +12,7 @@
     "@vercel/analytics": "^1.0.1",
     "date-fns": "^2.30.0",
     "framer-motion": "^10.15.0",
+    "million": "^2.6.2",
     "next": "^13.4.12",
     "next-auth": "^4.22.3",
     "react": "^18.2.0",

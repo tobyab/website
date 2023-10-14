@@ -1,15 +1,14 @@
-import { H1 } from "../components/design/typography";
+import { H1, P } from "../components/design/typography";
 import Np from "../components/np";
 import Image from "next/image";
 import { age } from "../utils/time";
 import Nav from "../components/nav";
 import Transition from "../components/transition";
 import React from "react";
+import Widget from "../components/widgets";
 
-import hammer from "../public/icons/hammer.svg";
-import sparkles from "../public/icons/sparkles.svg";
-import globe from "../public/icons/globe.svg";
-import pen from "../public/icons/pen.svg";
+import checkin from "../public/checkin.png";
+import social from "../public/social.png";
 
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
 
@@ -17,46 +16,71 @@ export default function Home(ref: IndexPageRef) {
   return (
     <div>
       <Transition ref={ref}>
-        <div className="grid justify-center place-items-center h-screen m-8 sm:m-0">
-          <H1 className="max-w-2xl">
-            Hey, I&apos;m Toby. I&apos;m a <>{age}</> year old full stack web
-            developer{" "}
-            <Image
-              src={hammer}
-              alt="Hammer icon"
-              className="h-8 w-8 object-cover inline self-center"
-            />{" "}
-            with a passion for making delightful websites{" "}
-            <Image
-              src={sparkles}
-              alt="Sparkles icon"
-              className="h-8 w-8 object-cover inline self-center"
-            />{" "}
-            . Right now, I&apos;m working as a Community Engineer at{" "}
-            <Np href="https://hackclub.com" className="underline">
-              Hack Club
-            </Np>
-            , a community for teenage hackers across the globe{" "}
-            <Image
-              src={globe}
-              alt="Globe icon"
-              className="h-8 w-8 object-cover inline self-center"
-            />{" "}
-            , and building{" "}
-            <Np href="https://aretav.com" className="underline">
-              Aretav
-            </Np>
-            , a tool for anyone to craft{" "}
-            <Image
-              src={pen}
-              alt="Pen nib icon"
-              className="h-8 w-8 object-cover inline self-center"
-            />{" "}
-            their own website as painlessly as possible.
-          </H1>
+        <Nav />
+        <div className="justify-center place-items-center grid">
+          <div className="grid max-w-7xl m-32">
+            <div className="flex">
+              <div>
+                <Widget className="max-w-md">
+                  <H1>
+                    Toby Brown
+                    <span className="text-[#B0B0B0]"> — big computer nerd</span>
+                  </H1>
+                  <div className="mt-8 space-y-4">
+                    <P>
+                      Hey, I’m Toby. I’m a full stack web developer and
+                      interface designer from London.
+                    </P>
+                    <P>
+                      Right now, I’m REDACTED at Hack Club. Oh, I’m also
+                      building this tool called Aretav on the side as well.
+                    </P>
+                    <P>
+                      I’ve been writin’ code & designing for a while now. I also
+                      happen to be running out of things to say, so please enjoy
+                      this final sentence.
+                    </P>
+                  </div>
+                </Widget>
+                <Widget className="pb-0">
+                  <Image
+                    src={checkin}
+                    alt="Check in"
+                    height={700}
+                    width={700}
+                  />
+                </Widget>
+              </div>
+              <div>
+                <Widget className="w-full h-max">
+                  <H1>
+                    Toby Brown
+                    <span className="text-[#B0B0B0]"> — big computer nerd</span>
+                  </H1>
+                  <div className="mt-8 space-y-4">
+                    <P>
+                      Hey, I’m Toby. I’m a full stack web developer and
+                      interface designer from London.
+                    </P>
+                    <P>
+                      Right now, I’m REDACTED at Hack Club. Oh, I’m also
+                      building this tool called Aretav on the side as well.
+                    </P>
+                    <P>
+                      I’ve been writin’ code & designing for a while now. I also
+                      happen to be running out of things to say, so please enjoy
+                      this final sentence.
+                    </P>
+                  </div>
+                </Widget>
+                <Widget className="w-max">
+                  <Image src={social} alt="Concept social app" height={700} />
+                </Widget>
+              </div>
+            </div>
+          </div>
         </div>
       </Transition>
-      <Nav />
     </div>
   );
 }

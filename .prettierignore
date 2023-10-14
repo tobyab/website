@@ -4,5 +4,5 @@
 .yarn
 .env
 /public
-/next.config.js
+/next.config.mjs
 yarn.lock
