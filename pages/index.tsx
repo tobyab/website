@@ -1,62 +1,89 @@
-import { H1 } from "../components/design/typography";
-import Np from "../components/np";
+import { H1, P, S } from "../components/design/typography";
 import Image from "next/image";
 import { age } from "../utils/time";
 import Nav from "../components/nav";
 import Transition from "../components/transition";
 import React from "react";
+import Np from "../components/np";
 
-import hammer from "../public/icons/hammer.svg";
-import sparkles from "../public/icons/sparkles.svg";
-import globe from "../public/icons/globe.svg";
-import pen from "../public/icons/pen.svg";
+import trees from "../public/trees.jpeg";
+import aretav from "../public/aretav.png";
+import numbers from "../public/numbers.png";
 
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
 
 export default function Home(ref: IndexPageRef) {
   return (
-    <div>
+    <div className="grid justify-center place-items-center m-8">
       <Transition ref={ref}>
-        <div className="grid justify-center place-items-center h-screen m-8 sm:m-0">
-          <H1 className="max-w-2xl">
-            Hey, I&apos;m Toby. I&apos;m a <>{age}</> year old full stack web
-            developer{" "}
-            <Image
-              src={hammer}
-              alt="Hammer icon"
-              className="h-8 w-8 object-cover inline self-center"
-            />{" "}
-            with a passion for making delightful websites{" "}
-            <Image
-              src={sparkles}
-              alt="Sparkles icon"
-              className="h-8 w-8 object-cover inline self-center"
-            />{" "}
-            . Right now, I&apos;m working as a Community Engineer at{" "}
-            <Np href="https://hackclub.com" className="underline">
-              Hack Club
-            </Np>
-            , a community for teenage hackers across the globe{" "}
-            <Image
-              src={globe}
-              alt="Globe icon"
-              className="h-8 w-8 object-cover inline self-center"
-            />{" "}
-            , and building{" "}
-            <Np href="https://aretav.com" className="underline">
-              Aretav
-            </Np>
-            , a tool for anyone to craft{" "}
-            <Image
-              src={pen}
-              alt="Pen nib icon"
-              className="h-8 w-8 object-cover inline self-center"
-            />{" "}
-            their own website as painlessly as possible.
+        <div className="max-w-4xl sm:mt-16">
+          <Image
+            src={trees}
+            alt="asdasd"
+            className="rounded-2xl object-cover w-full max-h-full sm:h-[32rem]"
+          />
+          <H1 className="mt-8">
+            Toby Brown is a <>{age}</> year old web developer & designer in
+            London{" "}
+            <span className="text-darkGrey">
+              — currently working as a Storyteller at Hack Club.
+            </span>
           </H1>
+          <div className="flex mt-16 space-x-8">
+            <P>
+              Pariatur in consectetur reprehenderit minim velit cupidatat
+              consectetur. Cillum ex id amet minim non non. Tempor labore non
+              velit Lorem irure veniam eu anim est nisi eiusmod laborum sunt.
+              Dolore ad est anim sit consequat.
+            </P>
+            <P>
+              Pariatur in consectetur reprehenderit minim velit cupidatat
+              consectetur. Cillum ex id amet minim non non. Tempor labore non
+              velit Lorem irure veniam eu anim est nisi eiusmod laborum sunt.
+              Dolore ad est anim sit consequat.
+            </P>
+          </div>
+          <div className="mt-16">
+            <div className="flex justify-between space-x-8">
+              <Thing
+                name="Aretav"
+                type="Work"
+                link="https://numbers.tobyb.dev/"
+                img={aretav}
+              />
+              <Thing
+                name="Numbers"
+                type="Personal"
+                link="https://numbers.tobyb.dev/"
+                img={numbers}
+              />
+            </div>
+          </div>
         </div>
       </Transition>
       <Nav />
     </div>
+  );
+}
+
+function Thing({ type, name, link, img }) {
+  return (
+    <Np href={link} className="space-y-4 w-full">
+      <Image
+        src={img}
+        alt="asdasd"
+        className="rounded-2xl object-cover w-full max-h-full h-64 border"
+      />
+      <div className="space-y-1">
+        <S
+          className={`text-[${
+            type === "Work" ? "#ff3e00" : type === "Personal" && "#3A86FF"
+          }]`}
+        >
+          {type}
+        </S>
+        <P className="text-black">{name}</P>
+      </div>
+    </Np>
   );
 }

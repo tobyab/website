@@ -19,8 +19,15 @@ export default function Work(ref: WorkPageRef) {
           </H1>
           <div className="w-full space-y-4">
             <Widget
-              start="2022"
+              start="2023"
               end=""
+              title="Storytelling"
+              company="Hack Club"
+              link="https://hackclub.com"
+            />
+            <Widget
+              start="2022"
+              end="2023"
               title="Community Engineer"
               company="Hack Club"
               link="https://hackclub.com"

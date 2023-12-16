@@ -39,11 +39,6 @@ export default function ProjectsPage(ref: ProjectsPageRef) {
               link="https://github.com/developedbytoby/website"
             />
             <Widget
-              creationDate="2023"
-              name="Hack The Thames"
-              link="https://hackthethames.uk/"
-            />
-            <Widget
               creationDate="2022"
               name="Conifer"
               link="https://conifer.tobyb.dev"
