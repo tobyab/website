@@ -16,72 +16,76 @@ type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
 
 export default function Home({ data }, ref: IndexPageRef) {
   return (
-    <div className="grid justify-center place-items-center m-8 mb-32">
-      <Transition ref={ref}>
-        <div className="max-w-4xl sm:mt-16">
-          <Image
-            src={trees}
-            alt="asdasd"
-            className="rounded-2xl object-cover w-full max-h-full sm:h-[32rem]"
-          />
-          <H1 className="mt-16">
-            Toby Brown is a <>{age}</> year old web developer & designer in
-            London{" "}
-            <span className="text-darkGrey">
-              — currently working as a Storyteller at Hack Club.
-            </span>
-          </H1>
-          <div className="sm:flex mt-24 sm:space-x-8 sm:space-y-0 space-y-8">
-            <P>
-              Pariatur in consectetur reprehenderit minim velit cupidatat
-              consectetur. Cillum ex id amet minim non non. Tempor labore non
-              velit Lorem irure veniam eu anim est nisi eiusmod laborum sunt.
-              Dolore ad est anim sit consequat.
-            </P>
-            <P>
-              Pariatur in consectetur reprehenderit minim velit cupidatat
-              consectetur. Cillum ex id amet minim non non. Tempor labore non
-              velit Lorem irure veniam eu anim est nisi eiusmod laborum sunt.
-              Dolore ad est anim sit consequat.
-            </P>
-          </div>
-          <div className="mt-16">
-            <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
-              <Thing
-                name="Aretav"
-                type="Work"
-                link="https://numbers.tobyb.dev/"
-                img={aretav}
-              />
-              <Thing
-                name="Numbers"
-                type="Personal"
-                link="https://numbers.tobyb.dev/"
-                img={numbers}
-              />
-            </div>
-          </div>
-          <div className="sm:space-x-8 sm:space-y-0 space-y-8 md:flex mt-16">
-            <div className="bg-grey w-full p-4 rounded-xl border h-48 justify-center place-items-center grid">
-              <H2 className="flex">
-                Add your own entry{" "}
-                <span className="ml-2">
-                  <Image src={plus} alt="Plus icon" className="self-center" />
-                </span>
-              </H2>
-            </div>
-            {((data as Array<any>).slice(0, 3) || []).map((data) => (
-              <Entry key={data.id} data={data} />
-            ))}
-          </div>
-        </div>
-      </Transition>
+    <div>
       <Nav />
+      <div className="grid justify-center place-items-center m-8 mb-32">
+        <Transition ref={ref}>
+          <div className="max-w-4xl sm:mt-16">
+            <Image
+              src={trees}
+              alt="asdasd"
+              className="rounded-2xl object-cover w-full max-h-full sm:h-[32rem]"
+            />
+            <H1 className="mt-16">
+              Toby Brown is a <>{age}</> year old full-stack web developer &
+              designer in London{" "}
+              <span className="text-darkGrey">
+                — currently working as a Storyteller at Hack Club.
+              </span>
+            </H1>
+            <div className="sm:flex mt-24 sm:space-x-8 sm:space-y-0 space-y-8">
+              <P>
+                Pariatur in consectetur reprehenderit minim velit cupidatat
+                consectetur. Cillum ex id amet minim non non. Tempor labore non
+                velit Lorem irure veniam eu anim est nisi eiusmod laborum sunt.
+                Dolore ad est anim sit consequat.
+              </P>
+              <P>
+                Pariatur in consectetur reprehenderit minim velit cupidatat
+                consectetur. Cillum ex id amet minim non non. Tempor labore non
+                velit Lorem irure veniam eu anim est nisi eiusmod laborum sunt.
+                Dolore ad est anim sit consequat.
+              </P>
+            </div>
+            <div className="mt-16">
+              <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
+                <Thing
+                  name="Aretav"
+                  type="Work"
+                  desc="Aretav is a company that I founded in 2021 that aims to make the internet a better place."
+                  link="https://numbers.tobyb.dev/"
+                  img={aretav}
+                />
+                <Thing
+                  name="Numbers"
+                  type="Personal"
+                  desc="A tiny utility that displays the emergency numbers of the country you're currently in."
+                  link="https://numbers.tobyb.dev/"
+                  img={numbers}
+                />
+              </div>
+            </div>
+            <div className="sm:space-x-8 sm:space-y-0 space-y-8 md:flex mt-16">
+              <div className="bg-grey w-full p-4 rounded-xl border h-48 justify-center place-items-center grid">
+                <H2 className="flex">
+                  Add your own entry{" "}
+                  <span className="ml-2">
+                    <Image src={plus} alt="Plus icon" className="self-center" />
+                  </span>
+                </H2>
+              </div>
+              {((data as Array<any>).slice(0, 3) || []).map((data) => (
+                <Entry key={data.id} data={data} />
+              ))}
+            </div>
+          </div>
+        </Transition>
+      </div>
     </div>
   );
 }
 
-function Thing({ type, name, link, img }) {
+function Thing({ type, name, link, img, desc }) {
   return (
     <Np href={link} className="space-y-4 w-full">
       <Image
@@ -90,14 +94,15 @@ function Thing({ type, name, link, img }) {
         className="rounded-2xl object-cover w-full max-h-full h-64 border"
       />
       <div className="space-y-1">
-        <S
-          className={`text-${
+        <p
+          className={`text-xs font-medium text-${
             type === "Work" ? "red" : type === "Personal" && "blue"
           }`}
         >
           {type}
-        </S>
-        <P className="text-black">{name}</P>
+        </p>
+        <P>{name}</P>
+        <S className="text-darkGrey">{desc}</S>
       </div>
     </Np>
   );
