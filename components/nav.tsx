@@ -63,39 +63,34 @@ export default function Nav() {
         <P>Toby Brown</P>
         <div />
         <div className="flex space-x-3 justify-center place-items-center">
-          <button data-tooltip-id="mail" data-tooltip-content="Email me">
-            <Np href="mailto:hi@tobyb.dev">
-              <Image src={mail} alt="Email" height={24} width={24} />
-            </Np>
-          </button>
-          <button data-tooltip-id="gh" data-tooltip-content="@developedbytoby">
-            <Np href="https://github.com/developedbytoby">
-              <Image src={github} alt="GitHub" height={24} width={24} />
-            </Np>
-          </button>
-          <button
-            data-tooltip-id="twitter"
-            data-tooltip-content="@developedbytoby"
+          <Np
+            href="mailto:hi@tobyb.dev"
+            dataTooltipId="mail"
+            dataTooltipContent="Email me"
           >
-            <Np href="https://twitter.com/developedbytoby">
-              <Image
-                src={x}
-                alt="X - formerly Twitter"
-                height={30}
-                width={30}
-              />
-            </Np>
-          </button>
-          <a data-tooltip-id="cv" data-tooltip-content="CV">
-            <Np href="https://read.cv/tobyab">
-              <Image
-                src={cv}
-                alt="X - formerly Twitter"
-                height={28}
-                width={28}
-              />
-            </Np>
-          </a>
+            <Image src={mail} alt="Email" height={24} width={24} />
+          </Np>
+          <Np
+            href="https://github.com/developedbytoby"
+            dataTooltipId="gh"
+            dataTooltipContent="@developedbytoby"
+          >
+            <Image src={github} alt="GitHub" height={24} width={24} />
+          </Np>
+          <Np
+            href="https://twitter.com/developedbytoby"
+            dataTooltipId="twitter"
+            dataTooltipContent="@developedbytoby"
+          >
+            <Image src={x} alt="X - formerly Twitter" height={30} width={30} />
+          </Np>
+          <Np
+            href="https://read.cv/tobyab"
+            dataTooltipId="cv"
+            dataTooltipContent="CV"
+          >
+            <Image src={cv} alt="X - formerly Twitter" height={28} width={28} />
+          </Np>
         </div>
       </div>
     </div>

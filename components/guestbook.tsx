@@ -53,7 +53,7 @@ export default function Guestbook({ data }: { data: Array<any> }) {
 
     // Cleanup function to remove the event listener
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, [handleResize]);
 
   const [numEntriesToShow, setNumEntriesToShow] = useState(4);
 

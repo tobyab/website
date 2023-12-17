@@ -13,11 +13,6 @@ import numbers from "../public/numbers.png";
 import sinerider from "../public/sinerider.png";
 import outernet from "../public/outernet.png";
 import reversegpt from "../public/reversegpt.png";
-import plus from "../public/icons/plus.svg";
-import { signIn, useSession } from "next-auth/react";
-import { Button } from "../components/design/button";
-import { Form, FormState } from "../utils/states";
-import { toast } from "sonner";
 import Guestbook from "../components/guestbook";
 
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
