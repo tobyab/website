@@ -9,7 +9,9 @@ import prisma from "../utils/prisma";
 
 import trees from "../public/trees.jpeg";
 import aretav from "../public/aretav.png";
+import hc from "../public/hc.png";
 import numbers from "../public/numbers.png";
+import sinerider from "../public/sinerider.png";
 import plus from "../public/icons/plus.svg";
 
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
@@ -33,28 +35,44 @@ export default function Home({ data }, ref: IndexPageRef) {
                 — currently working as a Storyteller at Hack Club.
               </span>
             </H1>
-            <div className="sm:flex mt-24 sm:space-x-8 sm:space-y-0 space-y-8">
-              <P>
+            <div className="sm:flex mt-24 sm:space-x-8 sm:space-y-0 space-y-8 text-darkGrey">
+              <S>
                 Pariatur in consectetur reprehenderit minim velit cupidatat
                 consectetur. Cillum ex id amet minim non non. Tempor labore non
                 velit Lorem irure veniam eu anim est nisi eiusmod laborum sunt.
                 Dolore ad est anim sit consequat.
-              </P>
-              <P>
+              </S>
+              <S>
                 Pariatur in consectetur reprehenderit minim velit cupidatat
                 consectetur. Cillum ex id amet minim non non. Tempor labore non
                 velit Lorem irure veniam eu anim est nisi eiusmod laborum sunt.
                 Dolore ad est anim sit consequat.
-              </P>
+              </S>
             </div>
-            <div className="mt-16">
+            <div className="mt-16 space-y-8">
               <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
                 <Thing
                   name="Aretav"
                   type="Work"
-                  desc="Aretav is a company that I founded in 2021 that aims to make the internet a better place."
+                  desc="Aretav is a company that I founded in 2022 that aims to make the internet a better place."
                   link="https://numbers.tobyb.dev/"
                   img={aretav}
+                />
+                <Thing
+                  name="Hack Club"
+                  type="Work"
+                  desc="I started working at Hack Club in 2021 as a Community Engineer, and now I'm a Storyteller."
+                  link="https://numbers.tobyb.dev/"
+                  img={hc}
+                />
+              </div>
+              <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
+                <Thing
+                  name="SineRider"
+                  type="Contributer"
+                  desc="I helped build the SineRider Twitter bot, which tweets out a new SineRider puzzle every day."
+                  link="https://twitter.com/SineRiderBot"
+                  img={sinerider}
                 />
                 <Thing
                   name="Numbers"
@@ -62,6 +80,22 @@ export default function Home({ data }, ref: IndexPageRef) {
                   desc="A tiny utility that displays the emergency numbers of the country you're currently in."
                   link="https://numbers.tobyb.dev/"
                   img={numbers}
+                />
+              </div>
+              <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
+                <Thing
+                  name="Numbers"
+                  type="Personal"
+                  desc="A tiny utility that displays the emergency numbers of the country you're currently in."
+                  link="https://numbers.tobyb.dev/"
+                  img={numbers}
+                />
+                <Thing
+                  name="Hack Club"
+                  type="Personal"
+                  desc="I started working at Hack Club in 2022 as a Community Engineer, and now I'm a Storyteller."
+                  link="https://numbers.tobyb.dev/"
+                  img={aretav}
                 />
               </div>
             </div>
@@ -96,7 +130,11 @@ function Thing({ type, name, link, img, desc }) {
       <div className="space-y-1">
         <p
           className={`text-xs font-medium text-${
-            type === "Work" ? "red" : type === "Personal" && "blue"
+            type === "Work"
+              ? "red"
+              : type === "Personal"
+                ? "blue"
+                : type === "Contributer" && "yellow"
           }`}
         >
           {type}
