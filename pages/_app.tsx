@@ -5,6 +5,7 @@ import { SessionProvider } from "next-auth/react";
 import Meta from "../components/meta";
 import type { AppProps } from "next/app";
 import type { Session } from "next-auth";
+import { Toaster } from "sonner";
 
 function MyApp({
   Component,
@@ -13,6 +14,7 @@ function MyApp({
   return (
     <AnimatePresence initial={false} mode="popLayout">
       <SessionProvider session={session}>
+        <Toaster position="top-right" />
         <Component {...pageProps} />
         <Meta />
         <Analytics />

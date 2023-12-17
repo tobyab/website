@@ -1,21 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, FormState } from "../utils/states";
 import { signIn, useSession } from "next-auth/react";
-import { format } from "date-fns";
 import { P, S } from "./design/typography";
 import { Button } from "./design/button";
-import { Toaster, toast } from "sonner";
-
-function GuestbookEntry({ data }) {
-  return (
-    <div className="py-2 w-auto">
-      <P>{data.body}</P>
-      <S className="font-mono">
-        {data.created_by} - {format(new Date(data.created_at), "MMM y")}
-      </S>
-    </div>
-  );
-}
+import { toast } from "sonner";
 
 export default function Guestbook({ data }: { data: Array<any> }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
@@ -50,10 +38,33 @@ export default function Guestbook({ data }: { data: Array<any> }) {
     }
   };
 
+  const handleResize = () => {
+    if (window.innerWidth <= 768) {
+      setNumEntriesToShow(4);
+    } else {
+      setNumEntriesToShow(data.length);
+    }
+  };
+
+  // Add event listener for window resize
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call the function initially
+
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, [handleResize]);
+
+  const [numEntriesToShow, setNumEntriesToShow] = useState(4);
+
   return (
-    <div className="max-w-2xl">
-      <Toaster position="top-right" />
-      <div className="mb-8">
+    <div>
+      <div className="sm:flex sm:space-x-8 sm:space-y-0 space-y-4 sm:mt-32 mt-16 sm:overflow-x-auto">
+        {((data as Array<any>) || []).slice(0, numEntriesToShow).map((data) => (
+          <Entry key={data.id} data={data} />
+        ))}
+      </div>
+      <div className="mt-8 flex space-x-2">
         {!session ? (
           <Button
             onClick={(e) => {
@@ -61,12 +72,12 @@ export default function Guestbook({ data }: { data: Array<any> }) {
               signIn("github");
             }}
           >
-            Continue with GitHub
+            Leave an entry
           </Button>
         ) : (
           <form onSubmit={leaveEntry} className="flex space-x-4">
             <input
-              className="bg-grey p-2 px-4 rounded-xl w-full placeholder-darkGrey outline-none"
+              className="bg-grey p-2 px-4 rounded-xl max-w-sm w-full placeholder-darkGrey outline-none"
               onChange={(e) => setEntry(e.target.value)}
               placeholder="Your message..."
               required
@@ -76,10 +87,25 @@ export default function Guestbook({ data }: { data: Array<any> }) {
             </Button>
           </form>
         )}
+        {!session && numEntriesToShow < data.length && (
+          <Button onClick={() => setNumEntriesToShow(data.length)}>
+            Show all entries
+          </Button>
+        )}
       </div>
-      {((data as Array<any>) || []).map((data) => (
-        <GuestbookEntry key={data.id} data={data} />
-      ))}
+    </div>
+  );
+}
+
+function Entry({ data }) {
+  data.body =
+    data.body.length > 130 ? data.body.substring(0, 250) + "..." : data.body;
+  return (
+    <div className="bg-grey p-4 rounded-xl border justify-center place-items-center flex-shrink-0 grid">
+      <div className="space-y-2 max-w-sm">
+        <P>{data.body}</P>
+        <S className="text-darkGrey">— {data.created_by}</S>
+      </div>
     </div>
   );
 }
