@@ -60,20 +60,20 @@ export default function Home({ data }, ref: IndexPageRef) {
       <Nav />
       <div className="grid justify-center place-items-center m-8">
         <Transition ref={ref}>
-          <div className="max-w-4xl sm:mt-16">
+          <div className="max-w-4xl mt-16">
             <Image
               src={trees}
               alt="asdasd"
               className="rounded-2xl object-cover w-full max-h-full sm:h-[32rem]"
             />
-            <H1 className="mt-16">
+            <H1 className="sm:mt-16 mt-8">
               Toby Brown is a <>{age}</> year old full-stack web developer &
               designer in London{" "}
               <span className="text-darkGrey">
                 — currently working as a Storyteller at Hack Club.
               </span>
             </H1>
-            <div className="sm:flex mt-24 sm:space-x-8 sm:space-y-0 space-y-8 text-darkGrey">
+            <div className="sm:flex sm:mt-24 mt-12 sm:space-x-8 sm:space-y-0 space-y-8 text-darkGrey">
               <S>
                 Right from the beginning, he was interested in very nerdy
                 things; such as alarm systems, and showed a strong interest in
@@ -96,70 +96,65 @@ export default function Home({ data }, ref: IndexPageRef) {
                 for Hack Club.
               </S>
             </div>
-            <div className="mt-16 space-y-8">
-              <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
-                <Thing
-                  name="Aretav"
-                  type="Work"
-                  desc="I started Aretav to allow anyone to build their own website, without any code."
-                  link="https://numbers.tobyb.dev/"
-                  img={aretav}
-                />
-                <Thing
-                  name="Hack Club"
-                  type="Work"
-                  desc="I started working at Hack Club in 2021 as a Community Engineer, and now I'm a Storyteller."
-                  link="https://numbers.tobyb.dev/"
-                  img={hc}
-                />
-              </div>
-              <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
-                <Thing
-                  name="SineRider"
-                  type="Contributer"
-                  desc="I helped build the SineRider Twitter bot, which tweets out a new SineRider puzzle every day."
-                  link="https://twitter.com/SineRiderBot"
-                  img={sinerider}
-                />
-                <Thing
-                  name="Outernet"
-                  type="Contributer"
-                  desc="I played a small part in creating an oasis for teenage hackers in Vermont."
-                  link="https://outernet.hackclub.com/"
-                  img={outernet}
-                />
-              </div>
-              <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
-                <Thing
-                  name="Numbers"
-                  type="Personal"
-                  desc="A tiny utility that displays the emergency numbers of the country you're currently in."
-                  link="https://numbers.tobyb.dev/"
-                  img={numbers}
-                />
-                <Thing
-                  name="ReverseGPT"
-                  type="Personal"
-                  desc="A reverse version of ChatGPT that asks YOU the questions. How the tables have turned!"
-                  link="https://github.com/developedbytoby/reversegpt"
-                  img={reversegpt}
-                />
-              </div>
+            <div className="mt-16 grid sm:grid-cols-2 gap-8">
+              <Thing
+                name="Aretav"
+                type="Work"
+                desc="I started Aretav to allow anyone to build their own website, without any code."
+                link="https://aretav.com/"
+                img={aretav}
+              />
+              <Thing
+                name="Hack Club"
+                type="Work"
+                desc="I started working at Hack Club in 2021 as a Community Engineer, and now I'm a Storyteller."
+                link="https://hackclub.com/"
+                img={hc}
+              />
+              <Thing
+                name="SineRider"
+                type="Contributer"
+                desc="I helped build the SineRider Twitter bot, which tweets out a new SineRider puzzle every day."
+                link="https://sinerider.com"
+                img={sinerider}
+              />
+              <Thing
+                name="Outernet"
+                type="Contributer"
+                desc="I played a small part in creating an oasis for teenage hackers in Vermont."
+                link="https://outernet.hackclub.com/"
+                img={outernet}
+              />
+
+              <Thing
+                name="Numbers"
+                type="Personal"
+                desc="A tiny utility that displays the emergency numbers of the country you're in. It's simple, but it's one of my favourites."
+                link="https://numbers.tobyb.dev/"
+                img={numbers}
+              />
+              <Thing
+                name="ReverseGPT"
+                type="Personal"
+                desc="A reverse version of ChatGPT that asks YOU the questions. How the tables have turned!"
+                link="https://github.com/developedbytoby/reversegpt"
+                img={reversegpt}
+              />
             </div>
-            <div className="sm:space-x-8 sm:space-y-0 space-y-8 md:flex mt-16">
+            <div className="sm:space-x-8 sm:space-y-0 space-y-8 md:flex mt-32">
               {((data as Array<any>).slice(0, 4) || []).map((data) => (
                 <Entry key={data.id} data={data} />
               ))}
             </div>
             <div className="mt-8">
-              {session ? (
+              {!session ? (
                 <Button
                   onClick={(e) => {
                     e.preventDefault();
                     signIn("github");
                   }}
                 >
-                  Leave a message
+                  Leave an entry
                 </Button>
               ) : (
                 <form onSubmit={leaveEntry} className="flex space-x-4">
