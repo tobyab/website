@@ -1,11 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Form, FormState } from "../utils/states";
 import { signIn, useSession } from "next-auth/react";
-import { format } from "date-fns";
 import { P, S } from "./design/typography";
 import { Button } from "./design/button";
-import { Toaster, toast } from "sonner";
-import prisma from "../utils/prisma";
+import { toast } from "sonner";
 
 export default function Guestbook({ data }: { data: Array<any> }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
@@ -40,14 +38,33 @@ export default function Guestbook({ data }: { data: Array<any> }) {
     }
   };
 
+  const handleResize = () => {
+    if (window.innerWidth <= 768) {
+      setNumEntriesToShow(4);
+    } else {
+      setNumEntriesToShow(data.length);
+    }
+  };
+
+  // Add event listener for window resize
+  useEffect(() => {
+    window.addEventListener("resize", handleResize);
+    handleResize(); // Call the function initially
+
+    // Cleanup function to remove the event listener
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  const [numEntriesToShow, setNumEntriesToShow] = useState(4);
+
   return (
     <div>
-      <div className="flex space-x-8 mt-16 overflow-x-auto no-scrollbar w-full">
-        {((data as Array<any>) || []).map((data) => (
+      <div className="sm:flex sm:space-x-8 sm:space-y-0 space-y-4 sm:mt-32 mt-16 sm:overflow-x-auto">
+        {((data as Array<any>) || []).slice(0, numEntriesToShow).map((data) => (
           <Entry key={data.id} data={data} />
         ))}
       </div>
-      <div className="mt-8">
+      <div className="mt-8 flex space-x-2">
         {!session ? (
           <Button
             onClick={(e) => {
@@ -69,6 +86,11 @@ export default function Guestbook({ data }: { data: Array<any> }) {
               {form.state === Form.Loading ? <P>Signing...</P> : <>Sign</>}
             </Button>
           </form>
+        )}
+        {!session && numEntriesToShow < data.length && (
+          <Button onClick={() => setNumEntriesToShow(data.length)}>
+            Show all entries
+          </Button>
         )}
       </div>
     </div>
