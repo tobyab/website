@@ -1,8 +1,8 @@
-import { H1, H2, P, S } from "../components/design/typography";
+import { H1, P, S } from "../components/design/typography";
 import Image from "next/image";
 import { age, message } from "../utils/time";
 import Nav from "../components/nav";
-import React, { useState } from "react";
+import React from "react";
 import Np from "../components/np";
 import prisma from "../utils/prisma";
 
@@ -15,9 +15,7 @@ import outernet from "../public/outernet.png";
 import reversegpt from "../public/reversegpt.png";
 import Guestbook from "../components/guestbook";
 
-type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
-
-export default function Home({ data }, ref: IndexPageRef) {
+export default function Home({ data }) {
   return (
     <div>
       <Nav />

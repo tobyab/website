@@ -2,16 +2,9 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 
 export default function Meta() {
-  const router = useRouter();
   return (
     <Head>
-      <title>
-        Toby Brown -{" "}
-        {router.pathname === "/"
-          ? "Home"
-          : router.pathname.replace(/\//g, "").substring(0, 1).toUpperCase() +
-            router.pathname.replace(/\//g, "").substring(1)}
-      </title>
+      <title>Toby Brown</title>
       <meta property="og:title" content="Toby Brown" />
       <meta name="description" content="Toby's personal website" />
       <link rel="icon" type="image/x-icon" href="/favicon.ico" />
