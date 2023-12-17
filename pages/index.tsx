@@ -12,6 +12,8 @@ import aretav from "../public/aretav.png";
 import hc from "../public/hc.png";
 import numbers from "../public/numbers.png";
 import sinerider from "../public/sinerider.png";
+import outernet from "../public/outernet.png";
+import reversegpt from "../public/reversegpt.png";
 import plus from "../public/icons/plus.svg";
 
 type IndexPageRef = React.ForwardedRef<HTMLDivElement>;
@@ -54,7 +56,7 @@ export default function Home({ data }, ref: IndexPageRef) {
                 <Thing
                   name="Aretav"
                   type="Work"
-                  desc="Aretav is a company that I founded in 2022 that aims to make the internet a better place."
+                  desc="I started Aretav to allow anyone to build their own website, without any code."
                   link="https://numbers.tobyb.dev/"
                   img={aretav}
                 />
@@ -75,11 +77,11 @@ export default function Home({ data }, ref: IndexPageRef) {
                   img={sinerider}
                 />
                 <Thing
-                  name="Numbers"
-                  type="Personal"
-                  desc="A tiny utility that displays the emergency numbers of the country you're currently in."
-                  link="https://numbers.tobyb.dev/"
-                  img={numbers}
+                  name="Outernet"
+                  type="Contributer"
+                  desc="I played a small part in creating an oasis for teenage hackers in Vermont."
+                  link="https://outernet.hackclub.com/"
+                  img={outernet}
                 />
               </div>
               <div className="md:flex justify-between sm:space-x-8 sm:space-y-0 space-y-8">
@@ -91,11 +93,11 @@ export default function Home({ data }, ref: IndexPageRef) {
                   img={numbers}
                 />
                 <Thing
-                  name="Hack Club"
+                  name="ReverseGPT"
                   type="Personal"
-                  desc="I started working at Hack Club in 2022 as a Community Engineer, and now I'm a Storyteller."
-                  link="https://numbers.tobyb.dev/"
-                  img={aretav}
+                  desc="A reverse version of ChatGPT that asks YOU the questions. How the tables have turned!"
+                  link="https://github.com/developedbytoby/reversegpt"
+                  img={reversegpt}
                 />
               </div>
             </div>
