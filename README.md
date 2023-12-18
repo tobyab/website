@@ -1,4 +1,7 @@
-![A screenshot of my personal website; https://tobyb.dev](https://github.com/developedbytoby/website/assets/77097223/b4253ad0-ef00-4f4a-af04-a2f517061481)
+<a href="https://tobyb.dev">
+  <img alt="A screenshot of my personal website!" width="full" alt="Screenshot 2023-12-17 at 9 54 38 PM" src="https://github.com/developedbytoby/website/assets/48997634/4ea78bfa-0567-49bf-bd4c-449cfbbd8ebc">
+</a>
+
 
 # developedbytoby/website
 
