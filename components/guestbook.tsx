@@ -4,6 +4,7 @@ import { signIn, useSession } from "next-auth/react";
 import { P, S } from "./design/typography";
 import { Button } from "./design/button";
 import { toast } from "sonner";
+import { useRouter } from "next/router";
 
 export default function Guestbook({ data }: { data: Array<any> }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
@@ -46,19 +47,17 @@ export default function Guestbook({ data }: { data: Array<any> }) {
     }
   };
 
-  // Add event listener for window resize
   useEffect(() => {
     window.addEventListener("resize", handleResize);
-    handleResize(); // Call the function initially
+    handleResize();
 
-    // Cleanup function to remove the event listener
     return () => window.removeEventListener("resize", handleResize);
   }, [handleResize]);
 
   const [numEntriesToShow, setNumEntriesToShow] = useState(4);
 
   return (
-    <div>
+    <div id="guestbook">
       <div className="sm:flex sm:space-x-8 sm:space-y-0 space-y-4 sm:mt-32 mt-16 sm:overflow-x-auto">
         {((data as Array<any>) || []).slice(0, numEntriesToShow).map((data) => (
           <Entry key={data.id} data={data} />
@@ -69,7 +68,7 @@ export default function Guestbook({ data }: { data: Array<any> }) {
           <Button
             onClick={(e) => {
               e.preventDefault();
-              signIn("github");
+              signIn("github", { callbackUrl: "/#guestbook" });
             }}
           >
             Leave an entry

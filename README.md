@@ -11,7 +11,7 @@
 1. Install dependecies and spin up the dev server!
 
 ```
-yarn && yarn dev
+pnpm i && pnpm dev
 ```
 
 And, make sure to create a `.env` file in the root directory with all of your environment variables!
