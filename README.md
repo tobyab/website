@@ -1,4 +1,5 @@
-![A screenshot of my personal website; https://tobyb.dev](https://github.com/developedbytoby/website/assets/77097223/b4253ad0-ef00-4f4a-af04-a2f517061481)
+![A screenshot of my personal website, https://tobyb.dev](https://github.com/developedbytoby/website/assets/77097223/68267e56-8301-4773-9b95-d8f34556ed9a)
+
 
 # developedbytoby/website
 
