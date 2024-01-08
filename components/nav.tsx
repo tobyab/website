@@ -71,9 +71,9 @@ export default function Nav() {
             <Image src={mail} alt="Email" height={24} width={24} />
           </Np>
           <Np
-            href="https://github.com/developedbytoby"
+            href="https://github.com/tobyab"
             dataTooltipId="gh"
-            dataTooltipContent="@developedbytoby"
+            dataTooltipContent="@tobyab"
           >
             <Image src={github} alt="GitHub" height={24} width={24} />
           </Np>
