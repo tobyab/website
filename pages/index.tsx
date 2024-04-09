@@ -4,7 +4,8 @@ import { age, message } from "../utils/time";
 import Nav from "../components/nav";
 import React from "react";
 import Np from "../components/np";
-import prisma from "../utils/prisma";
+import { Redis } from '@upstash/redis'
+import Guestbook from "../components/guestbook";
 
 import trees from "../public/trees.jpeg";
 import aretav from "../public/aretav.png";
@@ -13,7 +14,11 @@ import numbers from "../public/numbers.png";
 import sinerider from "../public/sinerider.png";
 import outernet from "../public/outernet.png";
 import reversegpt from "../public/reversegpt.png";
-import Guestbook from "../components/guestbook";
+
+const redis = new Redis({
+  url: 'https://usw1-fitting-swine-33716.upstash.io',
+  token: process.env.UPSTASH_TOKEN,
+})
 
 export default function Home({ data }) {
   return (
@@ -146,23 +151,17 @@ function Thing({ type, name, link, img, desc }) {
 }
 
 export async function getServerSideProps() {
-  const data = await prisma.guestbook.findMany({
-    orderBy: {
-      created_at: "desc",
-    },
-  });
+  const keys = await redis.keys('guestbook:*');
+  const data = await Promise.all(keys.map(key => redis.get(key)));
 
-  const serializedData = data.map((data) => {
-    return {
-      ...data,
-      id: data.id.toString(),
-      created_at: data.created_at.toISOString(),
-    };
-  });
+  data.sort(
+      (a: { created_at: string }, b: { created_at: string }) =>
+          new Date(a.created_at).getTime() - new Date(b.created_at).getTime(),
+  );
 
   return {
     props: {
-      data: serializedData,
+      data,
     },
   };
 }

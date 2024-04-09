@@ -4,7 +4,6 @@ import { signIn, useSession } from "next-auth/react";
 import { P, S } from "./design/typography";
 import { Button } from "./design/button";
 import { toast } from "sonner";
-import { useRouter } from "next/router";
 
 export default function Guestbook({ data }: { data: Array<any> }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
@@ -52,7 +51,7 @@ export default function Guestbook({ data }: { data: Array<any> }) {
     handleResize();
 
     return () => window.removeEventListener("resize", handleResize);
-  }, [handleResize]);
+  }, []);
 
   const [numEntriesToShow, setNumEntriesToShow] = useState(4);
 
@@ -61,7 +60,7 @@ export default function Guestbook({ data }: { data: Array<any> }) {
       <div className="sm:flex sm:space-x-8 sm:space-y-0 space-y-4 sm:mt-32 mt-16 sm:overflow-x-auto">
         {((data as Array<any>) || []).slice(0, numEntriesToShow).map((data) => (
           <Entry key={data.id} data={data} />
-        ))}
+        )).reverse()}
       </div>
       <div className="mt-8 flex space-x-2">
         {!session ? (
@@ -82,11 +81,11 @@ export default function Guestbook({ data }: { data: Array<any> }) {
               required
             />
             <Button type="submit">
-              {form.state === Form.Loading ? <P>Signing...</P> : <>Sign</>}
+              {form.state === Form.Loading ? <>Signing...</> : <>Sign</>}
             </Button>
           </form>
         )}
-        {!session && numEntriesToShow < data.length && (
+        {numEntriesToShow < data.length && (
           <Button onClick={() => setNumEntriesToShow(data.length)}>
             Show all entries
           </Button>

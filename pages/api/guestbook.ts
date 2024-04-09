@@ -1,7 +1,12 @@
-import prisma from "../../utils/prisma";
 import type { NextApiRequest, NextApiResponse } from "next";
 import { authOptions } from "./auth/[...nextauth]";
 import { getServerSession } from "next-auth/next";
+import { Redis } from '@upstash/redis'
+
+const redis = new Redis({
+  url: 'https://usw1-fitting-swine-33716.upstash.io',
+  token: process.env.UPSTASH_TOKEN,
+})
 
 export default async function handler(
   req: NextApiRequest,
@@ -9,21 +14,21 @@ export default async function handler(
 ) {
   const session = await getServerSession(req, res, authOptions);
 
-  if (!session) {
+ if (!session) {
     return res.status(403).send("Unauthorized");
   }
 
   if (req.method === "POST") {
-    await prisma.guestbook.create({
-      data: {
-        body: (req.body.body || "").slice(0, 500),
-        created_by: session.user.name,
-        created_at: new Date().toISOString(),
-        email: session.user.email,
-      },
-    });
+    await redis.set(`guestbook:${Date.now()}`, {
+      body: (req.body.body || "").slice(0, 500),
+      created_by: session.user.name,
+      created_at: new Date().toISOString(),
+      email: session.user.email,
+    })
 
     return res.status(200).json("Success!");
   }
-  return res.status(200).json("Good, day! Send a POST request.");
+
+
+  return res.status(200).json("POST PLS!");
 }
