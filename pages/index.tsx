@@ -35,7 +35,7 @@ export default function Home({ data }) {
             Toby Brown is a <>{age}</> year old full-stack web developer &
             designer in London{" "}
             <span className="text-darkGrey">
-              — currently working as a Storyteller at Hack Club.
+              — currently making a thinking machine at Beem.
             </span>
           </H1>
           <div className="grid sm:grid-cols-2 sm:mt-24 mt-12 sm:space-x-8 sm:space-y-0 space-y-8 text-darkGrey">
