@@ -9,6 +9,7 @@ import Guestbook from "../components/guestbook";
 
 import trees from "../public/trees.jpeg";
 import aretav from "../public/aretav.png";
+import beem from "../public/beem.png";
 import hc from "../public/hc.png";
 import numbers from "../public/numbers.png";
 import sinerider from "../public/sinerider.png";
@@ -61,8 +62,15 @@ export default function Home({ data }) {
           </div>
           <div className="mt-16 grid sm:grid-cols-2 gap-8">
             <Thing
+                name="Beem"
+                type="Founded"
+                desc="A personal thinking machine that's made for humans and learns and adapts for you."
+                link="https://beem.computer/"
+                img={beem}
+            />
+            <Thing
               name="Aretav"
-              type="Work"
+              type="Founded"
               desc="I started Aretav to allow anyone to build their own website, without any code."
               link="https://aretav.com/"
               img={aretav}
@@ -88,14 +96,13 @@ export default function Home({ data }) {
               link="https://outernet.hackclub.com/"
               img={outernet}
             />
-
-            <Thing
+            {/*<Thing
               name="Numbers"
               type="Personal"
               desc="A tiny utility that displays the emergency numbers of the country you're in. It's simple, but it's one of my favourites."
               link="https://numbers.tobyb.dev/"
               img={numbers}
-            />
+            />*/}
             <Thing
               name="ReverseGPT"
               type="Personal"
@@ -123,9 +130,9 @@ export default function Home({ data }) {
   );
 }
 
-function Thing({ type, name, link, img, desc }) {
+function Thing({ type, name, link, img, desc, className }: any) {
   return (
-    <Np href={link} className="space-y-4 w-full">
+    <Np href={link} className={`space-y-4 w-full ${className}`}>
       <Image
         src={img}
         alt="asdasd"
@@ -138,7 +145,8 @@ function Thing({ type, name, link, img, desc }) {
               ? "red"
               : type === "Personal"
                 ? "blue"
-                : type === "Contributor" && "yellow"
+                : type === "Contributor" ? "yellow" : type === "Founded" && "green"
+            
           }`}
         >
           {type}

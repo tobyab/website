@@ -23,7 +23,6 @@ export default async function handler(
       body: (req.body.body || "").slice(0, 500),
       created_by: session.user.name,
       created_at: new Date().toISOString(),
-      email: session.user.email,
     })
 
     return res.status(200).json("Success!");
