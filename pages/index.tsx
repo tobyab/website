@@ -63,14 +63,14 @@ export default function Home({ data }) {
           <div className="mt-16 grid sm:grid-cols-2 gap-8">
             <Thing
                 name="Beem"
-                type="Founded"
+                type="Work"
                 desc="A personal thinking machine that's made for humans and learns and adapts for you."
                 link="https://beem.computer/"
                 img={beem}
             />
             <Thing
               name="Aretav"
-              type="Founded"
+              type="Work"
               desc="I started Aretav to allow anyone to build their own website, without any code."
               link="https://aretav.com/"
               img={aretav}
@@ -144,8 +144,8 @@ function Thing({ type, name, link, img, desc, className }: any) {
             type === "Work"
               ? "red"
               : type === "Personal"
-                ? "blue"
-                : type === "Contributor" ? "yellow" : type === "Founded" && "green"
+                ? "green"
+                : type === "Contributor" && "yellow"
             
           }`}
         >
