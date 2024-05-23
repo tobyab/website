@@ -11,7 +11,6 @@ import trees from "../public/trees.jpeg";
 import aretav from "../public/aretav.png";
 import beem from "../public/beem.png";
 import hc from "../public/hc.png";
-import numbers from "../public/numbers.png";
 import sinerider from "../public/sinerider.png";
 import outernet from "../public/outernet.png";
 import reversegpt from "../public/reversegpt.png";
@@ -144,7 +143,7 @@ function Thing({ type, name, link, img, desc, className }: any) {
             type === "Work"
               ? "red"
               : type === "Personal"
-                ? "green"
+                ? "blue"
                 : type === "Contributor" && "yellow"
             
           }`}
