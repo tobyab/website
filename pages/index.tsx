@@ -158,17 +158,26 @@ function Thing({ type, name, link, img, desc, className }: any) {
 }
 
 export async function getServerSideProps() {
-  const keys = await redis.keys('guestbook:*');
-  const data = await Promise.all(keys.map(key => redis.get(key)));
+  try {
+    const keys = await redis.keys('guestbook:*');
+    const data = await Promise.all(keys.map(key => redis.get(key)));
 
-  data.sort(
-      (a: { created_at: string }, b: { created_at: string }) =>
-          new Date(a.created_at).getTime() - new Date(b.created_at).getTime(),
-  );
+    data.sort(
+        (a: { created_at: string }, b: { created_at: string }) =>
+            new Date(a.created_at).getTime() - new Date(b.created_at).getTime(),
+    );
 
-  return {
-    props: {
-      data,
-    },
-  };
+    return {
+      props: {
+        data,
+      },
+    };
+  } catch (error) {
+    console.error('Error loading guestbook:', error);
+    return {
+      props: {
+        data: null,
+      },
+    };
+  }
 }

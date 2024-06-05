@@ -42,7 +42,7 @@ export default function Guestbook({ data }: { data: Array<any> }) {
     if (window.innerWidth <= 768) {
       setNumEntriesToShow(4);
     } else {
-      setNumEntriesToShow(data.length);
+      data && setNumEntriesToShow(data.length);
     }
   };
 
@@ -85,7 +85,7 @@ export default function Guestbook({ data }: { data: Array<any> }) {
             </Button>
           </form>
         )}
-        {numEntriesToShow < data.length && (
+        {data && numEntriesToShow < data.length && (
           <Button onClick={() => setNumEntriesToShow(data.length)}>
             Show all entries
           </Button>
