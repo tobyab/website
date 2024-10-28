@@ -64,7 +64,7 @@ export default function Nav() {
         <div />
         <div className="flex space-x-3 justify-center place-items-center">
           <Np
-            href="mailto:hi@tobyb.dev"
+            href="mailto:toby@beem.computer"
             dataTooltipId="mail"
             dataTooltipContent="Email me"
           >
