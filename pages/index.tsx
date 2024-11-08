@@ -7,7 +7,7 @@ import Np from "../components/np";
 import { Redis } from '@upstash/redis'
 import Guestbook from "../components/guestbook";
 
-import trees from "../public/trees.jpeg";
+import trees from "../public/toby.jpeg";
 import aretav from "../public/aretav.png";
 import beem from "../public/beem.png";
 import hc from "../public/hc.png";
@@ -29,13 +29,13 @@ export default function Home({ data }) {
           <Image
             src={trees}
             alt="asdasd"
-            className="rounded-2xl object-cover w-full max-h-full sm:h-[32rem]"
+            className="rounded-2xl object-cover w-full max-h-full sm:h-[26rem]"
           />
           <H1 className="sm:mt-16 mt-8">
             Toby Brown is a <>{age}</> year old full-stack web developer &
             designer in London{" "}
             <span className="text-darkGrey">
-              — currently creating the next generation of computing at Beem.
+              — currently defining the next generation of computing at Beem.
             </span>
           </H1>
           <div className="grid sm:grid-cols-2 sm:mt-24 mt-12 sm:space-x-8 sm:space-y-0 space-y-8 text-darkGrey">
