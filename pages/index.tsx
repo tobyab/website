@@ -32,8 +32,7 @@ export default function Home({ data }) {
             className="rounded-2xl object-cover w-full max-h-full sm:h-[26rem]"
           />
           <H1 className="sm:mt-16 mt-8">
-            Toby Brown is a <>{age}</> year old full-stack web developer &
-            designer in London{" "}
+            Toby Brown is an inventor in London{" "}
             <span className="text-darkGrey">
               — currently defining the next generation of computing at Beem.
             </span>
