@@ -3,7 +3,7 @@ export function H1({ className, children }: any) {
 }
 
 export function H2({ className, children }: any) {
-  return <h1 className={`text-xl ${className}`}>{children}</h1>;
+  return <h2 className={`text-[1.625rem] font-light ${className}`}>{children}</h2>;
 }
 
 export function P({ className, children }: any) {

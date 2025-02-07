@@ -14,6 +14,12 @@ module.exports = {
         red: "#ff3e00",
         green: "#00ca48",
       },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
     },
   },
   corePlugins: {
