@@ -4,8 +4,8 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid place-items-center h-screen bg-[#f5f5f5]">
-      <div className="max-w-2xl space-y-4 mx-16">
+    <div className="grid place-items-center min-h-screen bg-[#f5f5f5]">
+      <div className="max-w-2xl space-y-4 m-12">
         <H2>
           Toby Brown is an inventor in London. He is the founder of a company
           called{" "}
