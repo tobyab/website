@@ -4,7 +4,6 @@ import { age, message } from "../utils/time";
 import Nav from "../components/nav";
 import React from "react";
 import Np from "../components/np";
-import { Redis } from '@upstash/redis'
 import Guestbook from "../components/guestbook";
 
 import trees from "../public/toby.jpeg";
@@ -14,11 +13,7 @@ import hc from "../public/hc.png";
 import sinerider from "../public/sinerider.png";
 import outernet from "../public/outernet.png";
 import reversegpt from "../public/reversegpt.png";
-
-const redis = new Redis({
-  url: 'https://usw1-fitting-swine-33716.upstash.io',
-  token: process.env.UPSTASH_TOKEN,
-})
+import { entries } from "../utils/entries";
 
 export default function Home({ data }) {
   return (
@@ -109,7 +104,7 @@ export default function Home({ data }) {
               img={reversegpt}
             />
           </div>
-          <Guestbook data={data} />
+          <Guestbook data={entries} />
           <S className="text-darkGrey mt-16">
             Thank you for visiting my website. I hope you enjoy the rest of your{" "}
             {message}!<br />
@@ -154,29 +149,4 @@ function Thing({ type, name, link, img, desc, className }: any) {
       </div>
     </Np>
   );
-}
-
-export async function getServerSideProps() {
-  try {
-    const keys = await redis.keys('guestbook:*');
-    const data = await Promise.all(keys.map(key => redis.get(key)));
-
-    data.sort(
-        (a: { created_at: string }, b: { created_at: string }) =>
-            new Date(a.created_at).getTime() - new Date(b.created_at).getTime(),
-    );
-
-    return {
-      props: {
-        data,
-      },
-    };
-  } catch (error) {
-    console.error('Error loading guestbook:', error);
-    return {
-      props: {
-        data: null,
-      },
-    };
-  }
 }

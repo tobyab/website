@@ -8,35 +8,6 @@ import { toast } from "sonner";
 export default function Guestbook({ data }: { data: Array<any> }) {
   const [form, setForm] = useState<FormState>({ state: Form.Initial });
   const [entry, setEntry] = useState("");
-  const { data: session } = useSession();
-
-  const leaveEntry = async (e: any) => {
-    e.preventDefault();
-    setForm({ state: Form.Loading });
-
-    const response = await fetch("/api/guestbook", {
-      body: JSON.stringify({
-        body: entry,
-      }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
-
-    const { error } = await response.json();
-
-    console.log("response: " + error);
-    if (error) {
-      setForm({ state: Form.Error });
-      toast("Uh oh. Something's gone wrong.");
-    } else {
-      setForm({
-        state: Form.Success,
-      });
-      toast("Thanks for signing my guestbook!");
-    }
-  };
 
   const handleResize = () => {
     if (window.innerWidth <= 768) {
@@ -63,28 +34,7 @@ export default function Guestbook({ data }: { data: Array<any> }) {
         )).reverse()}
       </div>
       <div className="mt-8 flex space-x-2">
-        {!session ? (
-          <Button
-            onClick={(e) => {
-              e.preventDefault();
-              signIn("github", { callbackUrl: "/#guestbook" });
-            }}
-          >
-            Leave an entry
-          </Button>
-        ) : (
-          <form onSubmit={leaveEntry} className="flex space-x-4">
-            <input
-              className="bg-grey p-2 px-4 rounded-xl max-w-sm w-full placeholder-darkGrey outline-none"
-              onChange={(e) => setEntry(e.target.value)}
-              placeholder="Your message..."
-              required
-            />
-            <Button type="submit">
-              {form.state === Form.Loading ? <>Signing...</> : <>Sign</>}
-            </Button>
-          </form>
-        )}
+        <S className="text-darkGrey">Guestbook archive</S>
         {data && numEntriesToShow < data.length && (
           <Button onClick={() => setNumEntriesToShow(data.length)}>
             Show all entries
