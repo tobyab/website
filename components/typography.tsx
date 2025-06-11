@@ -1,6 +1,8 @@
 export function H2({ className, children }: any) {
   return (
-    <h2 className={`text-[1.625rem] font-light ${className}`}>{children}</h2>
+    <h2 className={`text-[1.325rem] font-light text-[#333] ${className}`}>
+      {children}
+    </h2>
   );
 }
 

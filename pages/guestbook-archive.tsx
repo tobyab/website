@@ -1,4 +1,4 @@
-import { H2 } from "../components/design/typography";
+import { H2 } from "../components/typography";
 import Guestbook from "../components/guestbook";
 import { entries } from "../utils/entries";
 

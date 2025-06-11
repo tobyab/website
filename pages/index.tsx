@@ -1,16 +1,16 @@
-import { H2 } from "../components/design/typography";
-import React from "react";
+import { H2 } from "../components/typography";
 import Link from "next/link";
+import React from "react";
 
 export default function Home() {
   return (
     <div className="grid place-items-center min-h-screen bg-[#f5f5f5]">
-      <div className="max-w-2xl space-y-4 m-12">
+      <div className="max-w-lg space-y-4 m-12 text-center">
+        <H2>Toby Brown is an inventor in San Francisco.</H2>
         <H2>
-          Toby Brown is an inventor in London. He is the founder of a company
-          called <Np href="https://beem.computer">Beem</Np>. Their mission is to
-          define how people will be interacting with their computers in the
-          future.
+          He is the founder of a company called{" "}
+          <Np href="https://beem.computer">Beem</Np>. Their mission is to define
+          how people will be interacting with their computers in the future.
         </H2>
         <H2>
           Toby thinks a lot about computer interaction, and how we can make our
@@ -22,10 +22,8 @@ export default function Home() {
           .
         </H2>
         <H2>
-          Toby&apos;s most active on{" "}
-          <Np href="https://x.com/developedbytoby">X</Np>. Here&apos;s his{" "}
-          <Np href="https://read.cv/tobyab">CV</Np>. If you want to chat, you
-          can email him at{" "}
+          Toby&apos;s most active on <Np href="https://x.com/tobyab_">X</Np>. If
+          you want to chat, you can email him at{" "}
           <Np href="mailto:toby@beem.computer">toby@beem.computer</Np>
         </H2>
       </div>
@@ -35,7 +33,12 @@ export default function Home() {
 
 function Np({ href, children }: { href: string; children: React.ReactNode }) {
   return (
-    <Link href={href} className="underline underline-offset-2" target="_blank">
+    <Link
+      href={href}
+      className="hover:text-opacity-75 transition-opacity duration-200 underline"
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {children}
     </Link>
   );
