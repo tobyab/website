@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="grid place-items-center min-h-screen bg-[#f5f5f5]">
       <div className="max-w-lg space-y-4 m-12 text-center">
-        <H2>Toby Brown is an inventor in San Francisco.</H2>
+        <H2>Toby Brown is a founder in San Francisco.</H2>
         <H2>
           He is the founder of a company called{" "}
           <Np href="https://beem.computer">Beem</Np>. Their mission is to define
