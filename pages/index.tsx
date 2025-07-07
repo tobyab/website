@@ -8,7 +8,7 @@ export default function Home() {
       <div className="max-w-lg space-y-4 m-12 text-center">
         <H2>Toby Brown is a founder in San Francisco.</H2>
         <H2>
-          He is the founder of a company called{" "}
+          He started a company called{" "}
           <Np href="https://beem.computer">Beem</Np>. Their mission is to define
           how people will be interacting with their computers in the future.
         </H2>
